@@ -24,12 +24,12 @@ shape = SubResource("CapsuleShape3D_t2650")
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="LookPivot" type="Node3D" parent="." unique_id=1002062123 node_paths=PackedStringArray("input")]
-transform = Transform3D(1, 0, 0, 0, 0.91644657, 0.40015715, 0, -0.40015715, 0.91644657, 0, 0.9394461, -0.5838678)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9394461, -0.5838678)
 script = ExtResource("3_54pyi")
 input = NodePath("../Input")
 
 [node name="Camera3D" type="Camera3D" parent="LookPivot" unique_id=284677569]
-transform = Transform3D(0.99744093, -0.02861023, 0.065523565, 0.028610215, 0.9995903, 0.00093859434, -0.06552357, 0.00093844533, 0.9978505, 0.3505515, 0.016780615, 2.2339795)
+transform = Transform3D(1, 0, 0, 0, 0.9818364, 0.18972953, 0, -0.18972953, 0.9818364, 0.3505515, 0.77531683, 2.2339795)
 
 [node name="RollbackSynchronizer" type="Node" parent="." unique_id=886352839 node_paths=PackedStringArray("root")]
 script = ExtResource("2_qf1b4")
