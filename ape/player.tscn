@@ -34,13 +34,13 @@ transform = Transform3D(0.99744093, -0.02861023, 0.065523565, 0.028610215, 0.999
 [node name="RollbackSynchronizer" type="Node" parent="." unique_id=886352839 node_paths=PackedStringArray("root")]
 script = ExtResource("2_qf1b4")
 root = NodePath("..")
-state_properties = Array[String]([":position"])
-input_properties = Array[String](["Input:movement"])
+state_properties = Array[String]([":transform", ":velocity", "LookPivot:transform"])
+input_properties = Array[String](["Input:movement", "Input:jump", "Input:look_angle"])
 
 [node name="TickInterpolator" type="Node" parent="." unique_id=877752513 node_paths=PackedStringArray("root")]
 script = ExtResource("3_dkpv5")
 root = NodePath("..")
-properties = Array[String]([":position"])
+properties = Array[String]([":transform", "LookPivot:transform"])
 
 [node name="Input" type="Node" parent="." unique_id=1747756723]
 script = ExtResource("3_g8e4n")
