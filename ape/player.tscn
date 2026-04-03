@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://k3y73rql2u6e"]
+
+[ext_resource type="Script" uid="uid://lgmqlkuewowp" path="res://ape/scripts/player.gd" id="1_tksy4"]
+[ext_resource type="Script" uid="uid://d350u8evihs1u" path="res://addons/netfox/rollback/rollback-synchronizer.gd" id="2_qf1b4"]
+[ext_resource type="PackedScene" uid="uid://3hwk02h2rtte" path="res://ape/visuals/ape.blend" id="2_wppca"]
+[ext_resource type="Script" uid="uid://c5ogdg5hcnibf" path="res://ape/scripts/camera_pivot.gd" id="3_54pyi"]
+[ext_resource type="Script" uid="uid://dour8fehaaugp" path="res://addons/netfox/tick-interpolator.gd" id="3_dkpv5"]
+[ext_resource type="Script" uid="uid://dr0wqty80sjn7" path="res://ape/scripts/player-input.gd" id="3_g8e4n"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t2650"]
+height = 1.0
+
+[node name="Player" type="CharacterBody3D" unique_id=1802699836 node_paths=PackedStringArray("input", "camera", "look")]
+script = ExtResource("1_tksy4")
+input = NodePath("Input")
+camera = NodePath("LookPivot/Camera3D")
+look = NodePath("LookPivot")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=971283472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_t2650")
+
+[node name="ape" parent="." unique_id=1829828411 instance=ExtResource("2_wppca")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="LookPivot" type="Node3D" parent="." unique_id=1002062123 node_paths=PackedStringArray("input")]
+transform = Transform3D(1, 0, 0, 0, 0.91644657, 0.40015715, 0, -0.40015715, 0.91644657, 0, 0.9394461, -0.5838678)
+script = ExtResource("3_54pyi")
+input = NodePath("../Input")
+
+[node name="Camera3D" type="Camera3D" parent="LookPivot" unique_id=284677569]
+transform = Transform3D(0.99744093, -0.02861023, 0.065523565, 0.028610215, 0.9995903, 0.00093859434, -0.06552357, 0.00093844533, 0.9978505, 0.3505515, 0.016780615, 2.2339795)
+
+[node name="RollbackSynchronizer" type="Node" parent="." unique_id=886352839 node_paths=PackedStringArray("root")]
+script = ExtResource("2_qf1b4")
+root = NodePath("..")
+state_properties = Array[String]([":position"])
+input_properties = Array[String](["Input:movement"])
+
+[node name="TickInterpolator" type="Node" parent="." unique_id=877752513 node_paths=PackedStringArray("root")]
+script = ExtResource("3_dkpv5")
+root = NodePath("..")
+properties = Array[String]([":position"])
+
+[node name="Input" type="Node" parent="." unique_id=1747756723]
+script = ExtResource("3_g8e4n")
+mouse_sensitivity = 0.004

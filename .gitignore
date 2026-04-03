@@ -1,11 +1,14 @@
+# Created by https://www.toptal.com/developers/gitignore/api/godot
+# Edit at https://www.toptal.com/developers/gitignore?templates=godot
+
+### Godot ###
 # Godot 4+ specific ignores
 .godot/
-.nomedia
 
 # Godot-specific ignores
 .import/
 export.cfg
-export_credentials.cfg
+# export_presets.cfg # - needed for CI
 
 # Imported translations (automatically generated from CSV files)
 *.translation
@@ -14,3 +17,20 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# End of https://www.toptal.com/developers/gitignore/api/godot
+
+build
+buildtmp
+vest.log
+
+plantuml-*.jar
+
+# API docs
+docs/class-reference/*
+!docs/class-reference/.gitkeep
+apidocs/
+classdb.json
+
+# Only for local use
+sh/ensure-uids.sh

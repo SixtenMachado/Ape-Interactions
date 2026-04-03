@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://b2nbnsert06me"]
+
+[ext_resource type="Script" uid="uid://dfc6sptiy8y3p" path="res://ape/scripts/player-spawner.gd" id="1_x6d4h"]
+[ext_resource type="PackedScene" uid="uid://k3y73rql2u6e" path="res://ape/player.tscn" id="2_8ifxc"]
+[ext_resource type="PackedScene" uid="uid://badtpsxn5lago" path="res://examples/shared/ui/network-popup.tscn" id="3_ngyot"]
+[ext_resource type="Script" uid="uid://c3eokqjyc0bee" path="res://examples/shared/scripts/simple-time-display.gd" id="4_ypvrs"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rrbfu"]
+
+[sub_resource type="Sky" id="Sky_g0uhm"]
+sky_material = SubResource("ProceduralSkyMaterial_rrbfu")
+
+[sub_resource type="Environment" id="Environment_ef1wp"]
+background_mode = 2
+sky = SubResource("Sky_g0uhm")
+
+[sub_resource type="GDScript" id="GDScript_s4com"]
+script/source = "extends Label
+
+func _process(_dt):
+	if multiplayer.is_server():
+		text = \"Server\"
+	else:
+		text = \"Client\"
+"
+
+[node name="Game Scene" type="Node3D" unique_id=485616630]
+
+[node name="Map" type="Node" parent="." unique_id=254492577]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Map" unique_id=952568559]
+use_collision = true
+
+[node name="CSGFloor" type="CSGBox3D" parent="Map/CSGCombiner3D" unique_id=469892317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+size = Vector3(16, 0.5, 16)
+
+[node name="CSGWall" type="CSGBox3D" parent="Map/CSGCombiner3D" unique_id=409379340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 8)
+size = Vector3(16, 2, 1)
+
+[node name="CSGWall2" type="CSGBox3D" parent="Map/CSGCombiner3D" unique_id=731171381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -8)
+size = Vector3(16, 2, 1)
+
+[node name="CSGWall3" type="CSGBox3D" parent="Map/CSGCombiner3D" unique_id=211797923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 0)
+size = Vector3(1, 2, 16)
+
+[node name="CSGWall4" type="CSGBox3D" parent="Map/CSGCombiner3D" unique_id=536699011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 0)
+size = Vector3(1, 2, 16)
+
+[node name="CSGCorner" type="CSGCylinder3D" parent="Map/CSGCombiner3D" unique_id=1247010010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 8)
+
+[node name="CSGCorner2" type="CSGCylinder3D" parent="Map/CSGCombiner3D" unique_id=1723351827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -8)
+
+[node name="CSGCorner3" type="CSGCylinder3D" parent="Map/CSGCombiner3D" unique_id=805559773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -8)
+
+[node name="CSGCorner4" type="CSGCylinder3D" parent="Map/CSGCombiner3D" unique_id=83938788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 8)
+
+[node name="Environment" type="Node" parent="." unique_id=51693686]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=504060012]
+transform = Transform3D(0.5, 0.612372, -0.612372, 0, 0.707107, 0.707107, 0.866025, -0.353553, 0.353553, -6.7361, 8.77817, 3.88909)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="Environment" unique_id=1586257984]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 14.3564, 8.86602)
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=137861514]
+environment = SubResource("Environment_ef1wp")
+
+[node name="Network" type="Node" parent="." unique_id=1452676798]
+
+[node name="Player Spawner" type="Node" parent="Network" unique_id=105809630 node_paths=PackedStringArray("spawn_root")]
+script = ExtResource("1_x6d4h")
+player_scene = ExtResource("2_8ifxc")
+spawn_root = NodePath("../../Players")
+
+[node name="Players" type="Node" parent="." unique_id=1786668423]
+
+[node name="UI" type="Control" parent="." unique_id=893502530]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Network Popup" parent="UI" unique_id=1990213291 instance=ExtResource("3_ngyot")]
+layout_mode = 1
+current_tab = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=1957870916]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Time Display" type="Label" parent="UI/VBoxContainer" unique_id=1684504385]
+layout_mode = 2
+script = ExtResource("4_ypvrs")
+
+[node name="Label" type="Label" parent="UI/VBoxContainer" unique_id=1592727716]
+layout_mode = 2
+script = SubResource("GDScript_s4com")
