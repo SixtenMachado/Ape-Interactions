@@ -28,16 +28,53 @@ meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
-animation/import=true
+animation/import=false
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=0
+materials/extract=2
 materials/extract_format=0
 materials/extract_path=""
 _subresources={
+"materials": {
+"@MATERIAL:2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/@MATERIAL_2.tres",
+"use_external/path": "res://world/@MATERIAL_2.tres"
+},
+"@MATERIAL:3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/@MATERIAL_3.tres",
+"use_external/path": "res://world/@MATERIAL_3.tres"
+},
+"Ape": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/Ape.tres",
+"use_external/path": "uid://bp2yl8760kyvu"
+},
+"Bark": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/Bark.tres",
+"use_external/path": "uid://c7xln6ff4qds4"
+},
+"Ground_lichen": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/Ground_lichen.tres",
+"use_external/path": "uid://bd2tvvfhams7k"
+},
+"Ground_mulch": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/Ground_mulch.tres",
+"use_external/path": "uid://sjnuhmstx04s"
+},
+"Mouth": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/Mouth.tres",
+"use_external/path": "uid://boflc8l027r68"
+}
+},
 "nodes": {
 "PATH:Armature": {
 "import/skip_import": true
