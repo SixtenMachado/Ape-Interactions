@@ -10,6 +10,11 @@ class_name ApeBody
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting(&"physics/3d/default_gravity")
 
+func _enter_tree() -> void:
+	set_multiplayer_authority(name.to_int())
+	print(get_multiplayer_authority(), " is my multiplayer authority")
+	print(is_multiplayer_authority(), " am i multiplayer authority?")
+
 func _ready():
 	# Set spawn position
 	position = Vector3(0, 4, 0)
@@ -20,12 +25,15 @@ func _ready():
 		camera.current = true
 	
 
-func _rollback_tick(delta, _tick, _is_fresh):
+func _physics_process(delta: float) -> void:
+	if !is_multiplayer_authority():
+		return
+	
 	if is_on_floor():
 		# Ground-based jumping, for your ape pleasure
 		if input.jump:
 			velocity.y = jump_strength
-	else:
+	else: 
 		# Add the gravity.
 		velocity.y -= gravity * delta
 	
@@ -49,4 +57,5 @@ func _rollback_tick(delta, _tick, _is_fresh):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
+	
 	move_and_slide()

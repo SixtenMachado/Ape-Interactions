@@ -31,6 +31,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/vsync/vsync_mode=0
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/nodetunnel/plugin.cfg")
+
 [filesystem]
 
 import/fbx/enabled=false
@@ -39,6 +43,12 @@ import/fbx/enabled=false
 
 theme/default_font_multichannel_signed_distance_field=true
 theme/default_font_generate_mipmaps=true
+
+[importer_defaults]
+
+animation_library={
+&"blender/nodes/visible": 1
+}
 
 [input]
 
@@ -87,12 +97,6 @@ escape={
 3d_physics/layer_1="SOLID"
 3d_physics/layer_2="PLAYER"
 3d_physics/layer_5="PUSHABLE"
-
-[netfox]
-
-general/clear_settings=false
-time/tickrate=24
-extras/auto_tile_windows=true
 
 [physics]
 

@@ -12,7 +12,7 @@ var override_mouse: bool = false
 func _ready():
 	Input.mouse_mode = Input.MouseMode.MOUSE_MODE_CAPTURED
 
-func _gather():
+func _physics_process(delta: float) -> void:
 	if not is_multiplayer_authority():
 		return
 

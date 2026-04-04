@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://k3y73rql2u6e"]
 
-[ext_resource type="Script" uid="uid://lgmqlkuewowp" path="res://ape/scripts/player.gd" id="1_tksy4"]
+[ext_resource type="Script" uid="uid://lgmqlkuewowp" path="res://ape/scripts/ape_body.gd" id="1_tksy4"]
 [ext_resource type="PackedScene" uid="uid://3hwk02h2rtte" path="res://ape/visuals/ape.blend" id="2_wppca"]
 [ext_resource type="Script" uid="uid://c5ogdg5hcnibf" path="res://ape/scripts/camera_pivot.gd" id="3_54pyi"]
-[ext_resource type="Script" uid="uid://dr0wqty80sjn7" path="res://ape/scripts/player-input.gd" id="3_g8e4n"]
+[ext_resource type="Script" uid="uid://dr0wqty80sjn7" path="res://ape/scripts/ape_input.gd" id="3_g8e4n"]
 [ext_resource type="Script" uid="uid://qqt81cqdd6n8" path="res://ape/pushable_pusher.gd" id="7_n5wll"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t2650"]
@@ -11,6 +11,14 @@ height = 1.0
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_n5wll"]
 height = 1.0
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_wppca"]
+properties/0/path = NodePath(".:transform")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:velocity")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [node name="Player" type="CharacterBody3D" unique_id=1802699836 node_paths=PackedStringArray("input", "camera", "look")]
 collision_layer = 3
@@ -47,5 +55,8 @@ ape = NodePath("..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PushablePusher" unique_id=2006120402]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_n5wll")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=443644968]
+replication_config = SubResource("SceneReplicationConfig_wppca")
 
 [connection signal="body_entered" from="PushablePusher" to="PushablePusher" method="_on_body_entered"]
