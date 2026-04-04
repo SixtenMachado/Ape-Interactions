@@ -1,16 +1,19 @@
 [gd_scene format=3 uid="uid://k3y73rql2u6e"]
 
 [ext_resource type="Script" uid="uid://lgmqlkuewowp" path="res://ape/scripts/player.gd" id="1_tksy4"]
-[ext_resource type="Script" uid="uid://d350u8evihs1u" path="res://addons/netfox/rollback/rollback-synchronizer.gd" id="2_qf1b4"]
 [ext_resource type="PackedScene" uid="uid://3hwk02h2rtte" path="res://ape/visuals/ape.blend" id="2_wppca"]
 [ext_resource type="Script" uid="uid://c5ogdg5hcnibf" path="res://ape/scripts/camera_pivot.gd" id="3_54pyi"]
-[ext_resource type="Script" uid="uid://dour8fehaaugp" path="res://addons/netfox/tick-interpolator.gd" id="3_dkpv5"]
 [ext_resource type="Script" uid="uid://dr0wqty80sjn7" path="res://ape/scripts/player-input.gd" id="3_g8e4n"]
+[ext_resource type="Script" uid="uid://qqt81cqdd6n8" path="res://ape/pushable_pusher.gd" id="7_n5wll"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t2650"]
 height = 1.0
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_n5wll"]
+height = 1.0
+
 [node name="Player" type="CharacterBody3D" unique_id=1802699836 node_paths=PackedStringArray("input", "camera", "look")]
+collision_layer = 3
 script = ExtResource("1_tksy4")
 input = NodePath("Input")
 camera = NodePath("LookPivot/Camera3D")
@@ -31,17 +34,18 @@ input = NodePath("../Input")
 [node name="Camera3D" type="Camera3D" parent="LookPivot" unique_id=284677569]
 transform = Transform3D(1, 0, 0, 0, 0.9818364, 0.18972953, 0, -0.18972953, 0.9818364, 0.3505515, 0.77531683, 2.2339795)
 
-[node name="RollbackSynchronizer" type="Node" parent="." unique_id=886352839 node_paths=PackedStringArray("root")]
-script = ExtResource("2_qf1b4")
-root = NodePath("..")
-state_properties = Array[String]([":transform", ":velocity", "LookPivot:transform"])
-input_properties = Array[String](["Input:movement", "Input:jump", "Input:look_angle"])
-
-[node name="TickInterpolator" type="Node" parent="." unique_id=877752513 node_paths=PackedStringArray("root")]
-script = ExtResource("3_dkpv5")
-root = NodePath("..")
-properties = Array[String]([":transform", "LookPivot:transform"])
-
 [node name="Input" type="Node" parent="." unique_id=1747756723]
 script = ExtResource("3_g8e4n")
 mouse_sensitivity = 0.004
+
+[node name="PushablePusher" type="Area3D" parent="." unique_id=1087675309 node_paths=PackedStringArray("ape")]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("7_n5wll")
+ape = NodePath("..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PushablePusher" unique_id=2006120402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_n5wll")
+
+[connection signal="body_entered" from="PushablePusher" to="PushablePusher" method="_on_body_entered"]

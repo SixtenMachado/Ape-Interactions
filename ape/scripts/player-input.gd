@@ -10,7 +10,6 @@ var look_angle: Vector2 = Vector2.ZERO
 var override_mouse: bool = false
 
 func _ready():
-	NetworkTime.before_tick_loop.connect(_gather)
 	Input.mouse_mode = Input.MouseMode.MOUSE_MODE_CAPTURED
 
 func _gather():

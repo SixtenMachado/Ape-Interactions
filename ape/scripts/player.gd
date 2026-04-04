@@ -1,6 +1,7 @@
 extends CharacterBody3D
+class_name ApeBody
 
-@export var speed := 5.0
+@export var speed := 4.0
 @export var jump_strength := 5.0
 @export var input: PlayerInput
 @export var camera: Camera3D
@@ -48,9 +49,4 @@ func _rollback_tick(delta, _tick, _is_fresh):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
-
-	# move_and_slide assumes physics delta
-	# multiplying velocity by NetworkTime.physics_factor compensates for it
-	velocity *= NetworkTime.physics_factor
 	move_and_slide()
-	velocity /= NetworkTime.physics_factor

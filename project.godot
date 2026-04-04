@@ -21,26 +21,6 @@ config/features=PackedStringArray("4.6")
 run/max_fps=240
 config/icon="res://icon.png"
 
-[autoload]
-
-Async="*res://examples/shared/scripts/async.gd"
-Noray="*res://addons/netfox.noray/noray.gd"
-PacketHandshake="*res://addons/netfox.noray/packet-handshake.gd"
-WindowTiler="*res://addons/netfox.extras/window-tiler.gd"
-NetworkSimulator="*res://addons/netfox.extras/network-simulator.gd"
-NetworkTime="*res://addons/netfox/network-time.gd"
-NetworkTimeSynchronizer="*res://addons/netfox/network-time-synchronizer.gd"
-NetworkRollback="*res://addons/netfox/rollback/network-rollback.gd"
-NetworkEvents="*res://addons/netfox/network-events.gd"
-NetworkPerformance="*res://addons/netfox/network-performance.gd"
-RollbackSimulationServer="*res://addons/netfox/servers/rollback-simulation-server.gd"
-NetworkHistoryServer="*res://addons/netfox/servers/network-history-server.gd"
-NetworkSynchronizationServer="*res://addons/netfox/servers/network-synchronization-server.gd"
-NetworkIdentityServer="*res://addons/netfox/servers/network-identity-server.gd"
-NetworkCommandServer="*res://addons/netfox/servers/network-command-server.gd"
-RollbackLivenessServer="*res://addons/netfox/servers/rollback-liveness-server.gd"
-GameEvents="*uid://wpjf12noxvp5"
-
 [display]
 
 window/size/viewport_width=1280
@@ -50,10 +30,6 @@ window/size/window_height_override=540
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/vsync/vsync_mode=0
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/netfox.extras/plugin.cfg", "res://addons/netfox.internals/plugin.cfg", "res://addons/netfox.noray/plugin.cfg", "res://addons/netfox/plugin.cfg", "res://addons/nohub.gd/plugin.cfg", "res://addons/trimsock.gd/plugin.cfg", "res://addons/vest/plugin.cfg")
 
 [filesystem]
 
@@ -106,6 +82,12 @@ escape={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="SOLID"
+3d_physics/layer_2="PLAYER"
+3d_physics/layer_5="PUSHABLE"
+
 [netfox]
 
 general/clear_settings=false
@@ -114,14 +96,9 @@ extras/auto_tile_windows=true
 
 [physics]
 
-3d/physics_engine="Rapier3D"
+3d/physics_engine="Jolt Physics"
 
 [rendering]
 
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
 anti_aliasing/quality/screen_space_aa=1
-
-[vest]
-
-tests_root="res://test/"
-new_test_location=2

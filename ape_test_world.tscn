@@ -1,10 +1,6 @@
 [gd_scene format=3 uid="uid://b2nbnsert06me"]
 
 [ext_resource type="PackedScene" uid="uid://b1il363ijiarm" path="res://world/Clearing.blend" id="1_8ifxc"]
-[ext_resource type="Script" uid="uid://dfc6sptiy8y3p" path="res://ape/scripts/player-spawner.gd" id="1_x6d4h"]
-[ext_resource type="PackedScene" uid="uid://k3y73rql2u6e" path="res://ape/player.tscn" id="2_8ifxc"]
-[ext_resource type="PackedScene" uid="uid://badtpsxn5lago" path="res://examples/shared/ui/network-popup.tscn" id="3_ngyot"]
-[ext_resource type="Script" uid="uid://c3eokqjyc0bee" path="res://examples/shared/scripts/simple-time-display.gd" id="4_ypvrs"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ngyot"]
 data = PackedVector3Array(-0.5302, -0.0645, 0.4617, -4.9644, -0.5475, 6.8792, -7.6569, -0.2794, 1.4915999, -0.65029997, -0.3663, -4.7272997, -0.5302, -0.0645, 0.4617, -7.6569, -0.2794, 1.4915999, -0.65029997, -0.3663, -4.7272997, -7.6569, -0.2794, 1.4915999, -3.5423, -0.26, -2.9347, -0.5302, -0.0645, 0.4617, 0.0032, 0.0835, 6.6854, -4.9644, -0.5475, 6.8792, -4.9644, -0.5475, 6.8792, 0.0032, 0.0835, 6.6854, -1.9167999, 0.27109998, 8.2549, 1.1128, 1.487, 7.1549997, -1.9167999, 0.27109998, 8.2549, 0.0032, 0.0835, 6.6854, 1.1128, 1.487, 7.1549997, -0.7856, 1.1460999, 8.7631, -1.9167999, 0.27109998, 8.2549, -4.9644, -0.5475, 6.8792, -1.9167999, 0.27109998, 8.2549, -4.5752, 0.134, 9.4744, -4.9644, -0.5475, 6.8792, -4.5752, 0.134, 9.4744, -12.5317, -0.6181, 9.5476, -7.6569, -0.2794, 1.4915999, -4.9644, -0.5475, 6.8792, -12.5317, -0.6181, 9.5476, -0.7856, 1.1460999, 8.7631, -4.5752, 0.134, 9.4744, -1.9167999, 0.27109998, 8.2549, -0.7856, 1.1460999, 8.7631, -3.6494, 0.5038, 10.7388, -4.5752, 0.134, 9.4744, -3.6494, 0.5038, 10.7388, -12.5317, -0.6181, 9.5476, -4.5752, 0.134, 9.4744, -3.6494, 0.5038, 10.7388, -11.6058, -0.24839999, 10.811999, -12.5317, -0.6181, 9.5476, -14.2907, -0.68149996, -2.2489, -7.6569, -0.2794, 1.4915999, -12.5317, -0.6181, 9.5476, -14.2907, -0.68149996, -2.2489, -10.5714, -0.443, -4.6246, -7.6569, -0.2794, 1.4915999, -7.6569, -0.2794, 1.4915999, -10.5714, -0.443, -4.6246, -7.416, -0.4247, -5.6112, -3.4078999, -0.741, -8.1577, -7.416, -0.4247, -5.6112, -10.5714, -0.443, -4.6246, -14.2907, -0.68149996, -2.2489, -7.4111, -1.3805, -10.436399, -10.5714, -0.443, -4.6246, -3.4078999, -0.741, -8.1577, -10.5714, -0.443, -4.6246, -7.4111, -1.3805, -10.436399, -14.2907, -0.68149996, -2.2489, -11.3059, -2.4127998, -12.3375, -7.4111, -1.3805, -10.436399, -4.0151997, -2.1007, -15.7709, -7.4111, -1.3805, -10.436399, -11.3059, -2.4127998, -12.3375, -4.0151997, -2.1007, -15.7709, -2.628, -1.5453999, -11.0777, -7.4111, -1.3805, -10.436399, -3.4078999, -0.741, -8.1577, -7.4111, -1.3805, -10.436399, -2.628, -1.5453999, -11.0777, -3.4078999, -0.741, -8.1577, -2.628, -1.5453999, -11.0777, 0.65599996, -0.4254, -12.0973, -3.4078999, -0.741, -8.1577, 0.65599996, -0.4254, -12.0973, 0.155, -0.54179996, -9.8348, 1.6356, 1.9506999, 10.5557995, -3.6494, 0.5038, 10.7388, -0.7856, 1.1460999, 8.7631, 1.6356, 1.9506999, 10.5557995, -0.7856, 1.1460999, 8.7631, 1.2386999, 1.6925, 7.2011, 1.6356, 1.9506999, 10.5557995, -2.0432, 0.1837, 13.2638, -3.6494, 0.5038, 10.7388, -2.0432, 0.1837, 13.2638, -9.9997, -0.56839997, 13.337, -11.6058, -0.24839999, 10.811999, -2.0432, 0.1837, 13.2638, -11.6058, -0.24839999, 10.811999, -3.6494, 0.5038, 10.7388, 1.6356, 1.9506999, 10.5557995, 6.8752, 2.4893, 13.746599, -2.0432, 0.1837, 13.2638, 1.6356, 1.9506999, 10.5557995, 1.2386999, 1.6925, 7.2011, 5.7700996, 4.0459, 4.7033997, 5.7700996, 4.0459, 4.7033997, 6.8752, 2.4893, 13.746599, 1.6356, 1.9506999, 10.5557995, 3.9787998, 3.2038999, 3.7986, 5.7700996, 4.0459, 4.7033997, 1.2386999, 1.6925, 7.2011, 5.7700996, 4.0459, 4.7033997, 11.0097, 4.5845, 7.8943, 6.8752, 2.4893, 13.746599, 5.4740996, 3.5205, 1.486, 5.7700996, 4.0459, 4.7033997, 3.9787998, 3.2038999, 3.7986, 5.4740996, 3.5205, 1.486, 7.3499, 4.3185997, 2.4280999, 5.7700996, 4.0459, 4.7033997, 7.3499, 4.3185997, 2.4280999, 11.0097, 4.5845, 7.8943, 5.7700996, 4.0459, 4.7033997, 7.3499, 4.3185997, 2.4280999, 12.5896, 4.8573, 5.619, 11.0097, 4.5845, 7.8943, 5.4740996, 3.5205, 1.486, 4.7812, 1.5828999, -3.1394, 7.3499, 4.3185997, 2.4280999, 4.7812, 1.5828999, -3.1394, 8.6957, 2.7903, -2.0669, 7.3499, 4.3185997, 2.4280999, 8.6957, 2.7903, -2.0669, 12.5896, 4.8573, 5.619, 7.3499, 4.3185997, 2.4280999, 8.6957, 2.7903, -2.0669, 13.108299, 3.8894, 2.5958998, 12.5896, 4.8573, 5.619, 11.2877, 2.362, -8.1142, 13.108299, 3.8894, 2.5958998, 8.6957, 2.7903, -2.0669, 7.633, 0.5908, -8.8007, 11.2877, 2.362, -8.1142, 8.6957, 2.7903, -2.0669, 7.633, 0.5908, -8.8007, 8.6957, 2.7903, -2.0669, 4.7812, 1.5828999, -3.1394, 7.633, 0.5908, -8.8007, 9.3593, 0.43879998, -14.4135, 11.2877, 2.362, -8.1142, 5.0028996, 1.0964, -6.6995997, 7.633, 0.5908, -8.8007, 4.7812, 1.5828999, -3.1394, 6.0857997, 0.4174, -9.3364, 9.3593, 0.43879998, -14.4135, 7.633, 0.5908, -8.8007, 3.9025998, 0.5531, -7.1526, 7.633, 0.5908, -8.8007, 5.0028996, 1.0964, -6.6995997, 3.9025998, 0.5531, -7.1526, 6.0857997, 0.4174, -9.3364, 7.633, 0.5908, -8.8007, 6.0857997, 0.4174, -9.3364, 2.4415, -1.0769, -16.8681, 9.3593, 0.43879998, -14.4135, 0.155, -0.54179996, -9.8348, 6.0857997, 0.4174, -9.3364, 3.9025998, 0.5531, -7.1526, 0.155, -0.54179996, -9.8348, 0.65599996, -0.4254, -12.0973, 6.0857997, 0.4174, -9.3364, 6.0857997, 0.4174, -9.3364, 0.65599996, -0.4254, -12.0973, 2.4415, -1.0769, -16.8681, 0.65599996, -0.4254, -12.0973, -4.0151997, -2.1007, -15.7709, 2.4415, -1.0769, -16.8681, 0.65599996, -0.4254, -12.0973, -2.628, -1.5453999, -11.0777, -4.0151997, -2.1007, -15.7709, 4.849, 1.0734999, -3.3281, 3.9025998, 0.5531, -7.1526, 5.0028996, 1.0964, -6.6995997, 4.849, 1.0734999, -3.3281, 5.0028996, 1.0964, -6.6995997, 4.7812, 1.5828999, -3.1394, 5.5257998, 3.1669, 1.5732, 4.849, 1.0734999, -3.3281, 4.7812, 1.5828999, -3.1394, 5.5257998, 3.1669, 1.5732, 4.7812, 1.5828999, -3.1394, 5.4740996, 3.5205, 1.486, 5.5257998, 3.1669, 1.5732, 5.4740996, 3.5205, 1.486, 3.9787998, 3.2038999, 3.7986, 5.5257998, 3.1669, 1.5732, 3.9787998, 3.2038999, 3.7986, 4, 2.9705, 3.8699, 3.9787998, 3.2038999, 3.7986, 1.1128, 1.487, 7.1549997, 4, 2.9705, 3.8699, 3.9787998, 3.2038999, 3.7986, 1.2386999, 1.6925, 7.2011, 1.1128, 1.487, 7.1549997, 1.1128, 1.487, 7.1549997, 1.2386999, 1.6925, 7.2011, -0.7856, 1.1460999, 8.7631, 4.849, 1.0734999, -3.3281, 4.7813997, 0.0968, -3.6603, 3.9025998, 0.5531, -7.1526, 3.9025998, 0.5531, -7.1526, 4.7813997, 0.0968, -3.6603, 0.155, -0.54179996, -9.8348, 2.237, -0.4107, -2.8997998, 0.155, -0.54179996, -9.8348, 4.7813997, 0.0968, -3.6603, 2.237, -0.4107, -2.8997998, -0.65029997, -0.3663, -4.7272997, 0.155, -0.54179996, -9.8348, 5.2653, 0.0429, 0.714, 4.7813997, 0.0968, -3.6603, 4.849, 1.0734999, -3.3281, 5.2653, 0.0429, 0.714, 4.849, 1.0734999, -3.3281, 5.5257998, 3.1669, 1.5732, 5.2653, 0.0429, 0.714, 5.5257998, 3.1669, 1.5732, 4, 2.9705, 3.8699, 5.2653, 0.0429, 0.714, 4, 2.9705, 3.8699, 3.1706, 0.68549997, 3.9227, 5.2653, 0.0429, 0.714, 3.1706, 0.68549997, 3.9227, 0.0032, 0.0835, 6.6854, 5.2653, 0.0429, 0.714, 2.237, -0.4107, -2.8997998, 4.7813997, 0.0968, -3.6603, 5.2653, 0.0429, 0.714, 0.0032, 0.0835, 6.6854, -0.5302, -0.0645, 0.4617, 2.237, -0.4107, -2.8997998, 5.2653, 0.0429, 0.714, -0.5302, -0.0645, 0.4617, 2.237, -0.4107, -2.8997998, -0.5302, -0.0645, 0.4617, -0.65029997, -0.3663, -4.7272997, 0.0032, 0.0835, 6.6854, 3.1706, 0.68549997, 3.9227, 4, 2.9705, 3.8699, 4, 2.9705, 3.8699, 1.1128, 1.487, 7.1549997, 0.0032, 0.0835, 6.6854, -3.5423, -0.26, -2.9347, 0.155, -0.54179996, -9.8348, -0.65029997, -0.3663, -4.7272997, -3.5423, -0.26, -2.9347, -3.4078999, -0.741, -8.1577, 0.155, -0.54179996, -9.8348, -7.6569, -0.2794, 1.4915999, -3.4078999, -0.741, -8.1577, -3.5423, -0.26, -2.9347, -7.6569, -0.2794, 1.4915999, -7.416, -0.4247, -5.6112, -3.4078999, -0.741, -8.1577)
@@ -30,42 +26,59 @@ sky_material = SubResource("ProceduralSkyMaterial_rrbfu")
 background_mode = 2
 sky = SubResource("Sky_g0uhm")
 
-[sub_resource type="GDScript" id="GDScript_s4com"]
-script/source = "extends Label
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ngyot"]
+friction = 0.6
+bounce = 0.6
 
-func _process(_dt):
-	if multiplayer.is_server():
-		text = \"Server\"
-	else:
-		text = \"Client\"
-"
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ypvrs"]
+shading_mode = 2
+specular_mode = 2
+albedo_color = Color(0.6848113, 0.23875007, 0.3081591, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_517s6"]
+material = SubResource("StandardMaterial3D_ypvrs")
+radius = 0.3
+height = 0.6
+radial_segments = 7
+rings = 7
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0pddg"]
+radius = 0.3
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ngyot"]
+properties/0/path = NodePath(".:physics_state")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:transform")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [node name="Game Scene" type="Node3D" unique_id=485616630]
 
 [node name="Clearing" parent="." unique_id=1179134157 instance=ExtResource("1_8ifxc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20430517, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Clearing/Ground" parent_id_path=PackedInt32Array(1179134157, 503530988) index="0" unique_id=2112266855]
+[node name="StaticBody3D" type="StaticBody3D" parent="Clearing/Ground" parent_id_path=PackedInt32Array(1179134157, 1096746820) index="0" unique_id=2112266855]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Clearing/Ground/StaticBody3D" unique_id=1333842615]
 shape = SubResource("ConcavePolygonShape3D_ngyot")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Clearing/Stone" parent_id_path=PackedInt32Array(1179134157, 1082786999) index="0" unique_id=1526043219]
+[node name="StaticBody3D" type="StaticBody3D" parent="Clearing/Stone" parent_id_path=PackedInt32Array(1179134157, 1257054264) index="0" unique_id=1526043219]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Clearing/Stone/StaticBody3D" unique_id=2146186176]
 shape = SubResource("ConcavePolygonShape3D_ypvrs")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Clearing/Greybox" parent_id_path=PackedInt32Array(1179134157, 853435219) index="0" unique_id=166315169]
+[node name="StaticBody3D" type="StaticBody3D" parent="Clearing/Greybox" parent_id_path=PackedInt32Array(1179134157, 1784479035) index="0" unique_id=166315169]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Clearing/Greybox/StaticBody3D" unique_id=1839658776]
 shape = SubResource("ConcavePolygonShape3D_517s6")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Clearing/BigTree" parent_id_path=PackedInt32Array(1179134157, 2007640746) index="0" unique_id=2101742283]
+[node name="StaticBody3D" type="StaticBody3D" parent="Clearing/BigTree" parent_id_path=PackedInt32Array(1179134157, 1869341836) index="0" unique_id=2101742283]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Clearing/BigTree/StaticBody3D" unique_id=1589474444]
 shape = SubResource("ConcavePolygonShape3D_0pddg")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Clearing/Log" parent_id_path=PackedInt32Array(1179134157, 1880897631) index="0" unique_id=87222099]
+[node name="StaticBody3D" type="StaticBody3D" parent="Clearing/Log" parent_id_path=PackedInt32Array(1179134157, 206372678) index="0" unique_id=87222099]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Clearing/Log/StaticBody3D" unique_id=1118034861]
 shape = SubResource("ConcavePolygonShape3D_qgm3u")
@@ -83,38 +96,22 @@ current = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=137861514]
 environment = SubResource("Environment_ef1wp")
 
-[node name="Network" type="Node" parent="." unique_id=1452676798]
-
-[node name="Player Spawner" type="Node" parent="Network" unique_id=105809630 node_paths=PackedStringArray("spawn_root")]
-script = ExtResource("1_x6d4h")
-player_scene = ExtResource("2_8ifxc")
-spawn_root = NodePath("../../Players")
-
 [node name="Players" type="Node" parent="." unique_id=1786668423]
 
-[node name="UI" type="Control" parent="." unique_id=893502530]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Ball" type="RigidBody3D" parent="." unique_id=1398268064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3503156, 0)
+collision_layer = 16
+physics_material_override = SubResource("PhysicsMaterial_ngyot")
+linear_damp = 1.255
+angular_damp = 1.235
 
-[node name="Network Popup" parent="UI" unique_id=1990213291 instance=ExtResource("3_ngyot")]
-layout_mode = 1
-current_tab = 0
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ball" unique_id=275724537]
+mesh = SubResource("SphereMesh_517s6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=1957870916]
-layout_mode = 1
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ball" unique_id=82928144]
+shape = SubResource("SphereShape3D_0pddg")
 
-[node name="Time Display" type="Label" parent="UI/VBoxContainer" unique_id=1684504385]
-layout_mode = 2
-script = ExtResource("4_ypvrs")
-
-[node name="Label" type="Label" parent="UI/VBoxContainer" unique_id=1592727716]
-layout_mode = 2
-script = SubResource("GDScript_s4com")
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="Ball" unique_id=1222735485]
+replication_config = SubResource("SceneReplicationConfig_ngyot")
 
 [editable path="Clearing"]
