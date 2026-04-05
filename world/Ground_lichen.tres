@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://bd2tvvfhams7k"]
-
-[ext_resource type="Texture2D" uid="uid://dsw01xsvm3hup" path="res://world/ground_lichen.png" id="1_73hgw"]
-
-[resource]
-resource_name = "Ground_lichen"
-cull_mode = 2
-albedo_texture = ExtResource("1_73hgw")
-texture_filter = 2

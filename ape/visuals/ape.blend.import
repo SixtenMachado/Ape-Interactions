@@ -34,10 +34,32 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=2
+materials/extract=0
 materials/extract_format=2
 materials/extract_path=""
 _subresources={
+"materials": {
+"Ape": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://ape/visuals/ape_material.tres",
+"use_external/path": "uid://bewu5fua6vxqt"
+},
+"Ape.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://ape/visuals/Ape.001.material",
+"use_external/path": "uid://cwocsbllwb13"
+},
+"Mouth": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://ape/visuals/Mouth.material",
+"use_external/path": "uid://rkjdpmyntuhl"
+},
+"Mouth.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://ape/visuals/Mouth.001.material",
+"use_external/path": "uid://caddhi2gss6ej"
+}
+},
 "nodes": {
 "PATH:Armature_Orang": {
 "import/skip_import": true

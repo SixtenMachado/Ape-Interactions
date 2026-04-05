@@ -1,9 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://c7xln6ff4qds4"]
-
-[ext_resource type="Texture2D" uid="uid://b2t8155qgpnbt" path="res://world/bark.png" id="1_cftsm"]
-
-[resource]
-resource_name = "Bark"
-cull_mode = 2
-albedo_texture = ExtResource("1_cftsm")
-texture_filter = 2

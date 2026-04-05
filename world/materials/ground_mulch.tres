@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cbka6mnoyxqru"]
+
+[ext_resource type="Shader" uid="uid://dw3quh7owpey5" path="res://color_ramp.gdshader" id="1_njok4"]
+[ext_resource type="Texture2D" uid="uid://c0vqwa11xdbcx" path="res://world/materials/ground_mulch.png" id="2_njok4"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_njok4")
+shader_parameter/input_texture = ExtResource("2_njok4")
+shader_parameter/red_color = Color(0.34453517, 0.26263517, 0.12542617, 1)
+shader_parameter/black_color = Color(0.24133599, 0.2206263, 0.12898296, 1)
+shader_parameter/uv_mult = Vector2(1, 1)

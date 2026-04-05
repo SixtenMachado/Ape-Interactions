@@ -19,28 +19,74 @@ properties/0/replication_mode = 1
 properties/1/path = NodePath(".:velocity")
 properties/1/spawn = true
 properties/1/replication_mode = 1
+properties/2/path = NodePath("ape:transform")
+properties/2/spawn = true
+properties/2/replication_mode = 1
 
-[node name="Player" type="CharacterBody3D" unique_id=1802699836 node_paths=PackedStringArray("input", "camera", "look")]
+[node name="Player" type="CharacterBody3D" unique_id=1802699836 node_paths=PackedStringArray("input", "camera", "look", "model")]
 collision_layer = 3
 script = ExtResource("1_tksy4")
 input = NodePath("Input")
 camera = NodePath("LookPivot/Camera3D")
 look = NodePath("LookPivot")
+model = NodePath("ape")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=971283472]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("CapsuleShape3D_t2650")
 
-[node name="ape" parent="." unique_id=1829828411 instance=ExtResource("2_wppca")]
+[node name="ape" parent="." unique_id=820509596 instance=ExtResource("2_wppca")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="LookPivot" type="Node3D" parent="." unique_id=1002062123 node_paths=PackedStringArray("input")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9394461, -0.5838678)
-script = ExtResource("3_54pyi")
-input = NodePath("../Input")
+[node name="Head" type="BoneAttachment3D" parent="ape/Armature/Skeleton3D" parent_id_path=PackedInt32Array(820509596, 1044605629) index="1" unique_id=1092656707]
+transform = Transform3D(1, -5.057017e-09, 1.7697388e-10, -5.510298e-10, -0.14359634, -0.98963547, 5.030021e-09, 0.98963594, -0.14359684, -8.3723484e-10, 0.89152676, 0.46719888)
+bone_name = "Head"
+bone_idx = 13
 
-[node name="Camera3D" type="Camera3D" parent="LookPivot" unique_id=284677569]
-transform = Transform3D(1, 0, 0, 0, 0.9818364, 0.18972953, 0, -0.18972953, 0.9818364, 0.3505515, 0.77531683, 2.2339795)
+[node name="HeadLookAt" type="LookAtModifier3D" parent="ape/Armature/Skeleton3D" parent_id_path=PackedInt32Array(820509596, 1044605629) index="2" unique_id=1610885507]
+influence = 0.5
+target_node = NodePath("../../../../LookPivot/LookAtMe")
+bone_name = "Head"
+bone = 13
+forward_axis = 2
+primary_rotation_axis = 0
+relative = true
+use_angle_limitation = true
+symmetry_limitation = true
+primary_limit_angle = 0.87266463
+primary_damp_threshold = 1.0
+secondary_limit_angle = 0.87266463
+secondary_damp_threshold = 1.0
+
+[node name="NeckLookAt" type="LookAtModifier3D" parent="ape/Armature/Skeleton3D" parent_id_path=PackedInt32Array(820509596, 1044605629) index="3" unique_id=415999757]
+influence = 0.25
+target_node = NodePath("../../../../LookPivot/LookAtMe")
+bone_name = "Neck"
+bone = 12
+forward_axis = 2
+primary_rotation_axis = 0
+relative = true
+use_angle_limitation = true
+symmetry_limitation = true
+primary_limit_angle = 0.87266463
+primary_damp_threshold = 1.0
+secondary_limit_angle = 0.87266463
+secondary_damp_threshold = 1.0
+
+[node name="SpineLookAt" type="LookAtModifier3D" parent="ape/Armature/Skeleton3D" parent_id_path=PackedInt32Array(820509596, 1044605629) index="4" unique_id=360982078]
+influence = 0.25
+target_node = NodePath("../../../../LookPivot/LookAtMe")
+bone_name = "Spine"
+bone = 11
+forward_axis = 2
+primary_rotation_axis = 0
+relative = true
+use_angle_limitation = true
+symmetry_limitation = true
+primary_limit_angle = 0.87266463
+primary_damp_threshold = 1.0
+secondary_limit_angle = 0.87266463
+secondary_damp_threshold = 1.0
 
 [node name="Input" type="Node" parent="." unique_id=1747756723]
 script = ExtResource("3_g8e4n")
@@ -59,4 +105,17 @@ shape = SubResource("CylinderShape3D_n5wll")
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=443644968]
 replication_config = SubResource("SceneReplicationConfig_wppca")
 
+[node name="LookPivot" type="Node3D" parent="." unique_id=1002062123 node_paths=PackedStringArray("input")]
+transform = Transform3D(1, 0, 0, 0, 1.0000006, 0, 0, 0, 0.9999994, 0, 1.234893, 0)
+script = ExtResource("3_54pyi")
+input = NodePath("../Input")
+
+[node name="Camera3D" type="Camera3D" parent="LookPivot" unique_id=284677569]
+transform = Transform3D(1, 0, 0, 0, 0.9818363, 0.18972951, 0, -0.18972951, 0.9818363, 0, 0.775, 2.234)
+
+[node name="LookAtMe" type="Marker3D" parent="LookPivot" unique_id=1233610402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5263352e-07, -0.42456383, -1.8365661)
+
 [connection signal="body_entered" from="PushablePusher" to="PushablePusher" method="_on_body_entered"]
+
+[editable path="ape"]
