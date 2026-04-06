@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 			ape.set_collision_layer_value(1, false)
 			ragdolling = true
 	else:
-		if ragdolling:
+		if ragdolling and is_multiplayer_authority():
 				ape.global_position = $"Physical Bone Pelvis".global_position
 		if influence == 0:
 			physical_bones_stop_simulation()

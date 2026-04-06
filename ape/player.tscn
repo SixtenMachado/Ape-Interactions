@@ -235,10 +235,10 @@ transform = Transform3D(1, 1.7763568e-15, -7.1054274e-15, 0, 0, 1, 0, -1, 0, -1.
 shape = SubResource("CapsuleShape3D_wppca")
 
 [node name="Physical Bone Spine" type="PhysicalBone3D" parent="ape/Armature/Skeleton3D/PhysicalBoneSimulator3D" unique_id=1598314396]
-transform = Transform3D(0.98712367, 0.07589926, -0.14080542, -0.15995151, 0.4768421, -0.86431307, 0.0015412294, 0.87570596, 0.48284233, 0.03388863, 0.8506249, -0.12364948)
+transform = Transform3D(0.98712367, 0.075899266, -0.14080542, -0.15995152, 0.4768421, -0.86431307, 0.0015412314, 0.87570596, 0.48284233, 0.03388863, 0.8506249, -0.12364948)
 collision_layer = 4
 joint_type = 2
-body_offset = Transform3D(1, -0.00018128625, -9.444263e-05, 0.0001812122, 1, -1.9967556e-05, 9.4674935e-05, 1.9520521e-05, 1.0000007, 0, 0, 0)
+body_offset = Transform3D(1, -0.00018128625, -9.444263e-05, 0.00018121384, 1, -1.9967556e-05, 9.4675925e-05, 1.9520521e-05, 1.0000007, 0, 0, 0)
 friction = 0.4
 bounce = 0.2
 can_sleep = false
