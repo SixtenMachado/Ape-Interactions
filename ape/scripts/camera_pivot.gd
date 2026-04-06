@@ -1,8 +1,13 @@
 extends Node3D
 
 @export var input: PlayerInput
+@export var attach_bone: Node3D
 
 func _physics_process(delta: float) -> void:
+	global_position = attach_bone.global_position
+	#if state.current_state == state.State.RAGDOLL:
+		
+	
 	#DO BASIS SHIT
 	#Handle look left and right
 	#rotate(Vector3(0, 1, 0), input.look_angle.x)
@@ -12,7 +17,7 @@ func _physics_process(delta: float) -> void:
 	## Handle look up and down
 	#rotate(Vector3(1, 0, 0), input.look_angle.y)
 
-	rotation.x = clamp(rotation.x, -0.57, 1.57)
+	rotation.x = clamp(rotation.x, -0.57, 0.57)
 	rotation.z = 0
 #	TODO: put looking code here, then make player rotate to face camera when moving
 	

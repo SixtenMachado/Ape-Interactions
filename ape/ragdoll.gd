@@ -16,6 +16,7 @@ var ragdolling : bool = false
 
 func _physics_process(delta: float) -> void:
 	if input.ragdoll or state.current_state == state.State.RAGDOLL:
+		#
 		if not ragdolling:
 			physical_bones_stop_simulation()
 			physical_bones_start_simulation()
@@ -23,9 +24,11 @@ func _physics_process(delta: float) -> void:
 			ape.set_collision_layer_value(1, false)
 			ragdolling = true
 	else:
+		if ragdolling:
+				ape.global_position = $"Physical Bone Pelvis".global_position
 		if influence == 0:
 			physical_bones_stop_simulation()
 		else:
 			influence = clampf(influence - (delta * get_up_speed), 0, 1)
-		ape.set_collision_layer_value(1, true)
-		ragdolling = false
+			ape.set_collision_layer_value(1, true)
+			ragdolling = false
