@@ -14,8 +14,7 @@ func _ready():
 	Input.mouse_mode = Input.MouseMode.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta: float) -> void:
-	if not is_multiplayer_authority():
-		return
+	if !is_multiplayer_authority(): return
 
 	var move_x = Input.get_axis("move_left", "move_right")
 	var move_z = Input.get_axis("move_forward", "move_back")

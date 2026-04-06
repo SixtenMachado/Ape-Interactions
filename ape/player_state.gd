@@ -6,11 +6,12 @@ enum State{
 	RAGDOLL
 }
 
-var current_state := State.NORMAL
+@export var current_state := State.NORMAL
 var ragdoll_current_time : float = 0
 var ragdoll_getup_time : float = 5.0
 
 func _process(delta: float) -> void:
+	if !is_multiplayer_authority(): return
 	if current_state == State.RAGDOLL:
 		ragdoll_current_time += delta
 		if ragdoll_current_time > ragdoll_getup_time:

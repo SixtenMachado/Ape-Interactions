@@ -9,6 +9,9 @@ class_name ApeBody
 @export var model: Node3D
 @export var state: PlayerState
 
+@export var bone_data : Array[Vector3]
+@export var bone_transforms : Array[Transform3D]
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting(&"physics/3d/default_gravity")
 
