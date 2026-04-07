@@ -4,6 +4,7 @@ class_name PlayerInput
 var movement: Vector3 = Vector3.ZERO
 var jump : bool = false
 var ragdoll : bool = false
+var hand_right : bool = false
 
 @export var mouse_sensitivity: float = 1.0
 var mouse_rotation: Vector2 = Vector2.ZERO
@@ -21,9 +22,8 @@ func _physics_process(delta: float) -> void:
 	movement = Vector3(move_x, 0, move_z)
 	
 	jump = Input.is_action_pressed("jump")
-	
 	ragdoll = Input.is_action_pressed("ragdoll")
-	
+	hand_right = Input.is_action_pressed("hand_right")
 	# don't move the camera when the mouse is "released" with ESC
 	if override_mouse:
 		look_angle = Vector2.ZERO

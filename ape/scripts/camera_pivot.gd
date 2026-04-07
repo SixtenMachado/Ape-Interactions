@@ -8,8 +8,10 @@ class_name LookPivot
 var camera_smoothing : bool = false
 
 func _physics_process(delta: float) -> void:
-	global_position = lerp(global_position, attach_bone.global_position, 1 - ragdoll.influence)
-
+	if ragdoll.getting_up:
+		global_position = lerp(global_position, attach_bone.global_position, 1 - ragdoll.influence)
+	else: global_position = attach_bone.global_position
+	
 	rotation.y += (input.look_angle.x)
 	rotation.x += (input.look_angle.y)
 
