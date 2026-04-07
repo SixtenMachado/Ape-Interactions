@@ -6,11 +6,10 @@ var peer: NodeTunnelPeer
 
 
 func _ready() -> void:
-	
-	$UI/Control/ConnectionControls/Host.pressed.connect(_on_host_pressed)
-	$UI/Control/ConnectionControls/Join.pressed.connect(_on_join_pressed)
-	$UI/Control/LeaveRoom.pressed.connect(_on_leave_room_pressed)
-	
+	%Host.pressed.connect(_on_host_pressed)
+	%Join.pressed.connect(_on_join_pressed)
+	%LeaveRoom.pressed.connect(_on_leave_room_pressed)
+	%Host.grab_focus()
 	# Create the NodeTunnelPeer
 	peer = NodeTunnelPeer.new()
 	#peer.debug_enabled = true # Enable debugging if needed
@@ -96,7 +95,7 @@ func _remove_player(peer_id: int) -> void:
 
 func _on_leave_room_pressed() -> void:
 	peer.leave_room()
-
+	%Host.grab_focus()
 func _cleanup_room() -> void:
 	%LeaveRoom.hide()
 	%ConnectionControls.show()
