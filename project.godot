@@ -21,6 +21,17 @@ config/features=PackedStringArray("4.6")
 run/max_fps=240
 config/icon="res://icon.png"
 
+[audio]
+
+buses/default_bus_layout="uid://h1soica03xkf"
+
+[autoload]
+
+Gamestate="*uid://dt0x57ryl2uv8"
+GameplayInterface="*uid://8x4xud10ag"
+PauseMenu="*uid://cfudmw5dkqrsm"
+ScreenTransition="*uid://5vtdohl77nf"
+
 [display]
 
 window/size/window_width_override=540
@@ -92,6 +103,11 @@ escape={
 ragdoll={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":76,"key_label":0,"unicode":108,"location":0,"echo":false,"script":null)
+]
+}
+pause={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
 

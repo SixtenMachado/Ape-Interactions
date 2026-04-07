@@ -140,6 +140,63 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 
+[node name="UI" type="CanvasLayer" parent="." unique_id=498216998]
+
+[node name="Control" type="Control" parent="UI" unique_id=410343068]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ConnectionControls" type="VBoxContainer" parent="UI/Control" unique_id=1100988929]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.5
+offset_top = -64.0
+offset_right = 80.5
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Host" type="Button" parent="UI/Control/ConnectionControls" unique_id=881657031]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Host"
+
+[node name="HSeparator" type="HSeparator" parent="UI/Control/ConnectionControls" unique_id=1031483739]
+layout_mode = 2
+
+[node name="HostID" type="LineEdit" parent="UI/Control/ConnectionControls" unique_id=1431446032]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Host ID"
+
+[node name="Join" type="Button" parent="UI/Control/ConnectionControls" unique_id=1631033781]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Join"
+
+[node name="IDLabel" type="Label" parent="UI/Control/ConnectionControls" unique_id=1272953290]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Online ID: ABCD1234"
+
+[node name="LeaveRoom" type="Button" parent="UI/Control" unique_id=1948114138]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Leave Room"
+
 [node name="SubViewport" type="SubViewport" parent="." unique_id=625190499]
 handle_input_locally = false
 size = Vector2i(1152, 648)
@@ -151,32 +208,32 @@ script = ExtResource("1_sdddr")
 [node name="Clearing" parent="SubViewport/GameScene" unique_id=1507693151 instance=ExtResource("1_8ifxc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20430517, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/Ground" parent_id_path=PackedInt32Array(1507693151, 301563215) index="0" unique_id=2112266855]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/Ground" parent_id_path=PackedInt32Array(1507693151, 1597926460) index="0" unique_id=2112266855]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/Clearing/Ground/StaticBody3D" unique_id=1237914683]
 shape = SubResource("ConcavePolygonShape3D_x6d4h")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/Stone" parent_id_path=PackedInt32Array(1507693151, 41441894) index="0" unique_id=1526043219]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/Stone" parent_id_path=PackedInt32Array(1507693151, 1075613951) index="0" unique_id=1526043219]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/Clearing/Stone/StaticBody3D" unique_id=2146186176]
 shape = SubResource("ConcavePolygonShape3D_ypvrs")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/Greybox" parent_id_path=PackedInt32Array(1507693151, 1669438328) index="0" unique_id=166315169]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/Greybox" parent_id_path=PackedInt32Array(1507693151, 2020699837) index="0" unique_id=166315169]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/Clearing/Greybox/StaticBody3D" unique_id=1839658776]
 shape = SubResource("ConcavePolygonShape3D_517s6")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/BigTree" parent_id_path=PackedInt32Array(1507693151, 455340775) index="0" unique_id=2101742283]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/BigTree" parent_id_path=PackedInt32Array(1507693151, 977577439) index="0" unique_id=2101742283]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/Clearing/BigTree/StaticBody3D" unique_id=758000092]
 shape = SubResource("ConcavePolygonShape3D_sdddr")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/Log" parent_id_path=PackedInt32Array(1507693151, 1730838448) index="0" unique_id=87222099]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/Log" parent_id_path=PackedInt32Array(1507693151, 1627280154) index="0" unique_id=87222099]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/Clearing/Log/StaticBody3D" unique_id=1118034861]
 shape = SubResource("ConcavePolygonShape3D_qgm3u")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/FruitTree" parent_id_path=PackedInt32Array(1507693151, 488353076) index="0" unique_id=253225953]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/Clearing/FruitTree" parent_id_path=PackedInt32Array(1507693151, 1291511050) index="0" unique_id=253225953]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/Clearing/FruitTree/StaticBody3D" unique_id=210835840]
 shape = SubResource("ConcavePolygonShape3D_8ifxc")
@@ -238,59 +295,5 @@ script = ExtResource("2_h5c11")
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="SubViewport/GameScene" unique_id=1932905706]
 _spawnable_scenes = PackedStringArray("uid://k3y73rql2u6e")
 spawn_path = NodePath("..")
-
-[node name="UI" type="CanvasLayer" parent="SubViewport/GameScene" unique_id=498216998]
-
-[node name="Control" type="Control" parent="SubViewport/GameScene/UI" unique_id=410343068]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ConnectionControls" type="VBoxContainer" parent="SubViewport/GameScene/UI/Control" unique_id=1100988929]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -80.5
-offset_top = -64.0
-offset_right = 80.5
-offset_bottom = 64.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Host" type="Button" parent="SubViewport/GameScene/UI/Control/ConnectionControls" unique_id=881657031]
-layout_mode = 2
-text = "Host"
-
-[node name="HSeparator" type="HSeparator" parent="SubViewport/GameScene/UI/Control/ConnectionControls" unique_id=1031483739]
-layout_mode = 2
-
-[node name="HostID" type="LineEdit" parent="SubViewport/GameScene/UI/Control/ConnectionControls" unique_id=1431446032]
-unique_name_in_owner = true
-layout_mode = 2
-placeholder_text = "Host ID"
-
-[node name="Join" type="Button" parent="SubViewport/GameScene/UI/Control/ConnectionControls" unique_id=1631033781]
-layout_mode = 2
-text = "Join"
-
-[node name="IDLabel" type="Label" parent="SubViewport/GameScene/UI/Control/ConnectionControls" unique_id=1272953290]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Online ID: ABCD1234"
-
-[node name="LeaveRoom" type="Button" parent="SubViewport/GameScene/UI/Control" unique_id=1948114138]
-unique_name_in_owner = true
-visible = false
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Leave Room"
 
 [editable path="SubViewport/GameScene/Clearing"]
