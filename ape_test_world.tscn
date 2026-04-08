@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://yvg8mqud4glq" path="res://tunnel_test.gd" id="2_h5c11"]
 [ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="2_ngyot"]
 [ext_resource type="Material" uid="uid://c8xx16d4aq3im" path="res://world/materials/bark_smooth.tres" id="3_x6d4h"]
+[ext_resource type="PackedScene" uid="uid://b1cpav6kc2w85" path="res://props/ball.tscn" id="6_ypvrs"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pddg"]
 shader = ExtResource("1_ngyot")
@@ -88,39 +89,6 @@ volumetric_fog_detail_spread = 3.1383345
 adjustment_enabled = true
 adjustment_contrast = 1.2
 adjustment_saturation = 1.14
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ngyot"]
-friction = 0.6
-bounce = 0.6
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ypvrs"]
-shading_mode = 2
-specular_mode = 2
-albedo_color = Color(0.6848113, 0.23875007, 0.3081591, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_517s6"]
-material = SubResource("StandardMaterial3D_ypvrs")
-radius = 0.3
-height = 0.6
-radial_segments = 7
-rings = 7
-
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ngyot"]
-properties/0/path = NodePath(".:transform")
-properties/0/spawn = true
-properties/0/replication_mode = 1
-properties/1/path = NodePath(".:angular_velocity")
-properties/1/spawn = true
-properties/1/replication_mode = 1
-properties/2/path = NodePath(".:linear_velocity")
-properties/2/spawn = true
-properties/2/replication_mode = 1
-properties/3/path = NodePath(".:process_mode")
-properties/3/spawn = true
-properties/3/replication_mode = 1
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_sdddr"]
-radius = 0.3
 
 [node name="Control" type="SubViewportContainer" unique_id=1198256024]
 material = SubResource("ShaderMaterial_0pddg")
@@ -264,21 +232,8 @@ environment = SubResource("Environment_ef1wp")
 
 [node name="Players" type="Node" parent="SubViewport/GameScene" unique_id=1786668423]
 
-[node name="Ball" type="RigidBody3D" parent="SubViewport/GameScene" unique_id=1398268064]
+[node name="Ball" parent="SubViewport/GameScene" unique_id=421617764 instance=ExtResource("6_ypvrs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3503156, 0)
-collision_layer = 16
-physics_material_override = SubResource("PhysicsMaterial_ngyot")
-linear_damp = 1.255
-angular_damp = 1.235
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewport/GameScene/Ball" unique_id=275724537]
-mesh = SubResource("SphereMesh_517s6")
-
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="SubViewport/GameScene/Ball" unique_id=1222735485]
-replication_config = SubResource("SceneReplicationConfig_ngyot")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/Ball" unique_id=635191040]
-shape = SubResource("SphereShape3D_sdddr")
 
 [node name="Node" type="Node" parent="SubViewport/GameScene" unique_id=1040372971]
 script = ExtResource("2_h5c11")

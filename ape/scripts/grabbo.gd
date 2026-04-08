@@ -7,6 +7,7 @@ extends Node
 @export var input : PlayerInput
 @export var ape : ApeBody
 @export var hitbox : RigidBodyHitbox
+@export var authority_manager : AuthorityManager
 
 @export_category("Cool Ape Stats")
 @export var throw_power : float = 10.0
@@ -15,7 +16,7 @@ extends Node
 @export var ik_speed : float = 15
 
 @export_category("Network shit (don't set)")
-@export var held_item_right : RigidBody3D
+@export var held_item_right : NetworkRigidBody
 
 func lerp_ik_influence(delta: float, positive: bool = true, clamp_low : float = 0, clamp_high: float = 1):
 	ik_right.influence = clampf(ik_right.influence + (delta * (ik_speed * ((float(positive) * 2) - 1))), 0.3, 1)
@@ -30,16 +31,14 @@ func _physics_process(delta: float) -> void:
 		if not input.hand_right:
 			hitbox.ignore_thrown_rigid_body(held_item_right)
 			held_item_right.process_mode = Node.PROCESS_MODE_INHERIT
-			throw()
-			#TODO: figure out how to RPC this shit
-			held_item_right.set_multiplayer_authority(1)
-			held_item_right = null
+			throw.call_deferred()
+			authority_manager.release_authority.rpc_id(1, str(held_item_right.get_path()))
 	
 	elif input.hand_right:
 		lerp_ik_influence(delta)
-		if raycast.get_collider() is RigidBody3D:
+		if raycast.get_collider() is NetworkRigidBody:
 			held_item_right = raycast.get_collider()
-			held_item_right.set_multiplayer_authority(ape.get_multiplayer_authority())
+			authority_manager.claim_authority.rpc_id(1, str(held_item_right.get_path()))
 			held_item_right.process_mode = Node.PROCESS_MODE_DISABLED
 	
 	else:
@@ -48,9 +47,8 @@ func _physics_process(delta: float) -> void:
 	ik_right.active = bool(ik_right.influence != 0)
 
 func throw():
-	held_item_right.apply_central_impulse((-raycast.global_basis.z + (Vector3.UP * 0.7)).normalized() * 10 + ape.velocity)
+	held_item_right.apply_impulse_rpc.rpc_id(1, (-raycast.global_basis.z + (Vector3.UP * 0.7)).normalized() * 10 + ape.velocity)
+	held_item_right = null
 
-
-func set_held_item_location(item:RigidBody3D, transform:Transform3D):
-	item.global_position = transform.origin
-	item.global_basis = transform.basis
+func set_held_item_location(item:NetworkRigidBody, grab_transform:Transform3D):
+	item.attach_to_grabber.rpc(grab_transform)
