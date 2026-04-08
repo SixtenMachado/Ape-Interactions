@@ -54,14 +54,14 @@ func _physics_process(delta: float) -> void:
 	if adjusting_rotation:
 		adjusting_rotation = rotation_delta > 0.1
 	else:
-		adjusting_rotation = rotation_delta > 1.5
+		adjusting_rotation = rotation_delta > 2.4
 		
 	if velocity.length() > 0 or (input.hand_right and adjusting_rotation):
 		var rotation_speed
 		if is_on_floor(): rotation_speed = ground_rotation_speed
 		else: rotation_speed = air_rotation_speed
 		
-		model.rotation.y = lerp_angle(model.rotation.y, adjusted_look_rotation, delta * rotation_speed * clampf(velocity.length(), 1, 2)* (rotation_delta/2))
+		model.rotation.y = lerp_angle(model.rotation.y, adjusted_look_rotation, delta * rotation_speed * clampf(velocity.length(), 1, 2) * clampf(rotation_delta, 0.5, 1))
 	
 	
 	# Apply movement
