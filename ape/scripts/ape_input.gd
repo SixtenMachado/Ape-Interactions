@@ -24,6 +24,7 @@ func _physics_process(delta: float) -> void:
 	jump = Input.is_action_pressed("jump")
 	ragdoll = Input.is_action_pressed("ragdoll")
 	hand_right = Input.is_action_pressed("hand_right")
+	
 	# don't move the camera when the mouse is "released" with ESC
 	if override_mouse:
 		look_angle = Vector2.ZERO
@@ -39,7 +40,8 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		mouse_rotation.y += event.relative.x * mouse_sensitivity
 		mouse_rotation.x += event.relative.y * mouse_sensitivity
-
+	
+	#TODO: make pause menu work with this
 	if event.is_action_pressed("escape"):
 		if override_mouse:
 			override_mouse = false

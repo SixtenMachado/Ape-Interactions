@@ -1,8 +1,13 @@
 extends CharacterBody3D
 class_name ApeBody
 
+@export_category("Cool Ape Stats")
 @export var speed := 4.0
 @export var jump_strength := 5.0
+@export var ground_rotation_speed := 20.0
+@export var air_rotation_speed := 3.0
+
+@export_category("Node Friends")
 @export var input: PlayerInput
 @export var camera: Camera3D
 @export var look: Node3D
@@ -11,6 +16,7 @@ class_name ApeBody
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting(&"physics/3d/default_gravity")
+var adjusting_rotation : bool = false
 
 func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
@@ -42,18 +48,20 @@ func _physics_process(delta: float) -> void:
 		# Add the gravity.
 		velocity.y -= gravity * delta
 	
-	## TODO: move this out to LookPivot, greater separation between camera and body
-	## Handle look left and right
-	#rotate_object_local(Vector3(0, 1, 0), input.look_angle.x)
-#
-	## Handle look up and down
-	#look.rotate_object_local(Vector3(1, 0, 0), input.look_angle.y)
-#
-	#look.rotation.x = clamp(look.rotation.x, -0.57, 1.57)
-	#look.rotation.z = 0
-	#look.rotation.y = 0
-	var adjusted_look_rotation := Vector3(0, look.rotation.y, 0) + Vector3(0, deg_to_rad(180), 0)
-	model.rotation = model.rotation.lerp(adjusted_look_rotation, delta * velocity.length())
+	var adjusted_look_rotation := look.rotation.y + deg_to_rad(180)
+	var rotation_delta := absf(angle_difference(model.rotation.y, adjusted_look_rotation))
+	
+	if adjusting_rotation:
+		adjusting_rotation = rotation_delta > 0.1
+	else:
+		adjusting_rotation = rotation_delta > 1.5
+		
+	if velocity.length() > 0 or (input.hand_right and adjusting_rotation):
+		var rotation_speed
+		if is_on_floor(): rotation_speed = ground_rotation_speed
+		else: rotation_speed = air_rotation_speed
+		
+		model.rotation.y = lerp_angle(model.rotation.y, adjusted_look_rotation, delta * rotation_speed * clampf(velocity.length(), 1, 2)* (rotation_delta/2))
 	
 	
 	# Apply movement

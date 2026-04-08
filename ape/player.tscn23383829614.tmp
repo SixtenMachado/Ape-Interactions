@@ -303,6 +303,8 @@ transform = Transform3D(1, 2.506422e-07, -7.6170545e-07, 6.9034286e-07, 0.258818
 collision_layer = 0
 collision_mask = 16
 script = ExtResource("7_n5wll")
+armor = null
+power = null
 ape = NodePath("../../../../../..")
 state = NodePath("../../../../../../PlayerState")
 ragdoll = NodePath("../..")
@@ -348,11 +350,11 @@ transform = Transform3D(0.99994695, -0.0021346174, -0.010077274, 0.00027098507, 
 shape = SubResource("CapsuleShape3D_pe46d")
 
 [node name="Physical Bone Shoulder_L" type="PhysicalBone3D" parent="ape/Armature/Skeleton3D/Ragdoll" unique_id=1011885616]
-transform = Transform3D(0.07814397, 0.9088942, 0.4096402, 0.31740648, -0.4121971, 0.85401803, 0.94506437, 0.063286096, -0.32069963, 0.062309638, 1.0287508, 0.20347837)
+transform = Transform3D(0.07814397, 0.9088941, 0.4096402, 0.31740648, -0.41219708, 0.85401803, 0.94506437, 0.063286096, -0.32069963, 0.062309638, 1.0287508, 0.20347837)
 collision_layer = 4
 joint_type = 2
 joint_offset = Transform3D(0.9999979, 0, 0, 0, 0.99999756, 0, 0, 0, 0.99999845, 0, 0, 0)
-body_offset = Transform3D(1.0000002, 3.46452e-07, 1.7881393e-06, -2.9057264e-07, 1.0000004, -6.2230974e-06, -1.6093254e-06, 5.600974e-06, 1.0000008, 0, 0, 0)
+body_offset = Transform3D(1.0000002, 3.46452e-07, 1.7881393e-06, -2.9057264e-07, 1.0000002, -6.2230974e-06, -1.6093254e-06, 5.569309e-06, 1.0000008, 0, 0, 0)
 friction = 0.4
 bounce = 0.2
 bone_name = "Shoulder_L"
@@ -427,11 +429,11 @@ transform = Transform3D(0.9975691, 0.05082817, -0.047361463, -0.059808567, 0.975
 shape = SubResource("CapsuleShape3D_yop2s")
 
 [node name="Physical Bone Shoulder_R" type="PhysicalBone3D" parent="ape/Armature/Skeleton3D/Ragdoll" unique_id=1168480884]
-transform = Transform3D(-0.25307003, -0.8178288, -0.5168286, -0.5053067, -0.3438197, 0.79148793, -0.8249974, 0.46145883, -0.3262439, 0.062309638, 1.0287508, 0.20347837)
+transform = Transform3D(-0.25307003, -0.8178287, -0.5168286, -0.5053067, -0.3438197, 0.79148793, -0.82499737, 0.46145886, -0.3262439, 0.062309638, 1.0287508, 0.20347837)
 collision_layer = 4
 joint_type = 2
 joint_offset = Transform3D(0.9999979, 0, 0, 0, 0.99999756, 0, 0, 0, 0.99999845, 0, 0, 0)
-body_offset = Transform3D(1.0000001, -0.00010621548, 4.839897e-05, 0.000106453896, 1.0000002, 7.5101852e-06, -4.887581e-05, -8.21054e-06, 1.0000008, 0, 0, 0)
+body_offset = Transform3D(1.0000002, -0.00010621548, 4.839897e-05, 0.000106453896, 1.0000002, 7.5250864e-06, -4.887581e-05, -8.21054e-06, 1.0000008, 0, 0, 0)
 friction = 0.4
 bounce = 0.2
 bone_name = "Shoulder_R"

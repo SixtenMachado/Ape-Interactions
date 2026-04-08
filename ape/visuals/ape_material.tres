@@ -10,3 +10,6 @@ shader_parameter/input_texture = ExtResource("2_a2lr6")
 shader_parameter/red_color = Color(0.5209648, 0.42388275, 0.33306402, 1)
 shader_parameter/black_color = Color(0.06018164, 0.03835766, 0.018194433, 1)
 shader_parameter/uv_mult = Vector2(1, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.0
+shader_parameter/fps = 6.0

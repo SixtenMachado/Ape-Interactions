@@ -2,6 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://dw3quh7owpey5" path="res://color_ramp.gdshader" id="1_0v13x"]
 [ext_resource type="Texture2D" uid="uid://cscnfniax3t5e" path="res://world/materials/bark_smooth.png" id="2_0v13x"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_rq1k0"]
 
 [resource]
 render_priority = 0
@@ -10,3 +11,7 @@ shader_parameter/input_texture = ExtResource("2_0v13x")
 shader_parameter/red_color = Color(0.4765541, 0.47887218, 0.31948563, 1)
 shader_parameter/black_color = Color(0.41078302, 0.41524684, 0.29251805, 1)
 shader_parameter/uv_mult = Vector2(1.8, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.5
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_rq1k0")

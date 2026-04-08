@@ -10,9 +10,18 @@ class_name Ragdoll
 
 var ragdolling : bool = false
 var getting_up : bool = false
+var bones : Array[PhysicalBone3D]
+
+func _ready() -> void:
+	for bone in get_children().filter(func(x): return x is PhysicalBone3D):
+		if bone is PhysicalBone3D:
+			bones.append(bone)
 
 func _physics_process(delta: float) -> void:
-	if input.ragdoll or state.current_state == state.State.RAGDOLL:
+	if input.ragdoll: 
+		state.ragdoll()
+		
+	if state.current_state == state.State.RAGDOLL:
 		influence = 1
 		if not ragdolling:
 			physical_bones_stop_simulation()
@@ -26,11 +35,11 @@ func _physics_process(delta: float) -> void:
 		if influence == 0:
 			physical_bones_stop_simulation()
 			getting_up = false
-			for bone : PhysicalBone3D in get_children().filter(func(x): return x is PhysicalBone3D):
+			for bone : PhysicalBone3D in bones:
 					bone.set_collision_mask_value(1, true)
 		else:
 			if !getting_up:
-				for bone : PhysicalBone3D in get_children().filter(func(x): return x is PhysicalBone3D):
+				for bone : PhysicalBone3D in bones:
 					bone.linear_velocity = Vector3.ZERO
 					bone.angular_velocity = Vector3.ZERO
 					bone.set_collision_mask_value(1, false)

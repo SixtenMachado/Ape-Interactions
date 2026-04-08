@@ -2,6 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://dw3quh7owpey5" path="res://color_ramp.gdshader" id="1_pers7"]
 [ext_resource type="Texture2D" uid="uid://dsw01xsvm3hup" path="res://world/materials/ground_lichen.png" id="2_pers7"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_gm2wi"]
 
 [resource]
 render_priority = 0
@@ -10,3 +11,7 @@ shader_parameter/input_texture = ExtResource("2_pers7")
 shader_parameter/red_color = Color(0.23137255, 0.48235294, 0.24313726, 1)
 shader_parameter/black_color = Color(0.09411765, 0.23529412, 0.16078432, 1)
 shader_parameter/uv_mult = Vector2(2, 2)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.5
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_gm2wi")
