@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://ve8nce537602"]
+
+[ext_resource type="Script" uid="uid://lgmqlkuewowp" path="res://ape/scripts/ape_body.gd" id="1_xsmid"]
+[ext_resource type="PackedScene" uid="uid://cubf81kdaddng" path="res://ape/orangutan/ape_orangutan.blend" id="2_dg7gw"]
+[ext_resource type="Script" uid="uid://bb6okqe1l22n5" path="res://ape/scripts/ragdoll.gd" id="3_nf1pf"]
+[ext_resource type="Script" uid="uid://qqt81cqdd6n8" path="res://ape/scripts/rigid_body_hitbox.gd" id="4_n1hoy"]
+[ext_resource type="Script" uid="uid://c5ogdg5hcnibf" path="res://ape/scripts/camera_pivot.gd" id="5_qa2p8"]
+[ext_resource type="Script" uid="uid://4p57jdyc06ob" path="res://ape/scripts/hand_ray_cast.gd" id="6_gh7jo"]
+[ext_resource type="Script" uid="uid://dr0wqty80sjn7" path="res://ape/scripts/ape_input.gd" id="7_qifcs"]
+[ext_resource type="Script" uid="uid://dnm8oseo2h6ro" path="res://ape/scripts/player_state.gd" id="8_lk782"]
+[ext_resource type="Script" uid="uid://trfwgwd6pb83" path="res://ape/scripts/grabbo.gd" id="9_o015y"]
+[ext_resource type="Script" uid="uid://c5gwdr6pcl066" path="res://ape/scripts/authority_manager.gd" id="10_m4k8k"]
+[ext_resource type="Script" uid="uid://bvw7dpc6a2dwl" path="res://ape/scripts/animation_tree.gd" id="11_dg7gw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t2650"]
+radius = 0.49902344
+height = 0.9980469
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_vurlm"]
+angle = 1.0471976
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_pb1wn"]
+angle = 2.0943952
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_yop2s"]
+angle = 3.1415927
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wppca"]
+radius = 0.24804688
+height = 0.49609375
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_54pyi"]
+radius = 0.2421875
+height = 0.61431885
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_n5wll"]
+height = 1.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n5wll"]
+radius = 0.14389038
+height = 0.28778076
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pe46d"]
+radius = 0.17697144
+height = 0.35394287
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vurlm"]
+radius = 0.18408203
+height = 0.41308594
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pb1wn"]
+radius = 0.091
+height = 0.508448
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c5vop"]
+radius = 0.064
+height = 0.4451279
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yop2s"]
+radius = 0.07
+height = 0.2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ah3bo"]
+radius = 0.093
+height = 0.413
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cg0of"]
+radius = 0.064
+height = 0.32408106
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6yin8"]
+radius = 0.075
+height = 0.25
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_wppca"]
+properties/0/path = NodePath(".:transform")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:velocity")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("ape:transform")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath("PlayerState:current_state")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath("LookPivot:rotation")
+properties/4/spawn = true
+properties/4/replication_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dg7gw"]
+animation = &"Orang_Walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_saxvm"]
+animation = &"Orang_crouch"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g16rh"]
+animation = &"Orang_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e25ti"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6fun5"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"ape.velocity.length()>0"
+
+[sub_resource type="AnimationNode
