@@ -31,12 +31,15 @@ func _physics_process(delta: float) -> void:
 			hitbox.ignore_thrown_rigid_body(held_item_right)
 			held_item_right.process_mode = Node.PROCESS_MODE_INHERIT
 			throw()
+			#TODO: figure out how to RPC this shit
+			held_item_right.set_multiplayer_authority(1)
 			held_item_right = null
 	
 	elif input.hand_right:
 		lerp_ik_influence(delta)
 		if raycast.get_collider() is RigidBody3D:
 			held_item_right = raycast.get_collider()
+			held_item_right.set_multiplayer_authority(ape.get_multiplayer_authority())
 			held_item_right.process_mode = Node.PROCESS_MODE_DISABLED
 	
 	else:

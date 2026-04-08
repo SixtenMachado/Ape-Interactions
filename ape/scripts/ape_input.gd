@@ -42,7 +42,7 @@ func _input(event: InputEvent) -> void:
 		mouse_rotation.x += event.relative.y * mouse_sensitivity
 	
 	#TODO: make pause menu work with this
-	if event.is_action_pressed("escape"):
+	if event.is_action_pressed("escape_mouse"):
 		if override_mouse:
 			override_mouse = false
 			Input.mouse_mode = Input.MouseMode.MOUSE_MODE_CAPTURED
