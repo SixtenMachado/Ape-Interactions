@@ -23,7 +23,7 @@ func _on_body_entered(body: Node3D) -> void:
 		#TODO: replace get_parent_node with something smarter maybe
 		pushable.apply_impulse(((global_position.direction_to(pushable.global_position) * Vector3(1, 0, 1)) + Vector3(0, 0.5, 0)) * (get_parent_node_3d().linear_velocity.length() + 1) * power, global_position)
 
-func ignore_thrown_rigid_body(body: RigidBody3D, time: float = 0.2):
+func ignore_thrown_rigid_body(body: RigidBody3D, time: float = 0.4):
 	ignored_body = body
 	await get_tree().create_timer(time).timeout
 	ignored_body = null
