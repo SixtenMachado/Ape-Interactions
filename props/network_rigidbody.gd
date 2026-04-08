@@ -1,6 +1,8 @@
 extends RigidBody3D
 class_name NetworkRigidBody
 
+#TODO: make sure this node gets a unique identifier of some sort, such as a name
+
 @rpc("any_peer", "call_local")
 func attach_to_grabber(grab_transform : Transform3D):
 		print ("grabbo babbo")

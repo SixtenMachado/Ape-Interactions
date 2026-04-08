@@ -90,6 +90,8 @@ adjustment_enabled = true
 adjustment_contrast = 1.2
 adjustment_saturation = 1.14
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ypvrs"]
+
 [node name="Control" type="SubViewportContainer" unique_id=1198256024]
 material = SubResource("ShaderMaterial_0pddg")
 anchors_preset = 15
@@ -234,12 +236,21 @@ environment = SubResource("Environment_ef1wp")
 
 [node name="Ball" parent="SubViewport/GameScene" unique_id=421617764 instance=ExtResource("6_ypvrs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3503156, 0)
+collision_mask = 17
+
+[node name="Ball2" parent="SubViewport/GameScene" unique_id=1528856568 instance=ExtResource("6_ypvrs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2770066, 1.3503156, 0)
+collision_mask = 17
+
+[node name="MeshInstance3D" parent="SubViewport/GameScene/Ball2" index="0" unique_id=1931134846]
+surface_material_override/0 = SubResource("StandardMaterial3D_ypvrs")
 
 [node name="Node" type="Node" parent="SubViewport/GameScene" unique_id=1040372971]
 script = ExtResource("2_h5c11")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="SubViewport/GameScene" unique_id=1932905706]
-_spawnable_scenes = PackedStringArray("uid://k3y73rql2u6e")
+_spawnable_scenes = PackedStringArray("uid://k3y73rql2u6e", "uid://ve8nce537602")
 spawn_path = NodePath("..")
 
 [editable path="SubViewport/GameScene/Clearing"]
+[editable path="SubViewport/GameScene/Ball2"]

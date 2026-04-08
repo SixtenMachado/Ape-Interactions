@@ -37,6 +37,7 @@ radius = 0.3
 
 [node name="Ball" type="RigidBody3D" unique_id=421617764]
 collision_layer = 16
+collision_mask = 21
 physics_material_override = SubResource("PhysicsMaterial_ngyot")
 linear_damp = 1.255
 angular_damp = 1.235

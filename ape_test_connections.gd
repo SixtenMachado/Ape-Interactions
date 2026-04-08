@@ -1,6 +1,6 @@
 extends Node3D
 
-const PLAYER_SCENE = preload("uid://k3y73rql2u6e")
+const PLAYER_SCENE = preload("uid://ve8nce537602")
 
 var peer: NodeTunnelPeer
 

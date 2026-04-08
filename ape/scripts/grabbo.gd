@@ -19,7 +19,7 @@ extends Node
 @export var held_item_right : NetworkRigidBody
 
 func lerp_ik_influence(delta: float, positive: bool = true, clamp_low : float = 0, clamp_high: float = 1):
-	ik_right.influence = clampf(ik_right.influence + (delta * (ik_speed * ((float(positive) * 2) - 1))), 0.3, 1)
+	ik_right.influence = clampf(ik_right.influence + (delta * (ik_speed * ((float(positive) * 2) - 1))), clamp_low, clamp_high)
 	
 func _physics_process(delta: float) -> void:
 	if held_item_right:
