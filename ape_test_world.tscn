@@ -75,12 +75,13 @@ sky_material = SubResource("ProceduralSkyMaterial_rrbfu")
 [sub_resource type="Environment" id="Environment_ef1wp"]
 background_mode = 2
 sky = SubResource("Sky_g0uhm")
+reflected_light_source = 1
 fog_enabled = true
 fog_mode = 1
 fog_density = 1.0
 fog_depth_begin = 30.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
+volumetric_fog_density = 0.015
 volumetric_fog_albedo = Color(0.9607843, 1, 1, 1)
 volumetric_fog_emission_energy = 0.0
 volumetric_fog_anisotropy = 0.1
@@ -223,7 +224,9 @@ shape = SubResource("ConcavePolygonShape3D_8ifxc")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport/GameScene/Environment" unique_id=504060012]
 transform = Transform3D(0.27826685, 0.36159566, -0.88984036, 0.512726, 0.727474, 0.45595375, 0.8122066, -0.58312106, 0.017032214, -6.7361, 8.77817, 3.88909)
+light_specular = 0.0
 shadow_enabled = true
+shadow_blur = 0.7
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport/GameScene/Environment" unique_id=1586257984]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 14.3564, 8.86602)

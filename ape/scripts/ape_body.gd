@@ -4,6 +4,7 @@ class_name ApeBody
 @export_category("Cool Ape Stats")
 @export var speed := 4.0
 @export var jump_strength := 5.0
+@export var jump_boost := 5.0
 @export var ground_rotation_speed := 20.0
 @export var air_rotation_speed := 3.0
 
@@ -40,14 +41,6 @@ func _physics_process(delta: float) -> void:
 	if state.current_state == state.State.RAGDOLL:
 		return
 	
-	if is_on_floor():
-		# Ground-based jumping, for your ape pleasure
-		if input.jump:
-			velocity.y = jump_strength
-	else: 
-		# Add the gravity.
-		velocity.y -= gravity * delta
-	
 	var adjusted_look_rotation := look.rotation.y + deg_to_rad(180)
 	var rotation_delta := absf(angle_difference(model.rotation.y, adjusted_look_rotation))
 	
@@ -67,11 +60,22 @@ func _physics_process(delta: float) -> void:
 	# Apply movement
 	var input_dir = input.movement.rotated(Vector3.UP, look.rotation.y)
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.z)).normalized()
-	if direction:
-		velocity.x = direction.x * speed
-		velocity.z = direction.z * speed
-	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
-		velocity.z = move_toward(velocity.z, 0, speed)
+	
+	
+	if is_on_floor():
+		if direction:
+			velocity.x = direction.x * speed
+			velocity.z = direction.z * speed
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed)
+			velocity.z = move_toward(velocity.z, 0, speed)
+		# Ground-based jumping, for your ape pleasure
+		if input.jump:
+			velocity.y = jump_strength
+			velocity.x += direction.x * jump_boost
+			velocity.z += direction.z * jump_boost
+	else: 
+		# Add the gravity.
+		velocity.y -= gravity * delta
 	
 	move_and_slide()
