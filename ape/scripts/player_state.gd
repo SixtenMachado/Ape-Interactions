@@ -18,6 +18,9 @@ func _process(delta: float) -> void:
 			ragdoll_current_time = 0
 			current_state = State.NORMAL
 
-func ragdoll():
+func ragdoll(override_time : float = -1):
 	current_state = State.RAGDOLL
-	ragdoll_current_time = 0
+	if override_time != -1:
+		ragdoll_current_time = ragdoll_getup_time - override_time
+	else:
+		ragdoll_current_time = 0

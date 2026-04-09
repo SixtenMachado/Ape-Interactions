@@ -15,6 +15,7 @@ extends Node
 
 @export_category("Cool Ape Stats")
 @export var throw_power : float = 10.0
+@export var grip_time : float = 10.0
 
 @export_category("Animation")
 @export var ik_speed : float = 15
@@ -44,6 +45,7 @@ func _physics_process(delta: float) -> void:
 		if not input.hand_right:
 			hang_joint_right.node_b = ""
 			hang_joint_right.node_a = ""
+			state.current_state = state.State.NORMAL
 	
 	
 	elif input.hand_right:
@@ -60,7 +62,7 @@ func _physics_process(delta: float) -> void:
 			hand_bone_right.global_position = raycast.get_collision_point()
 			hang_joint_right.node_a = grabbed_node_right.get_path()
 			hang_joint_right.node_b = hand_bone_right.get_path()
-			state.current_state = state.State.RAGDOLL
+			state.ragdoll(grip_time)
 	
 	else:
 		lerp_ik_influence(delta, false)
