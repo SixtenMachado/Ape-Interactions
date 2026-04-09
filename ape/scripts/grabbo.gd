@@ -3,9 +3,13 @@ extends Node
 @export var head : Node3D
 @export var holding_space_right : Node3D
 @export var ik_right : JacobianIK3D
+@export var hang_joint_right : PinJoint3D
+@export var hand_bone_right : PhysicalBone3D
 @export var raycast : RayCast3D
 @export var input : PlayerInput
 @export var ape : ApeBody
+@export var look_pivot : Node3D
+@export var state : PlayerState
 @export var hitbox : RigidBodyHitbox
 @export var authority_manager : AuthorityManager
 
@@ -17,6 +21,7 @@ extends Node
 
 @export_category("Network shit (don't set)")
 @export var held_item_right : NetworkRigidBody
+
 
 func lerp_ik_influence(delta: float, positive: bool = true, clamp_low : float = 0, clamp_high: float = 1):
 	ik_right.influence = clampf(ik_right.influence + (delta * (ik_speed * ((float(positive) * 2) - 1))), clamp_low, clamp_high)
@@ -34,12 +39,28 @@ func _physics_process(delta: float) -> void:
 			throw.call_deferred()
 			authority_manager.release_authority.rpc_id(1, str(held_item_right.get_path()))
 	
+	elif hang_joint_right.node_a:
+		lerp_ik_influence(delta, false)
+		if not input.hand_right:
+			hang_joint_right.node_b = ""
+			hang_joint_right.node_a = ""
+	
+	
 	elif input.hand_right:
 		lerp_ik_influence(delta)
 		if raycast.get_collider() is NetworkRigidBody:
 			held_item_right = raycast.get_collider()
 			authority_manager.claim_authority.rpc_id(1, str(held_item_right.get_path()))
 			held_item_right.process_mode = Node.PROCESS_MODE_DISABLED
+		
+		elif raycast.get_collider() is Node3D:
+			var grabbed_node_right : Node3D
+			grabbed_node_right= raycast.get_collider()
+			hang_joint_right.global_position = raycast.get_collision_point()
+			hand_bone_right.global_position = raycast.get_collision_point()
+			hang_joint_right.node_a = grabbed_node_right.get_path()
+			hang_joint_right.node_b = hand_bone_right.get_path()
+			state.current_state = state.State.RAGDOLL
 	
 	else:
 		lerp_ik_influence(delta, false)
@@ -47,7 +68,7 @@ func _physics_process(delta: float) -> void:
 	ik_right.active = bool(ik_right.influence != 0)
 
 func throw():
-	held_item_right.apply_impulse_rpc.rpc_id(1, (-raycast.global_basis.z + (Vector3.UP * 0.7)).normalized() * 10 + ape.velocity)
+	held_item_right.apply_impulse_rpc.rpc_id(1, (-look_pivot.global_basis.z + (Vector3.UP * 0.7)).normalized() * 10 + ape.velocity)
 	held_item_right = null
 
 func set_held_item_location(item:NetworkRigidBody, grab_transform:Transform3D):
