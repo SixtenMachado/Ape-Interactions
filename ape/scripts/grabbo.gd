@@ -28,6 +28,7 @@ func lerp_ik_influence(delta: float, positive: bool = true, clamp_low : float = 
 	ik_right.influence = clampf(ik_right.influence + (delta * (ik_speed * ((float(positive) * 2) - 1))), clamp_low, clamp_high)
 	
 func _physics_process(delta: float) -> void:
+	if not is_multiplayer_authority():return
 	if held_item_right:
 		set_held_item_location(held_item_right, holding_space_right.global_transform)
 		

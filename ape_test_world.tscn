@@ -3,9 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://b1il363ijiarm" path="res://world/Clearing.blend" id="1_8ifxc"]
 [ext_resource type="Shader" uid="uid://bc7gx500udi2x" path="res://squiggle.gdshader" id="1_ngyot"]
 [ext_resource type="Script" uid="uid://mvghpsqp0mvm" path="res://ape_test_connections.gd" id="1_sdddr"]
-[ext_resource type="Script" uid="uid://yvg8mqud4glq" path="res://tunnel_test.gd" id="2_h5c11"]
 [ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="2_ngyot"]
 [ext_resource type="Material" uid="uid://c8xx16d4aq3im" path="res://world/materials/bark_smooth.tres" id="3_x6d4h"]
+[ext_resource type="PackedScene" uid="uid://ve8nce537602" path="res://ape/orangutan/orangutan_old.tscn" id="4_517s6"]
+[ext_resource type="PackedScene" uid="uid://k3y73rql2u6e" path="res://ape/player.tscn" id="5_0pddg"]
+[ext_resource type="PackedScene" uid="uid://cpdvklybvsjn2" path="res://ape/orangutan/orangutan.tscn" id="6_qgm3u"]
 [ext_resource type="PackedScene" uid="uid://b1cpav6kc2w85" path="res://props/ball.tscn" id="6_ypvrs"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pddg"]
@@ -166,6 +168,7 @@ render_target_update_mode = 4
 
 [node name="GameScene" type="Node3D" parent="SubViewport" unique_id=485616630]
 script = ExtResource("1_sdddr")
+apes = Array[PackedScene]([ExtResource("5_0pddg"), ExtResource("4_517s6"), ExtResource("6_qgm3u")])
 
 [node name="Clearing" parent="SubViewport/GameScene" unique_id=1507693151 instance=ExtResource("1_8ifxc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20430517, 0)
@@ -248,11 +251,8 @@ collision_mask = 17
 [node name="MeshInstance3D" parent="SubViewport/GameScene/Ball2" index="0" unique_id=1931134846]
 surface_material_override/0 = SubResource("StandardMaterial3D_ypvrs")
 
-[node name="Node" type="Node" parent="SubViewport/GameScene" unique_id=1040372971]
-script = ExtResource("2_h5c11")
-
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="SubViewport/GameScene" unique_id=1932905706]
-_spawnable_scenes = PackedStringArray("uid://k3y73rql2u6e", "uid://ve8nce537602")
+_spawnable_scenes = PackedStringArray("uid://k3y73rql2u6e", "uid://ve8nce537602", "uid://cpdvklybvsjn2")
 spawn_path = NodePath("..")
 
 [editable path="SubViewport/GameScene/Clearing"]

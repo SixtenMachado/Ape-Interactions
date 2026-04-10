@@ -1,6 +1,8 @@
 extends Node3D
 
-const PLAYER_SCENE = preload("uid://ve8nce537602")
+@export var apes : Array[PackedScene]
+
+#const PLAYER_SCENE = preload("uid://ve8nce537602")
 
 var peer: NodeTunnelPeer
 
@@ -81,7 +83,7 @@ func _add_player(peer_id: int = 1) -> void:
 	if !multiplayer.is_server(): return
 	
 	print("Player Joined: ", peer_id)
-	var player = PLAYER_SCENE.instantiate()
+	var player = apes.get(2).instantiate()
 	player.name = str(peer_id)
 	add_child(player)
 

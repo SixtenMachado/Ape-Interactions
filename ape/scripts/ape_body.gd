@@ -4,7 +4,7 @@ class_name ApeBody
 @export_category("Cool Ape Stats")
 @export var speed := 4.0
 @export var jump_strength := 5.0
-@export var jump_boost := 5.0
+@export var jump_boost := 1.0
 @export var ground_rotation_speed := 20.0
 @export var air_rotation_speed := 3.0
 
@@ -21,8 +21,8 @@ var adjusting_rotation : bool = false
 
 func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
-	print(get_multiplayer_authority(), " is my multiplayer authority")
-	print(is_multiplayer_authority(), " am i multiplayer authority?")
+	#print("i am player ", get_multiplayer_authority(), ", is_multiplayer_authority is: ", is_multiplayer_authority())
+	push_warning("i am player ", get_multiplayer_authority(), ", is_multiplayer_authority is: ", is_multiplayer_authority())
 
 func _ready():
 	# Set spawn position
@@ -30,7 +30,7 @@ func _ready():
 	
 	# Once we're spawned, set our camera
 	await get_tree().process_frame
-	if input.is_multiplayer_authority():
+	if is_multiplayer_authority():
 		camera.current = true
 	
 
