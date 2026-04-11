@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://lr0lsn4mqcsy"]
+
+[ext_resource type="Shader" uid="uid://dw3quh7owpey5" path="res://color_ramp.gdshader" id="1_1v5ls"]
+[ext_resource type="Texture2D" uid="uid://baa6bnao4xj62" path="res://world/materials/hoop.png" id="2_1v5ls"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_kcajw"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_1v5ls")
+shader_parameter/input_texture = ExtResource("2_1v5ls")
+shader_parameter/red_color = Color(0.85, 0.13316664, 0.06799999, 1)
+shader_parameter/black_color = Color(0.89, 0.80841666, 0.6942, 1)
+shader_parameter/uv_mult = Vector2(1, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.5
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_kcajw")

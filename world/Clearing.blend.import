@@ -74,6 +74,11 @@ _subresources={
 "use_external/fallback_path": "res://world/materials/ground_mulch.tres",
 "use_external/path": "uid://cbka6mnoyxqru"
 },
+"Hoop": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/materials/hoop.tres",
+"use_external/path": "uid://lr0lsn4mqcsy"
+},
 "Mouth": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/Mouth.tres",
