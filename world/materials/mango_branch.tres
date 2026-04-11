@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cnj08hu13u4xx"]
+
+[ext_resource type="Shader" uid="uid://dw3quh7owpey5" path="res://color_ramp.gdshader" id="1_0wdvp"]
+[ext_resource type="Texture2D" uid="uid://c4wh5ntsbkdvc" path="res://world/materials/mango_branch.png" id="2_0wdvp"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_0i1uy"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_0wdvp")
+shader_parameter/input_texture = ExtResource("2_0wdvp")
+shader_parameter/red_color = Color(0.2505849, 0.3937348, 0.17479464, 1)
+shader_parameter/black_color = Color(0.58344, 0.66, 0.46860003, 1)
+shader_parameter/uv_mult = Vector2(1, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 1.0
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_0i1uy")

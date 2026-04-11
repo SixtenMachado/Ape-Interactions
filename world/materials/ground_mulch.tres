@@ -13,5 +13,5 @@ shader_parameter/black_color = Color(0.24133599, 0.2206263, 0.12898296, 1)
 shader_parameter/uv_mult = Vector2(1, 1)
 shader_parameter/scale = Vector2(1, 1)
 shader_parameter/strength = 0.5
-shader_parameter/fps = 6.0
+shader_parameter/fps = 12.0
 shader_parameter/noise = ExtResource("3_wj7h7")

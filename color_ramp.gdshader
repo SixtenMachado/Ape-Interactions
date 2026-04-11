@@ -1,6 +1,6 @@
 shader_type spatial;
 
-render_mode vertex_lighting;
+render_mode vertex_lighting, cull_disabled;
 
 uniform sampler2D input_texture;
 
@@ -44,7 +44,9 @@ void fragment() {
 	vec2 squiggle_uv = UV + direction * strength * 0.005;
 	
 	ALBEDO = mix(black_color, red_color, texture(input_texture, squiggle_uv * uv_mult).x);
-	
+	ALPHA = texture(input_texture, squiggle_uv * uv_mult).a;
+	ALPHA_SCISSOR_THRESHOLD = 0.1;
+	ALPHA_ANTIALIASING_EDGE = 0.8;
 	//Use this if squiggle sucks
 	//ALBEDO = mix(black_color, red_color, texture(input_texture, UV * uv_mult).x);
 	

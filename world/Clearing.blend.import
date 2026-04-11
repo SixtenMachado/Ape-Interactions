@@ -39,11 +39,6 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"@MATERIAL:2": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://world/@MATERIAL_2.tres",
-"use_external/path": "res://world/@MATERIAL_2.tres"
-},
 "@MATERIAL:3": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/@MATERIAL_3.tres",
@@ -83,6 +78,11 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/Mouth.tres",
 "use_external/path": "uid://boflc8l027r68"
+},
+"branch_mango": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/materials/mango_branch.tres",
+"use_external/path": "uid://cnj08hu13u4xx"
 }
 },
 "nodes": {
