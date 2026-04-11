@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 			physical_bones_stop_simulation()
 			physical_bones_start_simulation()
 			
-			ape.set_collision_layer_value(1, false)
+			ape.set_collision_layer_value(2, false)
 			ragdolling = true
 	else:
 		if ragdolling and is_multiplayer_authority():
@@ -44,6 +44,6 @@ func _physics_process(delta: float) -> void:
 					bone.angular_velocity = Vector3.ZERO
 					bone.set_collision_mask_value(1, false)
 			influence = clampf(influence - (delta * get_up_speed), 0, 1)
-			ape.set_collision_layer_value(1, true)
+			ape.set_collision_layer_value(2, true)
 			getting_up = true
 			ragdolling = false

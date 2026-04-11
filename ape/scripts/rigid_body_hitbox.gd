@@ -19,9 +19,12 @@ func _on_body_entered(body: Node3D) -> void:
 		if pushable.linear_velocity.length() > armor:
 			state.ragdoll()
 			ragdoll_impulse.call_deferred(body)
-			
+		
+		var added_velocity : float = ape.velocity.length()
+		if state.current_state == state.State.RAGDOLL: added_velocity = get_parent_node_3d().linear_velocity.length()
+		
 		#TODO: replace get_parent_node with something smarter maybe
-		pushable.apply_impulse(((global_position.direction_to(pushable.global_position) * Vector3(1, 0, 1)) + Vector3(0, 0.5, 0)) * (get_parent_node_3d().linear_velocity.length() + 1) * power, global_position)
+		pushable.apply_central_impulse(((global_position.direction_to(pushable.global_position) * Vector3(1, 0, 1)) + Vector3(0, 0.5, 0)) * (added_velocity + 1) * power)
 
 func ignore_thrown_rigid_body(body: RigidBody3D, time: float = 0.4):
 	ignored_body = body

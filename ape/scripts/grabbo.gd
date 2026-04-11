@@ -1,5 +1,13 @@
 extends Node
 
+@export_category("Cool Ape Stats")
+@export var throw_power : float = 10.0
+@export var grip_time : float = 10.0
+
+@export_category("Animation")
+@export var ik_speed : float = 15
+
+@export_category("Node Buddies")
 @export var head : Node3D
 @export var holding_space_right : Node3D
 @export var ik_right : JacobianIK3D
@@ -13,16 +21,8 @@ extends Node
 @export var hitbox : RigidBodyHitbox
 @export var authority_manager : AuthorityManager
 
-@export_category("Cool Ape Stats")
-@export var throw_power : float = 10.0
-@export var grip_time : float = 10.0
-
-@export_category("Animation")
-@export var ik_speed : float = 15
-
 @export_category("Network shit (don't set)")
 @export var held_item_right : NetworkRigidBody
-
 
 func lerp_ik_influence(delta: float, positive: bool = true, clamp_low : float = 0, clamp_high: float = 1):
 	ik_right.influence = clampf(ik_right.influence + (delta * (ik_speed * ((float(positive) * 2) - 1))), clamp_low, clamp_high)
