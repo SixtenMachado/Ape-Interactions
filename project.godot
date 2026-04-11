@@ -127,6 +127,7 @@ pause={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+jolt_physics_3d/simulation/position_steps=10
 3d/default_angular_damp=0.2
 
 [rendering]

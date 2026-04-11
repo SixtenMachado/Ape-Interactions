@@ -26,7 +26,6 @@ func _physics_process(delta: float) -> void:
 		if not ragdolling:
 			physical_bones_stop_simulation()
 			physical_bones_start_simulation()
-			
 			ape.set_collision_layer_value(2, false)
 			ragdolling = true
 	else:
@@ -35,14 +34,14 @@ func _physics_process(delta: float) -> void:
 		if influence == 0:
 			physical_bones_stop_simulation()
 			getting_up = false
-			for bone : PhysicalBone3D in bones:
-					bone.set_collision_mask_value(1, true)
+			#for bone : PhysicalBone3D in bones:
+					#bone.set_collision_mask_value(1, true)
 		else:
-			if !getting_up:
-				for bone : PhysicalBone3D in bones:
-					bone.linear_velocity = Vector3.ZERO
-					bone.angular_velocity = Vector3.ZERO
-					bone.set_collision_mask_value(1, false)
+			#if !getting_up:
+				#for bone : PhysicalBone3D in bones:
+					#bone.linear_velocity = Vector3.ZERO
+					#bone.angular_velocity = Vector3.ZERO
+					#bone.set_collision_mask_value(1, false)
 			influence = clampf(influence - (delta * get_up_speed), 0, 1)
 			ape.set_collision_layer_value(2, true)
 			getting_up = true
