@@ -1,6 +1,6 @@
 shader_type spatial;
 
-render_mode vertex_lighting;
+render_mode vertex_lighting, cull_disabled;
 
 uniform sampler2D input_texture : filter_nearest;
 

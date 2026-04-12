@@ -83,10 +83,21 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/materials/mango_branch.tres",
 "use_external/path": "uid://cnj08hu13u4xx"
+},
+"mango_leaves": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/materials/meango_leaves.tres",
+"use_external/path": "uid://d07ampp1ttxrb"
 }
 },
 "nodes": {
 "PATH:Armature": {
+"import/skip_import": true
+},
+"PATH:MangoBranch": {
+"import/skip_import": true
+},
+"PATH:MangoLeaves": {
 "import/skip_import": true
 }
 }

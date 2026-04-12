@@ -15,5 +15,5 @@ func _physics_process(delta: float) -> void:
 	rotation.y += (input.look_angle.x)
 	rotation.x += (input.look_angle.y)
 
-	rotation.x = clamp(rotation.x, -0.75, 0.75)
+	rotation.x = clamp(rotation.x, -0.85, 0.85)
 	rotation.z = 0
