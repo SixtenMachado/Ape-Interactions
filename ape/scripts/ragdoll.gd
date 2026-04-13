@@ -12,12 +12,19 @@ var ragdolling : bool = false
 var getting_up : bool = false
 var bones : Array[PhysicalBone3D]
 
+@export_category("Network things (don't set)")
+@export var bone_transforms : Array[Transform3D]
+@export var bone_linear_velocities : Array[Vector3]
+@export var bone_angular_velocities : Array[Vector3]
+
 func _ready() -> void:
 	for bone in get_children().filter(func(x): return x is PhysicalBone3D):
 		if bone is PhysicalBone3D:
 			bones.append(bone)
 
 func _physics_process(delta: float) -> void:
+	#if !is_multiplayer_authority():return
+		
 	if input.ragdoll: 
 		state.ragdoll()
 		
@@ -46,3 +53,22 @@ func _physics_process(delta: float) -> void:
 			ape.set_collision_layer_value(2, true)
 			getting_up = true
 			ragdolling = false
+	
+	#update_bones()
+
+
+func update_bones():
+	bone_transforms.clear()
+	bone_angular_velocities.clear()
+	bone_linear_velocities.clear()
+	
+#	ape problems require ape solutions
+	#bone_transforms.resize(63)
+	#bone_angular_velocities.resize(63)
+	#bone_linear_velocities.resize(63)
+	
+	for bone in bones:
+		#var id:int = bone.get_bone_id()
+		bone_transforms.append(bone.global_transform)
+		bone_angular_velocities.append(bone.angular_velocity)
+		bone_linear_velocities.append(bone.linear_velocity)
