@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c2xs2kmfwb4jf"]
+
+[ext_resource type="Shader" uid="uid://dw3quh7owpey5" path="res://color_ramp.gdshader" id="1_8ax3j"]
+[ext_resource type="Texture2D" uid="uid://bud2a887huv74" path="res://world/materials/rock_sedimentary.png" id="2_8ax3j"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_dbs3t"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_8ax3j")
+shader_parameter/input_texture = ExtResource("2_8ax3j")
+shader_parameter/red_color = Color(0.59361255, 0.57321453, 0.556912, 1)
+shader_parameter/black_color = Color(0.45, 0.41489998, 0.396, 1)
+shader_parameter/uv_mult = Vector2(1, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.2
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_dbs3t")

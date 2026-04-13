@@ -39,11 +39,6 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"@MATERIAL:3": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://world/@MATERIAL_3.tres",
-"use_external/path": "res://world/@MATERIAL_3.tres"
-},
 "Ape": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/Ape.tres",
@@ -79,14 +74,29 @@ _subresources={
 "use_external/fallback_path": "res://world/Mouth.tres",
 "use_external/path": "uid://boflc8l027r68"
 },
+"Rock_sedimentary": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/materials/rock_sedimentary.tres",
+"use_external/path": "uid://c2xs2kmfwb4jf"
+},
 "branch_mango": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/materials/mango_branch.tres",
 "use_external/path": "uid://cnj08hu13u4xx"
 },
+"branch_rubber": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/materials/rubber_branch.tres",
+"use_external/path": "uid://deetqwfogbbk2"
+},
+"fern": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/materials/fern.tres",
+"use_external/path": "uid://dmktg3j132axp"
+},
 "mango_leaves": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://world/materials/meango_leaves.tres",
+"use_external/fallback_path": "res://world/materials/mango_leaves.tres",
 "use_external/path": "uid://d07ampp1ttxrb"
 }
 },
@@ -94,10 +104,19 @@ _subresources={
 "PATH:Armature": {
 "import/skip_import": true
 },
+"PATH:LeafMini": {
+"import/skip_import": true
+},
 "PATH:MangoBranch": {
 "import/skip_import": true
 },
 "PATH:MangoLeaves": {
+"import/skip_import": true
+},
+"PATH:RubberBranchA": {
+"import/skip_import": true
+},
+"PATH:RubberBranchB": {
 "import/skip_import": true
 }
 }

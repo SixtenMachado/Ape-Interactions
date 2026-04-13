@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://deetqwfogbbk2"]
+
+[ext_resource type="Shader" uid="uid://bn225pdvsp1k1" path="res://color_ramp_double_sided.gdshader" id="1_2yo1p"]
+[ext_resource type="Texture2D" uid="uid://cewvb1etld1ub" path="res://world/materials/rubber_branch.png" id="2_2yo1p"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_wi6ix"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_2yo1p")
+shader_parameter/input_texture = ExtResource("2_2yo1p")
+shader_parameter/red_color = Color(0.15209998, 0.39, 0.16399498, 1)
+shader_parameter/black_color = Color(0.7329951, 0.78607553, 0.46645755, 1)
+shader_parameter/uv_mult = Vector2(1, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 1.3
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_wi6ix")

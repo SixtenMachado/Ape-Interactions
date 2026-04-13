@@ -8,8 +8,8 @@
 render_priority = 0
 shader = ExtResource("1_tjj0i")
 shader_parameter/input_texture = ExtResource("2_tjj0i")
-shader_parameter/red_color = Color(0.2505849, 0.3937348, 0.17479464, 1)
-shader_parameter/black_color = Color(0.58344, 0.66, 0.46860003, 1)
+shader_parameter/red_color = Color(0.33716166, 0.5160158, 0.24306637, 1)
+shader_parameter/black_color = Color(0.57288, 0.66, 0.44219998, 1)
 shader_parameter/uv_mult = Vector2(1, 1)
 shader_parameter/scale = Vector2(1, 1)
 shader_parameter/strength = 1.3

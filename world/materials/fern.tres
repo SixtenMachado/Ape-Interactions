@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dmktg3j132axp"]
+
+[ext_resource type="Shader" uid="uid://bn225pdvsp1k1" path="res://color_ramp_double_sided.gdshader" id="1_3jck0"]
+[ext_resource type="Texture2D" uid="uid://deu8yp2had7db" path="res://world/materials/fern.png" id="2_3jck0"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_abj5n"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_3jck0")
+shader_parameter/input_texture = ExtResource("2_3jck0")
+shader_parameter/red_color = Color(0.27803996, 0.42, 0.09240001, 1)
+shader_parameter/black_color = Color(0.5241324, 0.54924524, 0.36799115, 1)
+shader_parameter/uv_mult = Vector2(1, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.7
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_abj5n")
