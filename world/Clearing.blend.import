@@ -104,6 +104,12 @@ _subresources={
 "PATH:Armature": {
 "import/skip_import": true
 },
+"PATH:Armature/Skeleton3D": {
+"import/skip_import": true
+},
+"PATH:Armature/Skeleton3D/Ape": {
+"import/skip_import": true
+},
 "PATH:LeafMini": {
 "import/skip_import": true
 },
