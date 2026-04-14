@@ -209,23 +209,23 @@ bones/8/position = Vector3(0.06873547, 0.30028573, 0.42565292)
 bones/9/position = Vector3(0.14016512, -0.05082156, 0.061301384)
 bones/9/rotation = Quaternion(0.11915757, 0.6993286, -0.28120747, 0.64626884)
 bones/10/position = Vector3(6.651855e-05, -0.13745527, 0.27577022)
-bones/10/rotation = Quaternion(1.3391252e-07, 0.95935196, 0.28221247, 5.3543846e-07)
-bones/11/rotation = Quaternion(0.18268894, 8.167367e-08, -1.6026662e-07, 0.98317087)
-bones/12/rotation = Quaternion(0.27126345, 1.4766639e-06, 2.1031681e-07, 0.96250516)
-bones/13/rotation = Quaternion(-0.16125616, -3.486051e-06, -2.2853335e-05, 0.98691267)
-bones/16/rotation = Quaternion(0.76798373, 0.6304173, 0.087604046, 0.0714191)
-bones/17/rotation = Quaternion(-0.1255126, -0.4512002, 0.10384047, 0.8774293)
-bones/18/rotation = Quaternion(-0.59048104, -0.19993797, 0.6474304, 0.4383958)
-bones/19/rotation = Quaternion(0.37063238, -0.16652039, -0.55650574, 0.72470963)
+bones/10/rotation = Quaternion(1.3566329e-07, 0.960244, 0.27916244, 5.353511e-07)
+bones/11/rotation = Quaternion(0.15555356, 8.1322874e-08, -1.580757e-07, 0.9878275)
+bones/12/rotation = Quaternion(0.2878215, 1.4800713e-06, 1.848204e-07, 0.9576841)
+bones/13/rotation = Quaternion(-0.1511207, -3.482833e-06, -2.2757442e-05, 0.9885153)
+bones/16/rotation = Quaternion(0.76741254, 0.6297258, 0.09244357, 0.077315755)
+bones/17/rotation = Quaternion(-0.107560515, -0.43366006, 0.11710258, 0.8869367)
+bones/18/rotation = Quaternion(-0.5898588, -0.20063323, 0.646748, 0.43992049)
+bones/19/rotation = Quaternion(0.37217516, -0.15498316, -0.55543464, 0.7272952)
 bones/20/rotation = Quaternion(0.61488503, 0.08976859, -0.15805171, 0.7673837)
 bones/21/rotation = Quaternion(0.8402194, 0.015071286, -0.034139547, 0.540961)
 bones/22/rotation = Quaternion(0.5259907, -0.28141648, -0.06729437, 0.7997562)
 bones/24/rotation = Quaternion(0.62400496, -0.08488151, -0.223102, 0.74406886)
 bones/25/rotation = Quaternion(0.73857147, 0.110073835, -0.29959065, 0.5938361)
-bones/26/rotation = Quaternion(0.7679929, -0.6304286, -0.08752285, 0.07131993)
-bones/27/rotation = Quaternion(-0.12565388, 0.45120993, -0.104036346, 0.87738085)
-bones/28/rotation = Quaternion(-0.59049606, 0.19992147, -0.6474462, 0.43835968)
-bones/29/rotation = Quaternion(0.3706821, 0.16624066, 0.55667377, 0.7246193)
+bones/26/rotation = Quaternion(0.7674069, -0.62971884, -0.09249072, 0.07737297)
+bones/27/rotation = Quaternion(-0.10769494, 0.43367478, -0.11730718, 0.88688624)
+bones/28/rotation = Quaternion(-0.58991057, 0.20057577, -0.6468044, 0.43979424)
+bones/29/rotation = Quaternion(0.37219918, 0.15488862, 0.55561316, 0.7271666)
 bones/30/rotation = Quaternion(0.614885, -0.08976861, 0.15805167, 0.7673837)
 bones/31/rotation = Quaternion(0.8402194, -0.015071329, 0.03413956, 0.54096097)
 bones/32/position = Vector3(0.018465336, 0.105905615, 0.014835339)
@@ -233,7 +233,7 @@ bones/32/rotation = Quaternion(0.62400496, 0.084881485, 0.22310194, 0.7440689)
 bones/33/rotation = Quaternion(0.73857135, -0.110073835, 0.2995907, 0.59383625)
 bones/34/rotation = Quaternion(0.52599066, 0.28141657, 0.06729435, 0.7997563)
 bones/36/rotation = Quaternion(0.65536684, 0.72970366, 0.09139436, 0.17226127)
-bones/37/rotation = Quaternion(-0.19554293, -0.6672213, 0.22855821, 0.68142486)
+bones/37/rotation = Quaternion(-0.1970681, -0.6693344, 0.22683357, 0.6794867)
 bones/38/rotation = Quaternion(0.71929103, -0.017833209, 0.6404052, 0.26867017)
 bones/39/rotation = Quaternion(-0.36000142, 0.14971301, -0.9207394, -0.014963178)
 bones/40/rotation = Quaternion(-0.034143746, 0.88755524, -0.06985925, 0.45409206)
@@ -244,7 +244,7 @@ bones/43/position = Vector3(-0.043649405, -0.024467414, -0.058716673)
 bones/43/rotation = Quaternion(0.016035995, 0.86718106, -0.48570782, -0.10875581)
 bones/44/rotation = Quaternion(-0.03783698, -0.4003064, 0.03324155, 0.91499627)
 bones/45/rotation = Quaternion(-0.6553667, 0.7297035, 0.09139517, -0.17226207)
-bones/46/rotation = Quaternion(-0.19583163, 0.6671068, -0.22881968, 0.6813664)
+bones/46/rotation = Quaternion(-0.19737612, 0.6692453, -0.22707337, 0.67940503)
 bones/47/rotation = Quaternion(0.7193019, 0.017829979, -0.640415, 0.2686177)
 bones/48/rotation = Quaternion(-0.35989982, -0.1493083, 0.9208427, -0.015096009)
 bones/49/rotation = Quaternion(0.034143798, 0.88755524, -0.069859274, -0.45409206)
@@ -256,12 +256,12 @@ bones/52/rotation = Quaternion(-0.016036, 0.8671811, -0.48570767, 0.10875581)
 bones/53/rotation = Quaternion(-0.037836928, 0.4003064, -0.03324153, 0.91499627)
 
 [node name="Head" type="BoneAttachment3D" parent="ape_orangutan/Armature_Orang/Skeleton3D" index="1" unique_id=312895356]
-transform = Transform3D(1, 5.1189712e-05, 5.3846816e-06, -3.6367082e-06, 0.1746182, -0.98463595, -5.1343508e-05, 0.984636, 0.17461807, -6.213498e-05, 0.44834483, 0.34769)
+transform = Transform3D(0.9999999, 5.1156923e-05, 4.3962436e-06, -4.004212e-06, 0.16305932, -0.98661584, -5.1189112e-05, 0.9866161, 0.1630591, -6.215357e-05, 0.45418963, 0.34712368)
 bone_name = "Head"
 bone_idx = 13
 
 [node name="Hand_R" type="BoneAttachment3D" parent="ape_orangutan/Armature_Orang/Skeleton3D" index="2" unique_id=1993154366]
-transform = Transform3D(0.85735524, 0.03241873, -0.51370245, -0.3922997, 0.6872644, -0.61136574, 0.3332296, 0.7256831, 0.60194784, -0.12658994, 0.73434293, 0.91653883)
+transform = Transform3D(0.8723936, 0.08714178, -0.48097277, -0.41276193, 0.658411, -0.6293824, 0.26183248, 0.74759674, 0.61036247, -0.12951617, 0.74301434, 0.9252572)
 bone_name = "Hand_R"
 bone_idx = 29
 
@@ -269,7 +269,7 @@ bone_idx = 29
 transform = Transform3D(0.99999946, -1.0058284e-06, -1.7881393e-07, 9.797513e-07, 0.9999993, 1.1324883e-06, 1.6391277e-07, -1.4007092e-06, 0.9999991, -0.03665997, 0.08608669, 0.0808467)
 
 [node name="Spine" type="BoneAttachment3D" parent="ape_orangutan/Armature_Orang/Skeleton3D" index="3" unique_id=1004265275]
-transform = Transform3D(1, 8.788217e-06, -9.923642e-07, -2.7398753e-06, 0.2011551, -0.9795594, -8.408964e-06, 0.9795595, 0.20115495, -6.650462e-05, 0.44244072, -0.017534107)
+transform = Transform3D(0.9999999, 8.834178e-06, -1.2632004e-06, -3.321194e-06, 0.23703304, -0.97150147, -8.283001e-06, 0.9715017, 0.23703283, -6.650674e-05, 0.44079268, -0.016480029)
 bone_name = "Spine"
 bone_idx = 11
 
@@ -361,11 +361,11 @@ look_pivot = NodePath("../../../../LookPivot")
 get_up_speed = 2.5
 
 [node name="Physical Bone Pelvis" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1117151723]
-transform = Transform3D(0.33, 7.750353e-09, -3.6564919e-07, -3.1159473e-07, 0.17870021, -0.27742794, 1.9148911e-07, 0.27742794, 0.17870021, -2.2311686e-05, 0.09296844, -0.09323832)
+transform = Transform3D(0.33, 5.8331118e-09, -3.661923e-07, -3.122358e-07, 0.1769337, -0.27855784, 1.9141481e-07, 0.27855787, 0.1769337, -2.2332682e-05, 0.093072385, -0.09332995)
 collision_layer = 4
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1018559e-06, 0.0020153604, 0.008378436)
-body_offset = Transform3D(1, -2.1834552e-08, -5.0981726e-09, 2.1834694e-08, 0.9999999, 3.9964914e-05, 5.097178e-09, -3.990531e-05, 1.0000001, -1.1017692e-06, -0.002015695, -0.008378357)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1659508e-06, 0.0021340533, 0.008780208)
+body_offset = Transform3D(1.0000001, -2.0729459e-08, -5.795755e-09, 2.0729601e-08, 0.99999976, 4.0978193e-05, 5.7949876e-09, -4.1097403e-05, 1.0000001, -1.1658558e-06, -0.0021344125, -0.008780122)
 friction = 0.4
 bone_name = "Pelvis"
 joint_constraints/swing_span = 9.999996
@@ -382,11 +382,11 @@ shape = SubResource("CapsuleShape3D_jyq33")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Spine" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=577611465]
-transform = Transform3D(0.33, 2.8181394e-06, -3.1839411e-07, -8.7900577e-07, 0.066409566, -0.3232488, -2.6964112e-06, 0.3232488, 0.066409566, -2.2429384e-05, 0.15048806, -0.005829206)
+transform = Transform3D(0.33, 2.8274255e-06, -4.1058541e-07, -1.0693387e-06, 0.0782525, -0.32058784, -2.6494208e-06, 0.32058784, 0.0782525, -2.2467162e-05, 0.15015283, -0.00565519)
 collision_layer = 4
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4983231e-06, -0.0026061113, 0.013332019)
-body_offset = Transform3D(1, -2.484876e-07, 2.6760858e-08, 2.484885e-07, 0.9999998, 8.791685e-05, -2.6784278e-08, -8.778274e-05, 0.99999994, -1.4993275e-06, 0.002604939, -0.013332248)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6163549e-06, -0.0027328213, 0.013966198)
+body_offset = Transform3D(1.0000001, -2.663446e-07, 1.8131232e-08, 2.6634825e-07, 0.99999994, 9.870529e-05, -1.8158403e-08, -9.855628e-05, 1.0000002, -1.6173362e-06, 0.0027314425, -0.013966471)
 friction = 0.4
 bone_name = "Spine"
 joint_constraints/swing_span = 4.999998
@@ -418,12 +418,12 @@ debug_color = Color(0.9733754, 0, 0.4378033, 0.41960785)
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Neck" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=2102952717]
-transform = Transform3D(0.33, 5.2002115e-06, -1.050186e-06, 7.453276e-08, -0.069862895, -0.32252005, -5.304671e-06, 0.32252005, -0.0698629, -2.1997437e-05, 0.16428676, 0.062025405)
+transform = Transform3D(0.33, 5.1520947e-06, -1.2200155e-06, -1.0620824e-07, -0.06958418, -0.32258034, -5.2935084e-06, 0.32258034, -0.06958418, -2.2021404e-05, 0.16635911, 0.061906714)
 collision_layer = 4
 collision_mask = 17
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0287482e-06, -0.0016875378, 0.014880242)
-body_offset = Transform3D(1, 4.971407e-07, -1.2113219e-07, -4.9737537e-07, 0.99999845, -0.0019306391, 1.2016858e-07, 0.0019307733, 0.9999985, -2.0261068e-06, 0.0017162636, -0.014876962)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.120258e-06, -0.0018104443, 0.015493035)
+body_offset = Transform3D(1.0000001, 5.061138e-07, -1.1982274e-07, -5.0633935e-07, 0.99999845, -0.0019306391, 1.18839125e-07, 0.0019309372, 0.9999986, -2.1174856e-06, 0.001840353, -0.015489519)
 friction = 0.4
 bone_name = "Neck"
 joint_constraints/swing_span = 19.999992
@@ -440,12 +440,12 @@ shape = SubResource("CapsuleShape3D_68qp5")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Head" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1779494347]
-transform = Transform3D(0.33, 1.8626044e-05, 2.0136038e-06, -1.2697674e-06, 0.057623807, -0.32492998, -1.8691491e-05, 0.32493, 0.057623807, -2.320039e-05, 0.15272795, 0.11767146)
+transform = Transform3D(0.33, 1.8698609e-05, 1.6993096e-06, -1.3724074e-06, 0.053809427, -0.32558343, -1.872544e-05, 0.32558343, 0.053809427, -2.3233328e-05, 0.15484627, 0.11769006)
 collision_layer = 4
 collision_mask = 17
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.728444e-06, -0.01127981, 0.012692454)
-body_offset = Transform3D(1, 5.2528194e-06, 7.1717295e-07, -5.252841e-06, 1.0000004, -5.662441e-07, -7.171893e-07, 6.7055225e-07, 1.0000004, -8.678297e-06, 0.011279821, -0.0126924515)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.852802e-06, -0.011838159, 0.013289002)
+body_offset = Transform3D(1.0000001, 5.505499e-06, 7.5319076e-07, -5.5055025e-06, 1.0000004, -3.2782555e-07, -7.5320713e-07, 5.066395e-07, 1.0000006, -8.797637e-06, 0.011838168, -0.013289005)
 friction = 0.4
 bone_name = "Head"
 joint_constraints/swing_span = 24.999996
@@ -462,12 +462,12 @@ shape = SubResource("CapsuleShape3D_6128t")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Shoulder_L" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=143140330]
-transform = Transform3D(0.06283162, 0.31544712, 0.07379223, 0.050631694, -0.083805285, 0.31513983, 0.31998223, -0.04868036, -0.06435529, -2.121876e-05, 0.16435388, 0.062434588)
+transform = Transform3D(0.062830284, 0.31427598, 0.078631856, 0.062357914, -0.09033142, 0.3112101, 0.31790543, -0.044394247, -0.07658527, 4.95289e-05, 0.1664914, 0.062143166)
 collision_layer = 4
 collision_mask = 17
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008063899, 0.004544717, -0.01256343)
-body_offset = Transform3D(1, -0.00064346194, 0.00010757148, 0.00064358115, 0.99999964, -0.001059914, -0.00010702014, 0.0010600612, 0.9999997, 0.008068174, -0.004552841, 0.012557745)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008448598, 0.004720233, -0.013016439)
+body_offset = Transform3D(0.9999999, -0.0006438345, 0.0001103729, 0.0006440878, 0.99999964, -0.0010541789, -0.00010974705, 0.0010542236, 0.9999997, 0.008453071, -0.004728511, 0.013010532)
 friction = 0.4
 bone_name = "Shoulder_L"
 joint_constraints/swing_span = 39.999985
@@ -484,12 +484,12 @@ shape = SubResource("CapsuleShape3D_o8nwy")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Arm_Upper_L" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1001508409]
-transform = Transform3D(0.19098401, 0.26782778, 0.026332144, 0.24349518, -0.18572131, 0.122954085, 0.11460898, -0.051728833, -0.30510476, 0.07023845, 0.14521538, 0.054251973)
+transform = Transform3D(0.19606115, 0.26456943, 0.02151864, 0.23953067, -0.18786798, 0.12739974, 0.11439011, -0.060072012, -0.30365485, 0.07009853, 0.14577878, 0.05533415)
 collision_layer = 4
 collision_mask = 17
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013847318, 0.011699807, 0.008224316)
-body_offset = Transform3D(0.9997627, -0.018247481, -0.011921048, 0.018171854, 0.9998145, -0.0064338, 0.012036473, 0.0062156618, 0.9999083, 0.014155567, -0.011393093, -0.008129612)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014515266, 0.012251012, 0.0086196745)
+body_offset = Transform3D(0.99974024, -0.019063704, -0.012510687, 0.018980961, 0.9997975, -0.006727442, 0.0126366615, 0.0064881444, 0.99989915, 0.014852881, -0.011915028, -0.008514866)
 friction = 0.4
 bone_name = "Arm_Upper_L"
 joint_constraints/swing_span = 49.999992
@@ -506,12 +506,12 @@ shape = SubResource("CapsuleShape3D_1hjce")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Arm_Lower_L" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=991657022]
-transform = Transform3D(0.21975401, -0.22383757, -0.1024935, -0.19929463, -0.08108839, -0.25021258, 0.14453319, 0.22852004, -0.18917918, 0.18664, 0.067757495, 0.030597616)
+transform = Transform3D(0.22135131, -0.21921968, -0.10884092, -0.20353116, -0.08336341, -0.24601956, 0.13593629, 0.2321493, -0.19112313, 0.18535914, 0.067369536, 0.027959669)
 collision_layer = 4
 collision_mask = 17
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004886041, 0.008149728, 0.009848782)
-body_offset = Transform3D(0.99973714, 0.022362351, -0.0051138103, -0.022276789, 0.9996201, 0.016262174, 0.005475551, -0.016143799, 0.99985504, 0.0047528744, -0.008415639, -0.009689033)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0050892616, 0.008562625, 0.010282334)
+body_offset = Transform3D(0.99971294, 0.023367226, -0.0053257197, -0.023273796, 0.9995843, 0.017033875, 0.00572145, -0.016904652, 0.99984086, 0.0049424767, -0.008852661, -0.010106832)
 friction = 0.4
 bone_name = "Arm_Lower_L"
 joint_constraints/angular_limit_enabled = true
@@ -529,12 +529,12 @@ shape = SubResource("CapsuleShape3D_opfua")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Hand_L" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1975766003]
-transform = Transform3D(0.2979832, 0.05519931, -0.13061027, 0.056099713, -0.32506102, -0.009389537, -0.13022606, -0.013725074, -0.30290723, 0.10508066, 0.037522238, 0.11036473)
+transform = Transform3D(0.29785392, 0.055317946, -0.13085483, 0.057710078, -0.32485983, -0.0059715407, -0.12981759, -0.017493924, -0.30288836, 0.105376236, 0.0363724, 0.10904214)
 collision_layer = 4
 collision_mask = 17
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01633756, 0.00048258615, 0.007065954)
-body_offset = Transform3D(0.99977696, 0.010430427, -0.01839438, -0.010431398, 0.9999459, 4.431978e-05, 0.018393785, 0.00014768168, 0.9998311, 0.016458854, -0.0006532967, -0.0067643225)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017122177, 0.00049476133, 0.0074107423)
+body_offset = Transform3D(0.9997548, 0.010915792, -0.019295722, -0.010915726, 0.9999406, 0.00010634586, 0.019295394, 0.000104144216, 0.99981385, 0.017255574, -0.000682421, -0.007079035)
 friction = 0.4
 bone_name = "Hand_L"
 joint_constraints/angular_limit_enabled = true
@@ -552,12 +552,12 @@ shape = SubResource("CapsuleShape3D_ixha7")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Shoulder_R" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1152930989]
-transform = Transform3D(-0.1015217, -0.302652, -0.083636805, -0.08709118, -0.057309773, 0.3130986, -0.3016761, 0.11839493, -0.062242832, 0.00040888408, 0.16430496, 0.061865054)
+transform = Transform3D(-0.10227511, -0.29867226, -0.09609721, -0.102745324, -0.063618, 0.30707678, -0.296451, 0.12509045, -0.07327467, 0.0002538397, 0.16643134, 0.06154839)
 collision_layer = 4
 collision_mask = 17
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008102799, 0.002121254, -0.012367465)
-body_offset = Transform3D(0.9999487, -0.010160953, -0.00048290193, 0.010166347, 0.9998739, 0.012235016, 0.00035867095, -0.012239322, 0.9999255, -0.008086801, -0.0020520464, 0.0123896)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008472182, 0.0021453765, -0.012821058)
+body_offset = Transform3D(0.99994326, -0.010653704, -0.0005597621, 0.010660112, 0.9998597, 0.012963019, 0.00042167306, -0.012968309, 0.9999163, -0.008456022, -0.0020691901, 0.012844235)
 friction = 0.4
 bone_name = "Shoulder_R"
 joint_constraints/swing_span = 39.999985
@@ -574,12 +574,12 @@ shape = SubResource("CapsuleShape3D_o8nwy")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Arm_Upper_R" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1441450116]
-transform = Transform3D(-0.11882062, -0.07563351, -0.2984313, -0.2938742, 0.1232051, 0.0857815, 0.091758475, 0.29664811, -0.11171528, -0.068134435, 0.15230854, 0.0889312)
+transform = Transform3D(-0.11450726, -0.07058674, -0.30133972, -0.29476494, 0.12282073, 0.083238974, 0.094349064, 0.298048, -0.105667755, -0.06726956, 0.15298139, 0.0904021)
 collision_layer = 4
 collision_mask = 17
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011499236, -0.012677484, 9.470714e-05)
-body_offset = Transform3D(0.999979, -0.00649859, -0.00052694976, 0.006501153, 0.9999683, 0.004667729, 0.00049661845, -0.004671216, 0.99998945, -0.0115813315, 0.012601882, -0.00015963614)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011900641, -0.013563282, 0.00020631921)
+body_offset = Transform3D(0.9999761, -0.0069523156, -0.00010467321, 0.00695315, 0.9999639, 0.0049435794, 7.041544e-05, -0.004943967, 0.99998826, -0.01199463, 0.013479024, -0.00027421117)
 friction = 0.4
 bone_name = "Arm_Upper_R"
 joint_constraints/swing_span = 49.999992
@@ -596,12 +596,12 @@ shape = SubResource("CapsuleShape3D_1hjce")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Arm_Lower_R" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1386195001]
-transform = Transform3D(0.26437068, 0.16719848, -0.105132364, -0.17770086, 0.1246965, -0.24854214, -0.08620071, 0.25572532, 0.18993157, -0.10199034, 0.2008235, 0.20090197)
+transform = Transform3D(0.2695618, 0.1568923, -0.1078019, -0.17544968, 0.13226892, -0.24621607, -0.07385018, 0.25843713, 0.19145864, -0.098879054, 0.20111512, 0.2022403)
 collision_layer = 4
 collision_mask = 17
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0025019785, 0.016334329, 0.01954146)
-body_offset = Transform3D(0.99991775, 0.012312606, -0.0036845505, -0.012263417, 0.9998406, 0.013008624, 0.0038440675, -0.012962341, 0.9999089, -0.0026308894, -0.01655525, -0.019337565)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0025002696, 0.016957391, 0.020805277)
+body_offset = Transform3D(0.99991596, 0.012397602, -0.003893733, -0.012340322, 0.9998204, 0.014392942, 0.0040712953, -0.01434356, 0.99988914, -0.00262928, -0.01722294, -0.02056992)
 friction = 0.4
 bone_name = "Arm_Lower_R"
 joint_constraints/angular_limit_enabled = true
@@ -619,12 +619,12 @@ shape = SubResource("CapsuleShape3D_opfua")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Hand_R" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1094305561]
-transform = Transform3D(0.28272247, 0.01223609, -0.16975951, -0.13122424, 0.22528262, -0.20230658, 0.10838916, 0.24082783, 0.19787309, -0.040210523, 0.24873406, 0.30709428)
+transform = Transform3D(0.2876182, 0.030552162, -0.15887848, -0.13796075, 0.21559522, -0.20829198, 0.08451413, 0.24796225, 0.20067906, -0.04080225, 0.25175157, 0.31053662)
 collision_layer = 4
 collision_mask = 17
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0009624683, -0.02367059, 0.005904895)
-body_offset = Transform3D(0.99997467, 0.007161826, -0.0007340312, -0.0071637034, 0.9999708, -0.0028734505, 0.0007134229, 0.0028788745, 0.9999959, 0.001136303, 0.023679972, -0.00583604)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00084906764, -0.02536883, 0.0057830685)
+body_offset = Transform3D(0.99996966, 0.00784409, -0.00025869906, -0.007844895, 0.9999653, -0.0029079914, 0.00023555756, 0.0029100478, 0.9999962, 0.0010495335, 0.025378108, -0.0057090223)
 friction = 0.4
 bone_name = "Hand_R"
 joint_constraints/angular_limit_enabled = true
@@ -642,12 +642,12 @@ shape = SubResource("CapsuleShape3D_ixha7")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Thigh_L" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1182233249]
-transform = Transform3D(0.27703995, 0.1783022, 0.018899824, 0.15219298, -0.2154544, -0.1982844, -0.09479543, 0.17517912, -0.26310858, 0.037463106, 0.08365369, -0.08329551)
+transform = Transform3D(0.27717137, 0.17810218, 0.018858505, 0.15198018, -0.21551302, -0.19838391, -0.09475259, 0.17531052, -0.2630365, 0.03751994, 0.08364226, -0.08342631)
 collision_layer = 4
 collision_mask = 17
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008906943, 0.00800075, -0.00611898)
-body_offset = Transform3D(0.9999073, -0.011862621, 0.0066854507, 0.011941746, 0.99985856, -0.01187104, -0.0065437704, 0.011949897, 0.999907, 0.009041935, -0.007965893, 0.0059645176)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009198408, 0.008156162, -0.0061831977)
+body_offset = Transform3D(0.99989825, -0.012447804, 0.0069762915, 0.012534127, 0.9998444, -0.012436986, -0.0068205595, 0.012523383, 0.99989784, 0.009342134, -0.008116499, 0.006017685)
 friction = 0.4
 bone_name = "Thigh_L"
 joint_constraints/swing_span = 65.0
@@ -664,12 +664,12 @@ shape = SubResource("CapsuleShape3D_12e65")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Shin_L" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1071844902]
-transform = Transform3D(0.12159835, -0.25107443, 0.17628239, -0.22549863, 0.05541721, 0.2344767, -0.20800054, -0.2068588, -0.15114638, 0.10040693, 0.010123255, -0.01890724)
+transform = Transform3D(0.12145991, -0.25108394, 0.17636426, -0.2256322, 0.055454772, 0.23433927, -0.20793657, -0.20683719, -0.15126391, 0.10050073, 0.010113988, -0.018882832)
 collision_layer = 4
 collision_mask = 17
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016040051, 0.00552726, -0.0041505946)
-body_offset = Transform3D(0.99983966, -0.01706016, -0.005413145, 0.017035097, 0.99984455, -0.0045782328, 0.0054905713, 0.00448519, 0.9999747, 0.001675576, -0.005518079, 0.004134506)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016759256, 0.005787412, -0.0043522785)
+body_offset = Transform3D(0.9998274, -0.017687172, -0.005664617, 0.017659277, 0.99983263, -0.004836023, 0.0057492554, 0.004735023, 0.99997234, 0.0017533451, -0.0057778955, 0.00433439)
 friction = 0.4
 bone_name = "Shin_L"
 joint_constraints/angular_limit_enabled = true
@@ -687,12 +687,12 @@ shape = SubResource("CapsuleShape3D_uerw7")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Foot_L" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1543677436]
-transform = Transform3D(0.04351723, 0.17045526, 0.27919754, 0.3202504, -0.07961143, -0.0013116994, 0.06667796, 0.27112183, -0.17591767, 0.046275385, 0.020810854, -0.06250576)
+transform = Transform3D(0.043501835, 0.17042519, 0.27921832, 0.32030556, -0.07938676, -0.0014482489, 0.06642248, 0.2712066, -0.17588364, 0.046263706, 0.020769378, -0.06250332)
 collision_layer = 4
 collision_mask = 17
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.001572345, 0.0001765118, 0.00014263901)
-body_offset = Transform3D(0.99998236, -0.0012687743, 0.0057674125, 0.0011756122, 0.99987006, 0.016096473, -0.0057870224, -0.016089082, 0.99985415, 0.0015717186, -0.00017693639, -0.0001488775)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016244884, 0.00019009844, 0.00014269688)
+body_offset = Transform3D(0.9999808, -0.0013195425, 0.0060370043, 0.0012219399, 0.99986994, 0.016090095, -0.006057255, -0.01608178, 0.9998524, 0.0016238466, -0.00019038469, -0.00014945865)
 friction = 0.4
 bone_name = "Foot_L"
 joint_constraints/angular_limit_enabled = true
@@ -710,12 +710,12 @@ shape = SubResource("CapsuleShape3D_fnqgs")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Thigh_R" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1140794336]
-transform = Transform3D(0.27596992, -0.17988692, -0.019527659, -0.15093346, -0.209212, -0.20578982, 0.099798396, 0.18102778, -0.25723383, -0.037432205, 0.08366069, -0.07691178)
+transform = Transform3D(0.27604315, -0.1797746, -0.019526618, -0.1506563, -0.20892625, -0.20628262, 0.100014396, 0.1814688, -0.25683886, -0.037488475, 0.08366844, -0.076859124)
 collision_layer = 4
 collision_mask = 17
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0030210973, -0.0023907716, 0.009316681)
-body_offset = Transform3D(0.9999639, 0.0035488605, 0.0077192336, -0.0036513358, 0.9999051, 0.013281494, -0.0076714903, -0.01330924, 0.99988174, -0.0030844212, 0.0022778362, -0.009324223)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0031660188, -0.0025257813, 0.0097244885)
+body_offset = Transform3D(0.9999601, 0.003727287, 0.008118838, -0.003840655, 0.9998946, 0.013998568, -0.008065775, -0.014029086, 0.99986887, -0.0032354295, 0.0024015456, -0.009733111)
 friction = 0.4
 bone_name = "Thigh_R"
 joint_constraints/swing_span = 65.0
@@ -732,12 +732,12 @@ shape = SubResource("CapsuleShape3D_12e65")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Shin_R" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1749021384]
-transform = Transform3D(0.12886418, 0.24372134, -0.18136689, 0.2279572, 0.052657627, 0.23272884, 0.20082222, -0.21616451, -0.14779499, -0.100451514, 0.010070133, -0.020423926)
+transform = Transform3D(0.12904952, 0.24343228, -0.18162313, 0.22820166, 0.05250834, 0.2325229, 0.20042516, -0.21652626, -0.14780447, -0.1005488, 0.010063946, -0.02046382)
 collision_layer = 4
 collision_mask = 17
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004728829, 0.0025048435, -0.006459874)
-body_offset = Transform3D(0.99989176, -0.014519006, 0.0024022162, 0.014569819, 0.99963784, -0.022628963, -0.0020727515, 0.022661567, 0.9997412, -0.0046764314, -0.0027190149, 0.0064112395)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0049496465, 0.0026164518, -0.006768479)
+body_offset = Transform3D(0.9998801, -0.015276521, 0.0025712252, 0.015333205, 0.99960506, -0.023556799, -0.0022102594, 0.023593545, 0.9997196, -0.0048916787, -0.002850756, 0.0067157894)
 friction = 0.4
 bone_name = "Shin_R"
 joint_constraints/angular_limit_enabled = true
@@ -755,12 +755,12 @@ shape = SubResource("CapsuleShape3D_uerw7")
 replication_config = SubResource("SceneReplicationConfig_eiabh")
 
 [node name="Physical Bone Foot_R" type="PhysicalBone3D" parent="ape_orangutan/Armature_Orang/Skeleton3D/Ragdoll" unique_id=1546737409]
-transform = Transform3D(0.04603928, -0.1924589, -0.26408324, -0.3207514, -0.07757687, 0.0006179747, -0.062441476, 0.2565958, -0.197888, -0.046593346, 0.020821627, -0.06702708)
+transform = Transform3D(0.046072733, -0.19322164, -0.26351985, -0.32081935, -0.07729558, 0.0005849728, -0.062066507, 0.256107, -0.19863777, -0.04654349, 0.020777043, -0.06722505)
 collision_layer = 4
 collision_mask = 17
 joint_type = 3
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0008548103, 0.01027721, -0.008837348)
-body_offset = Transform3D(0.99995524, -0.0050775707, 0.007967532, 0.005575359, 0.9979519, -0.06372821, -0.0076278523, 0.06376991, 0.99793565, 0.0009773672, -0.010814585, 0.008157209)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0009339396, 0.010816404, -0.009150818)
+body_offset = Transform3D(0.9999549, -0.005161941, 0.007989764, 0.005684018, 0.99775684, -0.066703886, -0.0076278746, 0.066746354, 0.997741, 0.001062844, -0.011397228, 0.008401066)
 friction = 0.4
 bone_name = "Foot_R"
 joint_constraints/angular_limit_enabled = true
