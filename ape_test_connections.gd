@@ -83,7 +83,7 @@ func _add_player(peer_id: int = 1) -> void:
 	if !multiplayer.is_server(): return
 	
 	print("Player Joined: ", peer_id)
-	var player = apes.get(2).instantiate()
+	var player = apes.pick_random().instantiate()
 	player.name = str(peer_id)
 	add_child(player)
 

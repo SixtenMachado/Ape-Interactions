@@ -21,7 +21,6 @@ var adjusting_rotation : bool = false
 
 func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
-	#print("i am player ", get_multiplayer_authority(), ", is_multiplayer_authority is: ", is_multiplayer_authority())
 	push_warning("i am player ", get_multiplayer_authority(), ", is_multiplayer_authority is: ", is_multiplayer_authority())
 
 func _ready():
@@ -35,8 +34,7 @@ func _ready():
 	
 
 func _physics_process(delta: float) -> void:
-	if !is_multiplayer_authority():
-		return
+	if !is_multiplayer_authority(): return
 		
 	if state.current_state == state.State.RAGDOLL:
 		return
