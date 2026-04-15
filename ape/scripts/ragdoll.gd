@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
 		state.ragdoll()
 		
 	if state.current_state == state.State.RAGDOLL:
+		getting_up = false
 		influence = 1
 		if not ragdolling:
 			physical_bones_stop_simulation()
@@ -40,7 +41,7 @@ func _physics_process(delta: float) -> void:
 				ape.global_position = $"Physical Bone Pelvis".global_position
 		if influence == 0:
 			physical_bones_stop_simulation()
-			getting_up = false
+			
 			#for bone : PhysicalBone3D in bones:
 					#bone.set_collision_mask_value(1, true)
 		else:

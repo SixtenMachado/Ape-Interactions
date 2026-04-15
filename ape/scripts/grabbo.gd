@@ -57,7 +57,15 @@ func _physics_process(delta: float) -> void:
 		if not pressed:
 			hang_joint.node_b = ""
 			hang_joint.node_a = ""
-			state.current_state = state.State.NORMAL
+			
+			if right_hand:
+				state.right_hand_grab = false
+			else:
+				state.left_hand_grab = false
+			
+			if not (state.right_hand_grab or state.left_hand_grab):
+				state.current_state = state.State.NORMAL
+				print("rhg: ", state.right_hand_grab, " lhg: ", state.left_hand_grab)
 	
 	
 	elif pressed:
@@ -75,6 +83,10 @@ func _physics_process(delta: float) -> void:
 			hang_joint.node_a = grabbed_node.get_path()
 			hang_joint.node_b = hand_bone.get_path()
 			state.ragdoll(grip_time)
+			if right_hand:
+				state.right_hand_grab = true
+			else:
+				state.left_hand_grab = true
 	
 	else:
 		lerp_ik_influence(delta, false)

@@ -7,6 +7,9 @@ extends RayCast3D
 func _ready() -> void:
 	for this in ignore_these:
 		add_exception(this)
+		for child in this.get_children():
+			if child is CollisionObject3D:
+				add_exception(child)
 
 func _physics_process(delta: float) -> void:
 	global_rotation = Vector3.ZERO
