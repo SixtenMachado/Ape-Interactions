@@ -7,6 +7,8 @@ var ragdoll : bool = false
 var hand_right : bool = false
 var hand_left : bool = false
 
+var enable_funny_jump : bool = false
+
 @export var mouse_sensitivity: float = 1.0
 var mouse_rotation: Vector2 = Vector2.ZERO
 var look_angle: Vector2 = Vector2.ZERO
@@ -43,6 +45,7 @@ func _input(event: InputEvent) -> void:
 		mouse_rotation.y += event.relative.x * mouse_sensitivity
 		mouse_rotation.x += event.relative.y * mouse_sensitivity
 	
+#	DEV COMMANDS
 	if event.is_action_pressed("escape_mouse"):
 		if override_mouse:
 			override_mouse = false
@@ -50,3 +53,10 @@ func _input(event: InputEvent) -> void:
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			override_mouse = true
+	
+	if event.is_action_pressed("reset_position"):
+		get_parent().global_position = Vector3(0,5,0)
+	
+	if event.is_action_pressed("enable_funny_jump"):
+		enable_funny_jump = !enable_funny_jump
+		print("funny jump enabled: ", enable_funny_jump)

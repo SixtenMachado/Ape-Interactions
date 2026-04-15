@@ -4,7 +4,7 @@ extends Node
 
 @export_category("Cool Ape Stats")
 @export var throw_power : float = 10.0
-@export var grip_time : float = 10.0
+@export var grip_time : float = 60.0
 
 @export_category("Animation")
 @export var ik_speed : float = 15
