@@ -59,6 +59,6 @@ func get_ragdoll_velocity() -> Vector3:
 	swooce = bones.get(0).linear_velocity
 	swooce *= (swing_power/1.5)
 	
-	swooce.y = clampf(swooce.y, 1, 10) * (swing_power * 0.6)
+	swooce.y = clampf(swooce.y * (swing_power * 0.6), swing_power, 10) 
 	print("swooce: ", swooce)
 	return swooce
