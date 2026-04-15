@@ -39,11 +39,6 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"Ape": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://world/Ape.tres",
-"use_external/path": "uid://bp2yl8760kyvu"
-},
 "Bark": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/materials/bark_rough.tres",
@@ -69,11 +64,6 @@ _subresources={
 "use_external/fallback_path": "res://world/materials/hoop.tres",
 "use_external/path": "uid://lr0lsn4mqcsy"
 },
-"Mouth": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://world/Mouth.tres",
-"use_external/path": "uid://boflc8l027r68"
-},
 "Rock_sedimentary": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/materials/rock_sedimentary.tres",
@@ -94,6 +84,11 @@ _subresources={
 "use_external/fallback_path": "res://world/materials/fern.tres",
 "use_external/path": "uid://dmktg3j132axp"
 },
+"leaf_calathea": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/materials/calathea.tres",
+"use_external/path": "uid://diu6e4u8ddb8d"
+},
 "mango_leaves": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/materials/mango_leaves.tres",
@@ -101,15 +96,6 @@ _subresources={
 }
 },
 "nodes": {
-"PATH:Armature": {
-"import/skip_import": true
-},
-"PATH:Armature/Skeleton3D": {
-"import/skip_import": true
-},
-"PATH:Armature/Skeleton3D/Ape": {
-"import/skip_import": true
-},
 "PATH:LeafMini": {
 "import/skip_import": true
 },

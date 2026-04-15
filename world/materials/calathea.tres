@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://diu6e4u8ddb8d"]
+
+[ext_resource type="Shader" uid="uid://bn225pdvsp1k1" path="res://color_ramp_double_sided.gdshader" id="1_kf3uf"]
+[ext_resource type="Texture2D" uid="uid://jsyfiyw5jkft" path="res://world/materials/calathea orbifolia.png" id="2_3p0s4"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_prtvx"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_kf3uf")
+shader_parameter/input_texture = ExtResource("2_3p0s4")
+shader_parameter/red_color = Color(0.41655684, 0.5453863, 0.34594163, 1)
+shader_parameter/black_color = Color(0.24053337, 0.44, 0.08799999, 1)
+shader_parameter/uv_mult = Vector2(1, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.5
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_prtvx")
