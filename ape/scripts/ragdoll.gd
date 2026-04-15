@@ -1,12 +1,16 @@
 extends PhysicalBoneSimulator3D
 class_name Ragdoll
 
+@export_category("Cool Ape Stats")
+@export var swing_power : float = 2.0
+@export var get_up_speed : float = 1.0
+
+@export_category("Node Friends")
 @export var input : PlayerInput
 @export var state : PlayerState
 @export var ape : ApeBody
 @export var skeleton : Skeleton3D
 @export var look_pivot : LookPivot
-@export var get_up_speed : float = 1.0
 
 var ragdolling : bool = false
 var getting_up : bool = false
@@ -53,7 +57,8 @@ func _physics_process(delta: float) -> void:
 func get_ragdoll_velocity() -> Vector3:
 	var swooce : Vector3
 	swooce = bones.get(0).linear_velocity
-	swooce *= 2
-	swooce.y = clampf(swooce.y, 1, 50)
+	swooce *= (swing_power/1.5)
+	
+	swooce.y = clampf(swooce.y, 1, 10) * (swing_power * 0.6)
 	print("swooce: ", swooce)
 	return swooce
