@@ -13,6 +13,8 @@ APE CONTROLS:
 	- pause with SPACE  
 	- ragdoll with L  
 	- free mouse with F1  
+	- reset ape position with F2  
+	- enable Funny Jumping with F3
 
 -----------------------------------------------------------------
 
