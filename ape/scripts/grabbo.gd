@@ -65,7 +65,6 @@ func _physics_process(delta: float) -> void:
 			
 			if not (state.right_hand_grab or state.left_hand_grab):
 				state.current_state = state.State.NORMAL
-				print("rhg: ", state.right_hand_grab, " lhg: ", state.left_hand_grab)
 	
 	
 	elif pressed:

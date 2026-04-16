@@ -2,11 +2,14 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6m5cmw8aktt1"
+uid="uid://ovob8ohnncdw"
 path.s3tc="res://.godot/imported/ape_mouth.png-50cca6fae08cfd58fd7622c665c71f8f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
+}
+generator_parameters={
+"md5": "d833955ad1ccab0aae474743ee8055ea"
 }
 
 [deps]

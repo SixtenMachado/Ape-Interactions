@@ -68,7 +68,6 @@ func get_ragdoll_velocity() -> Vector3:
 	swooce = bones.get(0).linear_velocity
 	swooce *= clampf(swing_power/1.5 * funny_jump_blocker, 1.1, 99)
 	swooce.y = clampf(swooce.y * (swing_power * 0.6 * funny_jump_blocker), swing_power, 1 + (10 * funny_jump_blocker)) 
-	print("swooce: ", swooce)
 	return swooce
 
 func directional_influence(delta : float):

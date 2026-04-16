@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://tf40qe2drgcp"]
+
+[ext_resource type="Shader" uid="uid://dw3quh7owpey5" path="res://color_ramp.gdshader" id="1_o4taw"]
+[ext_resource type="Texture2D" uid="uid://ovob8ohnncdw" path="res://ape/visuals/ape_mouth.png" id="2_o4taw"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_o4taw")
+shader_parameter/input_texture = ExtResource("2_o4taw")
+shader_parameter/red_color = Color(0.55, 0.5234167, 0.39050004, 1)
+shader_parameter/black_color = Color(0.67, 0.40200004, 0.4332667, 1)
+shader_parameter/uv_mult = Vector2(1, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.0
+shader_parameter/fps = 6.0

@@ -8269,6 +8269,11 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://ape/orangutan/orangutan_material.tres",
 "use_external/path": "uid://dpq50o0cej20m"
+},
+"Mouth.001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://ape/visuals/ape_mouth_material.tres",
+"use_external/path": "uid://tf40qe2drgcp"
 }
 }
 }
