@@ -6,6 +6,7 @@ var jump : bool = false
 var ragdoll : bool = false
 var hand_right : bool = false
 var hand_left : bool = false
+var crouch : bool = false
 
 var enable_funny_jump : bool = false
 
@@ -25,6 +26,7 @@ func _physics_process(delta: float) -> void:
 	movement = Vector3(move_x, 0, move_z)
 	
 	jump = Input.is_action_pressed("jump")
+	crouch = Input.is_action_pressed("crouch")
 	ragdoll = Input.is_action_pressed("ragdoll")
 	hand_right = Input.is_action_pressed("hand_right")
 	hand_left = Input.is_action_pressed("hand_left")

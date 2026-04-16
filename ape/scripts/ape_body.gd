@@ -67,6 +67,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, speed)
 			velocity.z = move_toward(velocity.z, 0, speed)
+		
 		# Ground-based jumping, for your ape pleasure
 		if input.jump:
 			velocity.y = jump_strength
