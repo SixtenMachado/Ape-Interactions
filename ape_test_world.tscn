@@ -838,5 +838,107 @@ spawn_path = NodePath("..")
 [node name="BananaPeel" parent="." unique_id=417685608 instance=ExtResource("14_gcxbd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.763253, -0.53507894, -3.8473725)
 
+[node name="BananaPeel2" parent="." unique_id=1806522554 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.763253, -0.53507894, -4.9389887)
+
+[node name="BananaPeel3" parent="." unique_id=1075783423 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.763253, -0.53507894, -3.0059175)
+
+[node name="BananaPeel4" parent="." unique_id=1469236909 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.234753, 0.56698674, -4.246826)
+
+[node name="BananaPeel5" parent="." unique_id=362211637 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.234753, 0.74841595, -3.7292008)
+
+[node name="BananaPeel6" parent="." unique_id=318765764 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.234753, 0.87639815, -3.3997226)
+
+[node name="BananaPeel7" parent="." unique_id=563474185 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.399089, 0.87639815, -3.3997226)
+
+[node name="BananaPeel8" parent="." unique_id=1877991429 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.729306, -0.53507894, -3.8473725)
+
+[node name="BananaPeel9" parent="." unique_id=2053975325 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.729306, -0.53507894, -4.9389887)
+
+[node name="BananaPeel10" parent="." unique_id=1641437505 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.729306, -0.53507894, -3.0059175)
+
+[node name="BananaPeel11" parent="." unique_id=1135583274 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.200806, 0.56698674, -4.246826)
+
+[node name="BananaPeel12" parent="." unique_id=2139069997 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.200806, 0.74841595, -3.7292008)
+
+[node name="BananaPeel13" parent="." unique_id=1366351309 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.200806, 0.87639815, -3.3997226)
+
+[node name="BananaPeel14" parent="." unique_id=1594822573 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.365142, 0.87639815, -3.3997226)
+
+[node name="BananaPeel15" parent="." unique_id=222328090 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.144205, -0.53507894, -3.8473725)
+
+[node name="BananaPeel16" parent="." unique_id=507582983 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.144205, -0.53507894, -4.9389887)
+
+[node name="BananaPeel17" parent="." unique_id=314692184 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.144205, -0.53507894, -3.0059175)
+
+[node name="BananaPeel18" parent="." unique_id=724208383 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.615705, 0.56698674, -4.246826)
+
+[node name="BananaPeel19" parent="." unique_id=498741634 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.615705, 0.74841595, -3.7292008)
+
+[node name="BananaPeel20" parent="." unique_id=1276244523 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.615705, 0.87639815, -3.3997226)
+
+[node name="BananaPeel21" parent="." unique_id=1933144247 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.780041, 0.87639815, -3.3997226)
+
+[node name="BananaPeel22" parent="." unique_id=1375629918 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.746277, -0.53507894, -4.5247536)
+
+[node name="BananaPeel23" parent="." unique_id=2041152913 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.746277, -0.53507894, -5.6163697)
+
+[node name="BananaPeel24" parent="." unique_id=478187917 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.746277, -0.53507894, -3.6832986)
+
+[node name="BananaPeel25" parent="." unique_id=1351148121 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.217776, 0.56698674, -4.924207)
+
+[node name="BananaPeel26" parent="." unique_id=1200517218 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.217776, 0.74841595, -4.406582)
+
+[node name="BananaPeel27" parent="." unique_id=417905294 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.217776, 0.87639815, -4.0771036)
+
+[node name="BananaPeel28" parent="." unique_id=409421169 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3821125, 0.87639815, -4.0771036)
+
+[node name="BananaPeel29" parent="." unique_id=1907931864 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.258465, 0.029090583, -3.5914185)
+
+[node name="BananaPeel30" parent="." unique_id=1791471900 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.258465, 0.029090583, -4.683035)
+
+[node name="BananaPeel31" parent="." unique_id=1532686897 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.258465, 0.029090583, -2.7499635)
+
+[node name="BananaPeel32" parent="." unique_id=864555979 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.729964, 1.1311562, -3.9908721)
+
+[node name="BananaPeel33" parent="." unique_id=1338152506 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.729964, 1.3125855, -3.4732468)
+
+[node name="BananaPeel34" parent="." unique_id=1531748931 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.729964, 1.4405677, -3.1437685)
+
+[node name="BananaPeel35" parent="." unique_id=636812356 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8943, 1.4405677, -3.1437685)
+
 [editable path="SubViewport/GameScene/Clearing"]
 [editable path="SubViewport/GameScene/Ball2"]
