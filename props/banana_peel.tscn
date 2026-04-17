@@ -22,11 +22,14 @@ linear_damp = 2.0
 script = ExtResource("1_86fm3")
 
 [node name="banana_peel" parent="." unique_id=1284943480 instance=ExtResource("2_x6r5b")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.08538893, 3.7324686e-09, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752722799]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.08538893, 3.7324686e-09, 0)
 shape = SubResource("ConvexPolygonShape3D_86fm3")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=602209679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12518445, -0.024623767, 0)
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("3_x6r5b")
