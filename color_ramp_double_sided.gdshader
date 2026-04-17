@@ -15,7 +15,7 @@ group_uniforms Squiggle;
  * By default, the noise texture's size in world coordinates is set by its resolution
 */
 uniform vec2 scale = vec2(1.0);
-uniform float strength = 10.0;
+uniform float strength = 0.5;
 /**
  * Number of squiggle frames per second
 */

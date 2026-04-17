@@ -144,6 +144,7 @@ crouch={
 3d_physics/layer_1="SOLID"
 3d_physics/layer_2="PLAYER"
 3d_physics/layer_3="RAGDOLL"
+3d_physics/layer_4="HITBOX"
 3d_physics/layer_5="PUSHABLE"
 
 [physics]

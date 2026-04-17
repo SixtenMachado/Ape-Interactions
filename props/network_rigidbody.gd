@@ -2,6 +2,14 @@ extends RigidBody3D
 class_name NetworkRigidBody
 
 #TODO: make sure this node gets a unique identifier of some sort, such as a name
+func _ready() -> void:
+	set_collision_layer_value(1, false)
+	set_collision_layer_value(5, true)
+	
+	set_collision_mask_value(1, true)
+	set_collision_mask_value(2, true)
+	set_collision_mask_value(5, true)
+
 
 @rpc("any_peer", "call_local")
 func attach_to_grabber(grab_transform : Transform3D):

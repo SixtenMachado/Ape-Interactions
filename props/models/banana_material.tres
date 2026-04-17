@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://u4tk2mt8q41w"]
+
+[ext_resource type="Shader" uid="uid://bn225pdvsp1k1" path="res://color_ramp_double_sided.gdshader" id="1_qm5co"]
+[ext_resource type="Texture2D" uid="uid://148287pb07t" path="res://props/models/banana.png" id="2_qm5co"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_lg3wn"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_qm5co")
+shader_parameter/input_texture = ExtResource("2_qm5co")
+shader_parameter/red_color = Color(1, 0.9333334, 0, 1)
+shader_parameter/black_color = Color(0.37, 0.33158168, 0.040700007, 1)
+shader_parameter/uv_mult = Vector2(1, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.5
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_lg3wn")

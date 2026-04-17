@@ -13,6 +13,7 @@
 [ext_resource type="Material" uid="uid://cnj08hu13u4xx" path="res://world/materials/mango_branch.tres" id="9_fnbhc"]
 [ext_resource type="Material" uid="uid://d07ampp1ttxrb" path="res://world/materials/mango_leaves.tres" id="10_3xxob"]
 [ext_resource type="Material" uid="uid://deetqwfogbbk2" path="res://world/materials/rubber_branch.tres" id="11_3xxob"]
+[ext_resource type="PackedScene" uid="uid://bmuewesgewgg0" path="res://props/banana_peel.tscn" id="14_gcxbd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pddg"]
 shader = ExtResource("1_ngyot")
@@ -833,6 +834,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ypvrs")
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="SubViewport/GameScene" unique_id=1932905706]
 _spawnable_scenes = PackedStringArray("uid://k3y73rql2u6e", "uid://cpdvklybvsjn2")
 spawn_path = NodePath("..")
+
+[node name="BananaPeel" parent="." unique_id=417685608 instance=ExtResource("14_gcxbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.763253, -0.53507894, -3.8473725)
 
 [editable path="SubViewport/GameScene/Clearing"]
 [editable path="SubViewport/GameScene/Ball2"]

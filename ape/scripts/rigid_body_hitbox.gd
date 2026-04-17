@@ -10,6 +10,10 @@ class_name RigidBodyHitbox
 
 var ignored_body : RigidBody3D
 
+func _enter_tree() -> void:
+	set_collision_layer_value(4, true)
+	set_collision_mask_value(5, true)
+
 func _on_body_entered(body: Node3D) -> void:
 	if body == ignored_body: 
 		return

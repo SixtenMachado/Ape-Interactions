@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bmuewesgewgg0"]
+
+[ext_resource type="Script" uid="uid://c1inyq3no23br" path="res://props/network_rigidbody.gd" id="1_86fm3"]
+[ext_resource type="PackedScene" uid="uid://b1x7p5ksrv6v8" path="res://props/models/banana_peel.blend" id="2_x6r5b"]
+[ext_resource type="Script" uid="uid://bts6apgwwef28" path="res://props/banana_peel.gd" id="3_x6r5b"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x6r5b"]
+friction = 0.3
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_86fm3"]
+points = PackedVector3Array(0.08934671, -0.07703781, -0.29319873, 0.007028818, 0.26596007, -0.02719006, 0.021585017, 0.28357595, 0.0023664534, 0.29107013, -0.059386626, 0.2628775, -0.27868566, -0.06298747, -0.038838506, -0.009814024, 0.28357595, 0.00775522, -0.029501155, 0.14557897, 0.041448534)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_x6r5b"]
+radius = 0.37494662
+
+[node name="BananaPeel" type="RigidBody3D" unique_id=1806522554]
+collision_layer = 0
+collision_mask = 0
+mass = 0.306
+physics_material_override = SubResource("PhysicsMaterial_x6r5b")
+linear_damp = 2.0
+script = ExtResource("1_86fm3")
+
+[node name="banana_peel" parent="." unique_id=1284943480 instance=ExtResource("2_x6r5b")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752722799]
+shape = SubResource("ConvexPolygonShape3D_86fm3")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=602209679]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("3_x6r5b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=625213764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.058042653, 0.0037803352, 0)
+shape = SubResource("SphereShape3D_x6r5b")
+
+[connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]
+
+[editable path="banana_peel"]
