@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cjb4ki0ugb5qx"]
+
+[ext_resource type="AudioStream" uid="uid://eca8opd11hkr" path="res://audio/jermachimp1.ogg" id="1_0rv1w"]
+[ext_resource type="Script" uid="uid://bo8ihtwo0f1s1" path="res://ape/scripts/pitch_detector.gd" id="1_wcub7"]
+[ext_resource type="AudioStream" uid="uid://d36j2cjiwxbq7" path="res://audio/jermachimp2.ogg" id="2_aq8th"]
+[ext_resource type="AudioStream" uid="uid://dqxversqagart" path="res://audio/jermachimp3.ogg" id="3_sipil"]
+[ext_resource type="AudioStream" uid="uid://bgvson41c5uaq" path="res://audio/jermachimp4.ogg" id="4_6xkxl"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_wcub7"]
+streams_count = 4
+stream_0/stream = ExtResource("1_0rv1w")
+stream_1/stream = ExtResource("2_aq8th")
+stream_2/stream = ExtResource("3_sipil")
+stream_3/stream = ExtResource("4_6xkxl")
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_wcub7"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_0rv1w"]
+properties/0/path = NodePath(".:playing")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:pitch_scale")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
+[node name="Voice" type="AudioStreamPlayer3D" unique_id=563546600]
+stream = SubResource("AudioStreamRandomizer_wcub7")
+attenuation_model = 3
+unit_size = 84.05
+bus = &"Sound"
+doppler_tracking = 2
+
+[node name="Input" type="AudioStreamPlayer" parent="." unique_id=215070053 node_paths=PackedStringArray("voice")]
+stream = SubResource("AudioStreamMicrophone_wcub7")
+autoplay = true
+bus = &"Voice"
+script = ExtResource("1_wcub7")
+voice = NodePath("..")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=2073046707]
+replication_config = SubResource("SceneReplicationConfig_0rv1w")
+
+[connection signal="finished" from="." to="Input" method="_on_voice_finished"]
