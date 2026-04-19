@@ -5,6 +5,9 @@
 [ext_resource type="AudioStream" uid="uid://d36j2cjiwxbq7" path="res://audio/jermachimp2.ogg" id="2_aq8th"]
 [ext_resource type="AudioStream" uid="uid://dqxversqagart" path="res://audio/jermachimp3.ogg" id="3_sipil"]
 [ext_resource type="AudioStream" uid="uid://bgvson41c5uaq" path="res://audio/jermachimp4.ogg" id="4_6xkxl"]
+[ext_resource type="Script" uid="uid://b0l4wpklk55i6" path="res://ape/scripts/voice.gd" id="5_aq8th"]
+[ext_resource type="Texture2D" uid="uid://dgmsutm1w43ra" path="res://ape/visuals/utterance1.png" id="7_6xkxl"]
+[ext_resource type="Texture2D" uid="uid://c5foyo530jia6" path="res://ape/visuals/utterance2.png" id="8_iu4e0"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_wcub7"]
 streams_count = 4
@@ -15,29 +18,54 @@ stream_3/stream = ExtResource("4_6xkxl")
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_wcub7"]
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_0rv1w"]
-properties/0/path = NodePath(".:playing")
-properties/0/spawn = true
-properties/0/replication_mode = 1
-properties/1/path = NodePath(".:pitch_scale")
-properties/1/spawn = true
-properties/1/replication_mode = 1
+[sub_resource type="SpriteFrames" id="SpriteFrames_qfyev"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6xkxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_iu4e0")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 6.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"silencio",
+"speed": 5.0
+}]
 
 [node name="Voice" type="AudioStreamPlayer3D" unique_id=563546600]
 stream = SubResource("AudioStreamRandomizer_wcub7")
-attenuation_model = 3
-unit_size = 84.05
+attenuation_model = 1
+unit_size = 4.0
+max_db = 0.0
 bus = &"Sound"
+attenuation_filter_db = -10.0
 doppler_tracking = 2
+script = ExtResource("5_aq8th")
 
-[node name="Input" type="AudioStreamPlayer" parent="." unique_id=215070053 node_paths=PackedStringArray("voice")]
+[node name="VoiceInput" type="AudioStreamPlayer" parent="." unique_id=215070053 node_paths=PackedStringArray("voice")]
 stream = SubResource("AudioStreamMicrophone_wcub7")
 autoplay = true
 bus = &"Voice"
 script = ExtResource("1_wcub7")
 voice = NodePath("..")
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=2073046707]
-replication_config = SubResource("SceneReplicationConfig_0rv1w")
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=394024735]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+pixel_size = 0.005
+billboard = 1
+no_depth_test = true
+alpha_cut = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_qfyev")
+animation = &"silencio"
+autoplay = "silencio"
 
-[connection signal="finished" from="." to="Input" method="_on_voice_finished"]
+[connection signal="finished" from="." to="." method="_on_finished"]
