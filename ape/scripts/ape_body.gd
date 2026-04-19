@@ -30,7 +30,7 @@ func _ready():
 	# Once we're spawned, set our camera
 	await get_tree().process_frame
 	if is_multiplayer_authority():
-		camera.current = true
+		camera.make_current()
 	
 
 func _physics_process(delta: float) -> void:

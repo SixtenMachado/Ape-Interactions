@@ -81,7 +81,7 @@ func _physics_process(delta: float) -> void:
 			hand_bone.global_position = raycast.get_collision_point()
 			hang_joint.node_a = grabbed_node.get_path()
 			hang_joint.node_b = hand_bone.get_path()
-			state.ragdoll(grip_time)
+			state.ragdoll(grip_time + (999 * float(!state.hungry)))
 			if right_hand:
 				state.right_hand_grab = true
 			else:
@@ -93,7 +93,10 @@ func _physics_process(delta: float) -> void:
 	ik.active = bool(ik.influence != 0)
 
 func throw():
-	held_item.apply_impulse_rpc.rpc_id(1, (-look_pivot.global_basis.z + (Vector3.UP * 0.7)).normalized() * 10 + ape.velocity)
+	var mod_throw_power = throw_power
+	if state.hungry:
+		mod_throw_power = mod_throw_power / 2
+	held_item.apply_impulse_rpc.rpc_id(1, (-look_pivot.global_basis.z + (Vector3.UP * 0.7)).normalized() * mod_throw_power + ape.velocity)
 	held_item = null
 
 func set_held_item_location(item:NetworkRigidBody, grab_transform:Transform3D):

@@ -6,6 +6,8 @@ enum State{
 	RAGDOLL
 }
 
+var hungry := true
+
 @export var current_state := State.NORMAL
 var ragdoll_current_time : float = 0
 var ragdoll_getup_time : float = 4.0
