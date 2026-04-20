@@ -6,6 +6,7 @@ format = 3
 
 [sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_q8u25"]
 resource_name = "SpectrumAnalyzer"
+buffer_length = 0.5
 fft_size = 1
 
 [sub_resource type="AudioEffectAmplify" id="AudioEffectAmplify_q8u25"]

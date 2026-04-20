@@ -1,6 +1,20 @@
 extends AudioStreamPlayer3D
 class_name ApeVoice
 
+var idx : int = -1
+var analyzer : AudioEffectSpectrumAnalyzerInstance
+
+func _ready() -> void:
+	idx = AudioServer.bus_count
+	AudioServer.add_bus(idx)
+	AudioServer.set_bus_send(idx, "Sound")
+	AudioServer.add_bus_effect(idx, AudioEffectSpectrumAnalyzer.new())
+	var effect = AudioServer.get_bus_effect(idx, 0)
+	effect.buffer_length = 1
+	effect.fft_size = 3
+	analyzer = AudioServer.get_bus_effect_instance(idx, 0)
+	bus = AudioServer.get_bus_name(idx)
+
 @rpc("any_peer", "call_local")
 func utter(pscale : float):
 	print("im an utterance baby, pitch scale ", pscale)
