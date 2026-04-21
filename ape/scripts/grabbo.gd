@@ -28,6 +28,8 @@ extends Node
 
 
 var pressed : bool
+var cooldown : bool = false
+var timer : SceneTreeTimer
 
 func lerp_ik_influence(delta: float, positive: bool = true, clamp_low : float = 0, clamp_high: float = 1):
 	ik.influence = clampf(ik.influence + (delta * (ik_speed * ((float(positive) * 2) - 1))), clamp_low, clamp_high)
@@ -51,6 +53,7 @@ func _physics_process(delta: float) -> void:
 			held_item.process_mode = Node.PROCESS_MODE_INHERIT
 			throw.call_deferred()
 			authority_manager.release_authority.rpc_id(1, str(held_item.get_path()))
+			start_cooldown()
 	
 	elif hang_joint.node_a:
 		lerp_ik_influence(delta, false)
@@ -65,15 +68,18 @@ func _physics_process(delta: float) -> void:
 			
 			if not (state.right_hand_grab or state.left_hand_grab):
 				state.current_state = state.State.NORMAL
+			
+			start_cooldown()
 	
-	
-	elif pressed:
+	#Grab item
+	elif pressed and not cooldown:
 		lerp_ik_influence(delta)
 		if raycast.get_collider() is NetworkRigidBody:
 			held_item = raycast.get_collider()
 			authority_manager.claim_authority.rpc_id(1, str(held_item.get_path()))
 			held_item.process_mode = Node.PROCESS_MODE_DISABLED
 		
+		#Grab and swing
 		elif raycast.get_collider() is Node3D:
 			var grabbed_node : Node3D
 			grabbed_node = raycast.get_collider()
@@ -101,3 +107,13 @@ func throw():
 
 func set_held_item_location(item:NetworkRigidBody, grab_transform:Transform3D):
 	item.attach_to_grabber.rpc(grab_transform)
+
+func start_cooldown():
+	if cooldown: return
+	cooldown = true
+	await get_tree().create_timer(0.33).timeout
+	end_cooldown()
+
+func end_cooldown():
+	cooldown = false
+	print("balatro")

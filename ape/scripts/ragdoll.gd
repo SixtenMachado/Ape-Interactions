@@ -41,7 +41,7 @@ func _physics_process(delta: float) -> void:
 		
 	if state.current_state == state.State.RAGDOLL:
 		getting_up = false
-		influence = 1
+		influence = clampf(influence + (delta * 10), 0, 1)
 		
 		# apply directional influence
 		directional_influence(delta)
@@ -64,10 +64,12 @@ func _physics_process(delta: float) -> void:
 			ragdolling = false
 
 func get_ragdoll_velocity() -> Vector3:
+	var mod_swing_power = swing_power
+	if state.hungry: mod_swing_power = 1
 	var swooce : Vector3
 	swooce = bones.get(0).linear_velocity
 	swooce *= clampf(swing_power/1.5 * funny_jump_blocker, 1.1, 99)
-	swooce.y = clampf(swooce.y * (swing_power * 0.6 * funny_jump_blocker), swing_power, 1 + (10 * funny_jump_blocker)) 
+	swooce.y = clampf(swooce.y * (mod_swing_power * 0.6 * funny_jump_blocker), mod_swing_power, 1 + (10 * funny_jump_blocker)) 
 	return swooce
 
 func directional_influence(delta : float):
