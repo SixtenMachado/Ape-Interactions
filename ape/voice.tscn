@@ -12,9 +12,15 @@
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_wcub7"]
 streams_count = 4
 stream_0/stream = ExtResource("1_0rv1w")
+stream_0/weight = 0.0
 stream_1/stream = ExtResource("2_aq8th")
 stream_2/stream = ExtResource("3_sipil")
 stream_3/stream = ExtResource("4_6xkxl")
+stream_3/weight = 0.0
+
+[sub_resource type="Curve" id="Curve_6xkxl"]
+_data = [Vector2(0.15151516, 0.2583201), 0.0, 1.5004104, 0, 0, Vector2(0.5, 0.67036456), 1.6115509, 1.6115509, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_wcub7"]
 
@@ -44,11 +50,12 @@ animations = [{
 stream = SubResource("AudioStreamRandomizer_wcub7")
 attenuation_model = 1
 unit_size = 4.0
-max_db = 0.0
+max_db = 6.0
 bus = &"Sound"
 attenuation_filter_db = -10.0
 doppler_tracking = 2
 script = ExtResource("5_aq8th")
+curve = SubResource("Curve_6xkxl")
 
 [node name="VoiceInput" type="AudioStreamPlayer" parent="." unique_id=215070053 node_paths=PackedStringArray("voice")]
 stream = SubResource("AudioStreamMicrophone_wcub7")

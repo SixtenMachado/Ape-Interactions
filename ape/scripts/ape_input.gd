@@ -7,6 +7,7 @@ var ragdoll : bool = false
 var hand_right : bool = false
 var hand_left : bool = false
 var crouch : bool = false
+var mic : bool = false
 
 var enable_funny_jump : bool = false
 
@@ -30,6 +31,7 @@ func _physics_process(delta: float) -> void:
 	ragdoll = Input.is_action_pressed("ragdoll")
 	hand_right = Input.is_action_pressed("hand_right")
 	hand_left = Input.is_action_pressed("hand_left")
+	mic = Input.is_action_pressed("mic")
 	
 	# don't move the camera when the mouse is "released" with ESC
 	if override_mouse:

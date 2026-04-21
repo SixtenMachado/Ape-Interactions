@@ -3,6 +3,8 @@ class_name ApeVoice
 
 var idx : int = -1
 var analyzer : AudioEffectSpectrumAnalyzerInstance
+@export var curve : Curve
+@export var input : PlayerInput
 
 func _ready() -> void:
 	idx = AudioServer.bus_count
@@ -16,12 +18,14 @@ func _ready() -> void:
 	bus = AudioServer.get_bus_name(idx)
 
 @rpc("any_peer", "call_local")
-func utter(pscale : float):
+func utter(pscale : float, loud : float):
 	print("im an utterance baby, pitch scale ", pscale)
 	$VoiceInput.voice_playing = true
 	pitch_scale = pscale
+	volume_linear = curve.sample(loud)
 	play()
 	if is_multiplayer_authority():
+		$AnimatedSprite3D.pixel_size = volume_linear * 0.005
 		$AnimatedSprite3D.stop()
 		$AnimatedSprite3D.flip_h = !$AnimatedSprite3D.flip_h 
 		$AnimatedSprite3D.play("default")
