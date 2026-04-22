@@ -60,6 +60,7 @@ func _input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("reset_position"):
 		get_parent().global_position = Vector3(0,5,0)
+		get_parent().velocity = Vector3.ZERO
 	
 	if event.is_action_pressed("enable_funny_jump"):
 		enable_funny_jump = !enable_funny_jump

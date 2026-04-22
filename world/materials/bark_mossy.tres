@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c0lqho5dv7ao1"]
+
+[ext_resource type="Shader" uid="uid://dw3quh7owpey5" path="res://color_ramp.gdshader" id="1_qceln"]
+[ext_resource type="Texture2D" uid="uid://bmreeynbj8olb" path="res://world/materials/mossy.png" id="2_qceln"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_qq583"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_qceln")
+shader_parameter/input_texture = ExtResource("2_qceln")
+shader_parameter/red_color = Color(0.60453427, 0.640625, 0.62036, 1)
+shader_parameter/black_color = Color(0.16423753, 0.17578125, 0.12880747, 1)
+shader_parameter/uv_mult = Vector2(1, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.2
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_qq583")
