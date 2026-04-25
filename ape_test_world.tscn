@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cy5xfsup6e7n8" path="res://world/SickTree.blend" id="15_1v17q"]
 [ext_resource type="Material" uid="uid://c0lqho5dv7ao1" path="res://world/materials/bark_mossy.tres" id="16_8d02a"]
 [ext_resource type="Material" uid="uid://dfq6ytympclob" path="res://world/materials/leaves_pollock.tres" id="17_10uu3"]
+[ext_resource type="PackedScene" uid="uid://cgmnx4on3jod5" path="res://props/banana.tscn" id="19_akkhh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pddg"]
 shader = ExtResource("1_ngyot")
@@ -25,9 +26,6 @@ shader_parameter/scale = Vector2(1, 1)
 shader_parameter/strength = 0.05
 shader_parameter/fps = 6.0
 shader_parameter/noise = ExtResource("2_ngyot")
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_63tlq"]
-data = PackedVector3Array(0, 2.0307999, -2.8244998, 2.6167, 2.8588998, -2.6167, 2.4024, 1.851, -2.4024, 0, 2.0307999, -2.8244998, 0, 3.2903, -3.2036, 2.6167, 2.8588998, -2.6167, 2.3555999, 0.1998, 0, 2.8161, 1.8916999, -2.8161, 2.093, 0.2699, -2.093, 2.3555999, 0.1998, 0, 3.5767, 2.179, 0, 2.8161, 1.8916999, -2.8161, -2.3555999, 0.1998, 0, -2.8161, 1.8916999, 2.8161, -2.093, 0.2699, 2.093, -2.3555999, 0.1998, 0, -3.5767, 2.179, 0, -2.8161, 1.8916999, 2.8161, 0, 2.0307999, 2.8244998, -2.6167, 2.8588998, 2.6167, -2.4024, 1.851, 2.4024, 0, 2.0307999, 2.8244998, 0, 3.2903, 3.2036, -2.6167, 2.8588998, 2.6167, 0, 0.0923, 0, 2.093, 0.2699, 2.093, 2.3555999, 0.1998, 0, 0, 0.0923, 0, 0, 0.1998, 2.3555999, 2.093, 0.2699, 2.093, 2.4024, 1.851, -2.4024, 2.4024, 1.851, 2.4024, 0, 0.8278, 0, 2.4024, 1.851, -2.4024, 2.8244998, 2.0307999, 0, 2.4024, 1.851, 2.4024, -3.2036, 3.2903, 0, -2.721, 5.8884, -2.721, -2.6167, 2.8588998, -2.6167, -3.2036, 3.2903, 0, -3.4088, 6.3747997, 0, -2.721, 5.8884, -2.721, 0, 2.179, -3.5767, -3.0730999, 1.7779, -3.0730999, -2.8161, 1.8916999, -2.8161, 0, 2.179, -3.5767, 0, 2.0788, -4.0463, -3.0730999, 1.7779, -3.0730999, 3.2036, 3.2903, 0, 2.721, 5.8884, 2.721, 2.6167, 2.8588998, 2.6167, 3.2036, 3.2903, 0, 3.4088, 6.3747997, 0, 2.721, 5.8884, 2.721, 0, 2.179, 3.5767, 3.0730999, 1.7779, 3.0730999, 2.8161, 1.8916999, 2.8161, 0, 2.179, 3.5767, 0, 2.0788, 4.0463, 3.0730999, 1.7779, 3.0730999, 0, 0.1998, 2.3555999, 2.8161, 1.8916999, 2.8161, 2.093, 0.2699, 2.093, 0, 0.1998, 2.3555999, 0, 2.179, 3.5767, 2.8161, 1.8916999, 2.8161, 2.8244998, 2.0307999, 0, 2.6167, 2.8588998, 2.6167, 2.4024, 1.851, 2.4024, 2.8244998, 2.0307999, 0, 3.2036, 3.2903, 0, 2.6167, 2.8588998, 2.6167, 0, 0.1998, -2.3555999, -2.8161, 1.8916999, -2.8161, -2.093, 0.2699, -2.093, 0, 0.1998, -2.3555999, 0, 2.179, -3.5767, -2.8161, 1.8916999, -2.8161, -2.8244998, 2.0307999, 0, -2.6167, 2.8588998, -2.6167, -2.4024, 1.851, -2.4024, -2.8244998, 2.0307999, 0, -3.2036, 3.2903, 0, -2.6167, 2.8588998, -2.6167, -4.0463, 2.0788, 0, -2.721, 5.8884, -2.721, -3.4088, 6.3747997, 0, -4.0463, 2.0788, 0, -3.0730999, 1.7779, -3.0730999, -2.721, 5.8884, -2.721, 0, 2.0788, -4.0463, 2.721, 5.8884, -2.721, 0, 6.3747997, -3.4088, 0, 2.0788, -4.0463, 3.0730999, 1.7779, -3.0730999, 2.721, 5.8884, -2.721, 4.0463, 2.0788, 0, 2.721, 5.8884, 2.721, 3.4088, 6.3747997, 0, 4.0463, 2.0788, 0, 3.0730999, 1.7779, 3.0730999, 2.721, 5.8884, 2.721, 0, 2.0788, 4.0463, -2.721, 5.8884, 2.721, 0, 6.3747997, 3.4088, 0, 2.0788, 4.0463, -3.0730999, 1.7779, 3.0730999, -2.721, 5.8884, 2.721, 0, 3.2903, 3.2036, -2.721, 5.8884, 2.721, -2.6167, 2.8588998, 2.6167, 0, 3.2903, 3.2036, 0, 6.3747997, 3.4088, -2.721, 5.8884, 2.721, -3.5767, 2.179, 0, -3.0730999, 1.7779, 3.0730999, -2.8161, 1.8916999, 2.8161, -3.5767, 2.179, 0, -4.0463, 2.0788, 0, -3.0730999, 1.7779, 3.0730999, 3.5767, 2.179, 0, 3.0730999, 1.7779, -3.0730999, 2.8161, 1.8916999, -2.8161, 3.5767, 2.179, 0, 4.0463, 2.0788, 0, 3.0730999, 1.7779, -3.0730999, 0, 3.2903, -3.2036, 2.721, 5.8884, -2.721, 2.6167, 2.8588998, -2.6167, 0, 3.2903, -3.2036, 0, 6.3747997, -3.4088, 2.721, 5.8884, -2.721, -2.6167, 2.8588998, -2.6167, 0, 6.3747997, -3.4088, 0, 3.2903, -3.2036, -2.6167, 2.8588998, -2.6167, -2.721, 5.8884, -2.721, 0, 6.3747997, -3.4088, -2.4024, 1.851, 2.4024, -2.4024, 1.851, -2.4024, 0, 0.8278, 0, -2.4024, 1.851, 2.4024, -2.8244998, 2.0307999, 0, -2.4024, 1.851, -2.4024, -2.4024, 1.851, -2.4024, 2.4024, 1.851, -2.4024, 0, 0.8278, 0, -2.4024, 1.851, -2.4024, 0, 2.0307999, -2.8244998, 2.4024, 1.851, -2.4024, 2.4024, 1.851, 2.4024, -2.4024, 1.851, 2.4024, 0, 0.8278, 0, 2.4024, 1.851, 2.4024, 0, 2.0307999, 2.8244998, -2.4024, 1.851, 2.4024, 2.6167, 2.8588998, 2.6167, 0, 6.3747997, 3.4088, 0, 3.2903, 3.2036, 2.6167, 2.8588998, 2.6167, 2.721, 5.8884, 2.721, 0, 6.3747997, 3.4088, 3.0730999, 1.7779, 3.0730999, 0, 6.3747997, 3.4088, 2.721, 5.8884, 2.721, 3.0730999, 1.7779, 3.0730999, 0, 2.0788, 4.0463, 0, 6.3747997, 3.4088, -3.0730999, 1.7779, -3.0730999, 0, 6.3747997, -3.4088, -2.721, 5.8884, -2.721, -3.0730999, 1.7779, -3.0730999, 0, 2.0788, -4.0463, 0, 6.3747997, -3.4088, 2.093, 0.2699, -2.093, 0, 2.179, -3.5767, 0, 0.1998, -2.3555999, 2.093, 0.2699, -2.093, 2.8161, 1.8916999, -2.8161, 0, 2.179, -3.5767, -2.093, 0.2699, 2.093, 0, 2.179, 3.5767, 0, 0.1998, 2.3555999, -2.093, 0.2699, 2.093, -2.8161, 1.8916999, 2.8161, 0, 2.179, 3.5767, -2.8161, 1.8916999, 2.8161, 0, 2.0788, 4.0463, 0, 2.179, 3.5767, -2.8161, 1.8916999, 2.8161, -3.0730999, 1.7779, 3.0730999, 0, 2.0788, 4.0463, 2.8161, 1.8916999, -2.8161, 0, 2.0788, -4.0463, 0, 2.179, -3.5767, 2.8161, 1.8916999, -2.8161, 3.0730999, 1.7779, -3.0730999, 0, 2.0788, -4.0463, -2.3555999, 0.1998, 0, 0, 0.1998, 2.3555999, 0, 0.0923, 0, -2.3555999, 0.1998, 0, -2.093, 0.2699, 2.093, 0, 0.1998, 2.3555999, 2.4024, 1.851, 2.4024, 0, 3.2903, 3.2036, 0, 2.0307999, 2.8244998, 2.4024, 1.851, 2.4024, 2.6167, 2.8588998, 2.6167, 0, 3.2903, 3.2036, -2.4024, 1.851, -2.4024, 0, 3.2903, -3.2036, 0, 2.0307999, -2.8244998, -2.4024, 1.851, -2.4024, -2.6167, 2.8588998, -2.6167, 0, 3.2903, -3.2036, -2.093, 0.2699, -2.093, 0, 0.0923, 0, 0, 0.1998, -2.3555999, -2.093, 0.2699, -2.093, -2.3555999, 0.1998, 0, 0, 0.0923, 0, 2.8161, 1.8916999, 2.8161, 4.0463, 2.0788, 0, 3.5767, 2.179, 0, 2.8161, 1.8916999, 2.8161, 3.0730999, 1.7779, 3.0730999, 4.0463, 2.0788, 0, -2.8161, 1.8916999, -2.8161, -4.0463, 2.0788, 0, -3.5767, 2.179, 0, -2.8161, 1.8916999, -2.8161, -3.0730999, 1.7779, -3.0730999, -4.0463, 2.0788, 0, 3.0730999, 1.7779, -3.0730999, 3.4088, 6.3747997, 0, 2.721, 5.8884, -2.721, 3.0730999, 1.7779, -3.0730999, 4.0463, 2.0788, 0, 3.4088, 6.3747997, 0, -3.0730999, 1.7779, 3.0730999, -3.4088, 6.3747997, 0, -2.721, 5.8884, 2.721, -3.0730999, 1.7779, 3.0730999, -4.0463, 2.0788, 0, -3.4088, 6.3747997, 0, -2.4024, 1.851, 2.4024, -3.2036, 3.2903, 0, -2.8244998, 2.0307999, 0, -2.4024, 1.851, 2.4024, -2.6167, 2.8588998, 2.6167, -3.2036, 3.2903, 0, 2.4024, 1.851, -2.4024, 3.2036, 3.2903, 0, 2.8244998, 2.0307999, 0, 2.4024, 1.851, -2.4024, 2.6167, 2.8588998, -2.6167, 3.2036, 3.2903, 0, 2.6167, 2.8588998, -2.6167, 3.4088, 6.3747997, 0, 3.2036, 3.2903, 0, 2.6167, 2.8588998, -2.6167, 2.721, 5.8884, -2.721, 3.4088, 6.3747997, 0, -2.6167, 2.8588998, 2.6167, -3.4088, 6.3747997, 0, -3.2036, 3.2903, 0, -2.6167, 2.8588998, 2.6167, -2.721, 5.8884, 2.721, -3.4088, 6.3747997, 0, 0, 0.1998, -2.3555999, 2.3555999, 0.1998, 0, 2.093, 0.2699, -2.093, 0, 0.1998, -2.3555999, 0, 0.0923, 0, 2.3555999, 0.1998, 0, -2.093, 0.2699, -2.093, -3.5767, 2.179, 0, -2.3555999, 0.1998, 0, -2.093, 0.2699, -2.093, -2.8161, 1.8916999, -2.8161, -3.5767, 2.179, 0, 2.093, 0.2699, 2.093, 3.5767, 2.179, 0, 2.3555999, 0.1998, 0, 2.093, 0.2699, 2.093, 2.8161, 1.8916999, 2.8161, 3.5767, 2.179, 0)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_akkhh"]
 shader = ExtResource("3_okbi4")
@@ -509,11 +507,6 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=584039338]
-shape = SubResource("ConcavePolygonShape3D_63tlq")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1326782859]
-
 [node name="UI" type="CanvasLayer" parent="." unique_id=498216998]
 
 [node name="Control" type="Control" parent="UI" unique_id=410343068]
@@ -937,560 +930,359 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ypvrs")
 _spawnable_scenes = PackedStringArray("uid://k3y73rql2u6e", "uid://cpdvklybvsjn2")
 spawn_path = NodePath("..")
 
-[node name="BananaPeel" parent="." unique_id=417685608 instance=ExtResource("14_gcxbd")]
+[node name="BananaPeel" parent="SubViewport/GameScene" unique_id=1806522554 instance=ExtResource("14_gcxbd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.831786, 0.9939404, -8.111376)
 
-[node name="BananaPeel2" parent="." unique_id=1806522554 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.831786, 0.9939404, -9.2029915)
-
-[node name="BananaPeel3" parent="." unique_id=1075783423 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.831786, 0.9939404, -7.26992)
-
-[node name="BananaPeel4" parent="." unique_id=1469236909 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.303286, 2.0960062, -8.510828)
-
-[node name="BananaPeel5" parent="." unique_id=362211637 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.303286, 2.2774353, -7.9932036)
-
-[node name="BananaPeel6" parent="." unique_id=318765764 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.303286, 2.4054174, -7.6637244)
-
-[node name="BananaPeel7" parent="." unique_id=563474185 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.46762, 2.4054174, -7.6637244)
-
-[node name="BananaPeel8" parent="." unique_id=1877991429 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.79784, 0.9939404, -8.111376)
-
-[node name="BananaPeel9" parent="." unique_id=2053975325 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.79784, 0.9939404, -9.2029915)
-
-[node name="BananaPeel10" parent="." unique_id=1641437505 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.79784, 0.9939404, -7.26992)
-
-[node name="BananaPeel11" parent="." unique_id=1135583274 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.269339, 2.0960062, -8.510828)
-
-[node name="BananaPeel12" parent="." unique_id=2139069997 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.269339, 2.2774353, -7.9932036)
-
-[node name="BananaPeel13" parent="." unique_id=1366351309 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.269339, 2.4054174, -7.6637244)
-
-[node name="BananaPeel14" parent="." unique_id=1594822573 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.433674, 2.4054174, -7.6637244)
-
-[node name="BananaPeel15" parent="." unique_id=222328090 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.212738, 0.9939404, -8.111376)
-
-[node name="BananaPeel16" parent="." unique_id=507582983 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -49.377304, -8.03557, 13.8752575)
-
-[node name="BananaPeel17" parent="." unique_id=314692184 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.212738, 0.9939404, -7.26992)
-
-[node name="BananaPeel18" parent="." unique_id=724208383 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.684238, 2.0960062, -8.510828)
-
-[node name="BananaPeel19" parent="." unique_id=498741634 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.684238, 2.2774353, -7.9932036)
-
-[node name="BananaPeel20" parent="." unique_id=1276244523 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.684238, 2.4054174, -7.6637244)
-
-[node name="BananaPeel21" parent="." unique_id=1933144247 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.848574, 2.4054174, -7.6637244)
-
-[node name="BananaPeel22" parent="." unique_id=1375629918 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.81481, 0.9939404, -8.788755)
-
-[node name="BananaPeel23" parent="." unique_id=2041152913 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.81481, 0.9939404, -9.880373)
-
-[node name="BananaPeel24" parent="." unique_id=478187917 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.81481, 0.9939404, -7.9473014)
-
-[node name="BananaPeel25" parent="." unique_id=1351148121 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.286308, 2.0960062, -9.18821)
-
-[node name="BananaPeel26" parent="." unique_id=1200517218 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.286308, 2.2774353, -8.670584)
-
-[node name="BananaPeel27" parent="." unique_id=417905294 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.286308, 2.4054174, -8.341106)
-
-[node name="BananaPeel28" parent="." unique_id=409421169 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.450645, 2.4054174, -8.341106)
-
-[node name="BananaPeel29" parent="." unique_id=1907931864 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.326998, 1.55811, -7.8554206)
-
-[node name="BananaPeel30" parent="." unique_id=1791471900 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.326998, 1.55811, -8.947037)
-
-[node name="BananaPeel31" parent="." unique_id=1532686897 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.326998, 1.55811, -7.013966)
-
-[node name="BananaPeel32" parent="." unique_id=864555979 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.798496, 2.6601756, -8.254875)
-
-[node name="BananaPeel33" parent="." unique_id=1338152506 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.798496, 2.8416047, -7.737249)
-
-[node name="BananaPeel34" parent="." unique_id=1531748931 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.798496, 2.969587, -7.4077706)
-
-[node name="BananaPeel35" parent="." unique_id=636812356 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.962833, 2.969587, -7.4077706)
-
-[node name="BananaPeel36" parent="." unique_id=1301235808 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.831786, 0.9939404, -9.629858)
-
-[node name="BananaPeel37" parent="." unique_id=2035233535 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.831786, 0.9939404, -10.721474)
-
-[node name="BananaPeel38" parent="." unique_id=223675070 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.831786, 0.9939404, -8.788402)
-
-[node name="BananaPeel39" parent="." unique_id=1489773699 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.303286, 2.0960062, -10.02931)
-
-[node name="BananaPeel40" parent="." unique_id=2042403002 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.303286, 2.2774353, -9.511685)
-
-[node name="BananaPeel41" parent="." unique_id=1844139970 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.303286, 2.4054174, -9.182206)
-
-[node name="BananaPeel42" parent="." unique_id=1647188278 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.46762, 2.4054174, -9.182206)
-
-[node name="BananaPeel43" parent="." unique_id=1075893764 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.79784, 0.9939404, -9.629858)
-
-[node name="BananaPeel44" parent="." unique_id=841018133 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.79784, 0.9939404, -10.721474)
-
-[node name="BananaPeel45" parent="." unique_id=1265774822 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.79784, 0.9939404, -8.788402)
-
-[node name="BananaPeel46" parent="." unique_id=830314907 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.269339, 2.0960062, -10.02931)
-
-[node name="BananaPeel47" parent="." unique_id=996339132 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.269339, 2.2774353, -9.511685)
-
-[node name="BananaPeel48" parent="." unique_id=1924354619 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.269339, 2.4054174, -9.182206)
-
-[node name="BananaPeel49" parent="." unique_id=1282381123 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.433674, 2.4054174, -9.182206)
-
-[node name="BananaPeel50" parent="." unique_id=450137466 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.212738, 0.9939404, -9.629858)
-
-[node name="BananaPeel51" parent="." unique_id=311407807 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -49.377304, -8.03557, 12.356775)
-
-[node name="BananaPeel52" parent="." unique_id=692356575 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.212738, 0.9939404, -8.788402)
-
-[node name="BananaPeel53" parent="." unique_id=637488636 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.684238, 2.0960062, -10.02931)
-
-[node name="BananaPeel54" parent="." unique_id=1518322252 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.684238, 2.2774353, -9.511685)
-
-[node name="BananaPeel55" parent="." unique_id=2085515089 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.684238, 2.4054174, -9.182206)
-
-[node name="BananaPeel56" parent="." unique_id=997519302 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.848574, 2.4054174, -9.182206)
-
-[node name="BananaPeel57" parent="." unique_id=100005850 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.81481, 0.9939404, -10.307238)
-
-[node name="BananaPeel58" parent="." unique_id=836048773 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.81481, 0.9939404, -11.398855)
-
-[node name="BananaPeel59" parent="." unique_id=934074612 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.81481, 0.9939404, -9.465783)
-
-[node name="BananaPeel60" parent="." unique_id=1074767642 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.286308, 2.0960062, -10.706692)
-
-[node name="BananaPeel61" parent="." unique_id=2005591185 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.286308, 2.2774353, -10.189066)
-
-[node name="BananaPeel62" parent="." unique_id=276998938 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.286308, 2.4054174, -9.859589)
-
-[node name="BananaPeel63" parent="." unique_id=1622478213 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.450645, 2.4054174, -9.859589)
-
-[node name="BananaPeel64" parent="." unique_id=823155771 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.326998, 1.55811, -9.373902)
-
-[node name="BananaPeel65" parent="." unique_id=582764539 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.326998, 1.55811, -10.465519)
-
-[node name="BananaPeel66" parent="." unique_id=259502288 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.326998, 1.55811, -8.532448)
-
-[node name="BananaPeel67" parent="." unique_id=444151480 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.798496, 2.6601756, -9.773357)
-
-[node name="BananaPeel68" parent="." unique_id=1755588966 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.798496, 2.8416047, -9.255731)
-
-[node name="BananaPeel69" parent="." unique_id=1706137529 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.798496, 2.969587, -8.926252)
-
-[node name="BananaPeel70" parent="." unique_id=937518014 instance=ExtResource("14_gcxbd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.962833, 2.969587, -8.926252)
-
-[node name="SickTree" parent="." unique_id=2016672918 instance=ExtResource("15_1v17q")]
+[node name="SickTree" parent="SubViewport/GameScene" unique_id=2016672918 instance=ExtResource("15_1v17q")]
 transform = Transform3D(-0.08478239, 0, -0.39091167, 0, 0.4, 0, 0.39091167, 0, -0.08478239, -13.9649315, 0.40128136, 10.241524)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree" parent_id_path=PackedInt32Array(2016672918, 1461657678) index="0" unique_id=1849106091]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree" parent_id_path=PackedInt32Array(2016672918, 1461657678) index="0" unique_id=1849106091]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree/StaticBody3D" unique_id=706107665]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree/StaticBody3D" unique_id=706107665]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="SickTree2" type="MeshInstance3D" parent="SickTree" unique_id=703814540]
+[node name="SickTree2" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=703814540]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, -42.789005, -3.725846, 29.290691)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree2" unique_id=491082869]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree2" unique_id=491082869]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree2/StaticBody3D" unique_id=1884512019]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree2/StaticBody3D" unique_id=1884512019]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree2" unique_id=608047176]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree2" unique_id=608047176]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree3" type="MeshInstance3D" parent="SickTree" unique_id=31092947]
+[node name="SickTree3" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=31092947]
 transform = Transform3D(0.39874908, 0, -1.0127538, 0, 1.2397496, 0, 0.9170601, 0, 0.44035792, -6.98806, -3.725846, 69.14157)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree3" unique_id=1955168139]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree3" unique_id=1955168139]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree3/StaticBody3D" unique_id=524072204]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree3/StaticBody3D" unique_id=524072204]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree3" unique_id=1375102461]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree3" unique_id=1375102461]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree4" type="MeshInstance3D" parent="SickTree" unique_id=32957547]
+[node name="SickTree4" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=32957547]
 transform = Transform3D(0.6152213, 0, 0.870618, 0, 1.2397496, 0, -0.7883546, 0, 0.67941874, 7.861635, -3.725846, 38.95461)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree4" unique_id=729579688]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree4" unique_id=729579688]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree4/StaticBody3D" unique_id=156754288]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree4/StaticBody3D" unique_id=156754288]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree4" unique_id=1133565696]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree4" unique_id=1133565696]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree5" type="MeshInstance3D" parent="SickTree" unique_id=2072760825]
+[node name="SickTree5" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=2072760825]
 transform = Transform3D(-0.624575, 0, -0.8624573, 0, 1.2397496, 0, 0.7809649, 0, -0.68974847, -14.487471, -11.551866, 30.71668)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree5" unique_id=53762557]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree5" unique_id=53762557]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree5/StaticBody3D" unique_id=1988820849]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree5/StaticBody3D" unique_id=1988820849]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree5" unique_id=1395370813]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree5" unique_id=1395370813]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree6" type="MeshInstance3D" parent="SickTree" unique_id=1923966857]
+[node name="SickTree6" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=1923966857]
 transform = Transform3D(0.9681695, 0, -0.2502955, 0, 1, 0, 0.2502955, 0, 0.9681695, 18.837687, -3.725846, 57.217438)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree6" unique_id=75201364]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree6" unique_id=75201364]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree6/StaticBody3D" unique_id=1492009282]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree6/StaticBody3D" unique_id=1492009282]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree6" unique_id=543732149]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree6" unique_id=543732149]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree7" type="MeshInstance3D" parent="SickTree" unique_id=26236681]
+[node name="SickTree7" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=26236681]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, 37.46439, -3.725846, 8.433281)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree7" unique_id=848589515]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree7" unique_id=848589515]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree7/StaticBody3D" unique_id=362680840]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree7/StaticBody3D" unique_id=362680840]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree7" unique_id=262090991]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree7" unique_id=262090991]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree8" type="MeshInstance3D" parent="SickTree" unique_id=200023355]
+[node name="SickTree8" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=200023355]
 transform = Transform3D(-0.99934435, 0, 0.039986014, 0, 1.2397496, 0, -0.036207646, 0, -1.1036243, 24.40513, -3.725846, 16.897041)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree8" unique_id=336039861]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree8" unique_id=336039861]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree8/StaticBody3D" unique_id=410858152]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree8/StaticBody3D" unique_id=410858152]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree8" unique_id=340464316]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree8" unique_id=340464316]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree9" type="MeshInstance3D" parent="SickTree" unique_id=1187561411]
+[node name="SickTree9" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=1187561411]
 transform = Transform3D(0.7509531, 0, 0.7292626, 0, 1.2397496, 0, -0.6603556, 0, 0.8293139, 57.506832, -13.017112, 25.722235)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree9" unique_id=21186977]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree9" unique_id=21186977]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree9/StaticBody3D" unique_id=1545138979]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree9/StaticBody3D" unique_id=1545138979]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree9" unique_id=1927974035]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree9" unique_id=1927974035]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree10" type="MeshInstance3D" parent="SickTree" unique_id=1912536461]
+[node name="SickTree10" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=1912536461]
 transform = Transform3D(0.47196618, 0, 0.9565541, 0, 0.955, 0, -0.88161665, 0, 0.5120833, 79.42612, -3.725846, -14.505573)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree10" unique_id=213421802]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree10" unique_id=213421802]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree10/StaticBody3D" unique_id=1175012405]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree10/StaticBody3D" unique_id=1175012405]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree10" unique_id=1522062891]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree10" unique_id=1522062891]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree11" type="MeshInstance3D" parent="SickTree" unique_id=1570913454]
+[node name="SickTree11" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=1570913454]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, 53.74964, -3.725846, 45.817234)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree11" unique_id=1492995679]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree11" unique_id=1492995679]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree11/StaticBody3D" unique_id=94016689]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree11/StaticBody3D" unique_id=94016689]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree11" unique_id=380584755]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree11" unique_id=380584755]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree12" type="MeshInstance3D" parent="SickTree" unique_id=367132358]
+[node name="SickTree12" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=367132358]
 transform = Transform3D(0.30569535, 0, 1.0514826, 0, 1.2397496, 0, -0.95212936, 0, 0.33759418, 29.308065, -3.725846, 75.18095)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree12" unique_id=1504921257]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree12" unique_id=1504921257]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree12/StaticBody3D" unique_id=43216211]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree12/StaticBody3D" unique_id=43216211]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree12" unique_id=885266222]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree12" unique_id=885266222]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree13" type="MeshInstance3D" parent="SickTree" unique_id=2003338089]
+[node name="SickTree13" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=2003338089]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, 87.50851, -3.725846, 38.283234)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree13" unique_id=1976022961]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree13" unique_id=1976022961]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree13/StaticBody3D" unique_id=187942481]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree13/StaticBody3D" unique_id=187942481]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree13" unique_id=727426379]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree13" unique_id=727426379]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree14" type="MeshInstance3D" parent="SickTree" unique_id=1188020761]
+[node name="SickTree14" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=1188020761]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, 106.235535, -3.725846, -3.3113098)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree14" unique_id=1745551270]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree14" unique_id=1745551270]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree14/StaticBody3D" unique_id=1214824749]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree14/StaticBody3D" unique_id=1214824749]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree14" unique_id=1834326717]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree14" unique_id=1834326717]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree15" type="MeshInstance3D" parent="SickTree" unique_id=1035512644]
+[node name="SickTree15" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=1035512644]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, 52.59169, -3.725846, 72.63931)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree15" unique_id=270092159]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree15" unique_id=270092159]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree15/StaticBody3D" unique_id=1303677501]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree15/StaticBody3D" unique_id=1303677501]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree15" unique_id=567736620]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree15" unique_id=567736620]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree16" type="MeshInstance3D" parent="SickTree" unique_id=176602161]
+[node name="SickTree16" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=176602161]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, -0.91324615, -3.725846, 93.42799)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree16" unique_id=922816678]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree16" unique_id=922816678]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree16/StaticBody3D" unique_id=358887444]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree16/StaticBody3D" unique_id=358887444]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree16" unique_id=1816866805]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree16" unique_id=1816866805]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree17" type="MeshInstance3D" parent="SickTree" unique_id=856665211]
+[node name="SickTree17" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=856665211]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, 83.03188, -3.725846, 51.41752)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree17" unique_id=828912482]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree17" unique_id=828912482]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree17/StaticBody3D" unique_id=13424955]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree17/StaticBody3D" unique_id=13424955]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree17" unique_id=1568948013]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree17" unique_id=1568948013]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree18" type="MeshInstance3D" parent="SickTree" unique_id=1563374813]
+[node name="SickTree18" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=1563374813]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, 110.86815, -3.725846, 3.1323166)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree18" unique_id=2048867976]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree18" unique_id=2048867976]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree18/StaticBody3D" unique_id=164163317]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree18/StaticBody3D" unique_id=164163317]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree18" unique_id=1286519713]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree18" unique_id=1286519713]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree19" type="MeshInstance3D" parent="SickTree" unique_id=2131129391]
+[node name="SickTree19" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=2131129391]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, 110.86815, -3.725846, 3.1323166)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree19" unique_id=1863581616]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree19" unique_id=1863581616]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree19/StaticBody3D" unique_id=1345054507]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree19/StaticBody3D" unique_id=1345054507]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree19" unique_id=805976030]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree19" unique_id=805976030]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree20" type="MeshInstance3D" parent="SickTree" unique_id=706999569]
+[node name="SickTree20" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=706999569]
 transform = Transform3D(-0.97535, 0, -0.24368927, 0, 1.2397496, 0, 0.22066343, 0, -1.0771263, 41.503822, -3.725846, 42.93698)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree20" unique_id=340089317]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree20" unique_id=340089317]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree20/StaticBody3D" unique_id=771551301]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree20/StaticBody3D" unique_id=771551301]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree20" unique_id=750044842]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree20" unique_id=750044842]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree21" type="MeshInstance3D" parent="SickTree" unique_id=1080705862]
+[node name="SickTree21" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=1080705862]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, 47.34397, -3.725846, -31.524681)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree21" unique_id=1499533593]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree21" unique_id=1499533593]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree21/StaticBody3D" unique_id=635547794]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree21/StaticBody3D" unique_id=635547794]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree21" unique_id=519459155]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree21" unique_id=519459155]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree22" type="MeshInstance3D" parent="SickTree" unique_id=1562372925]
+[node name="SickTree22" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=1562372925]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, -1.5427513, -3.725846, -70.904755)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree22" unique_id=1683976]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree22" unique_id=1683976]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree22/StaticBody3D" unique_id=1560356305]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree22/StaticBody3D" unique_id=1560356305]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree22" unique_id=627445475]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree22" unique_id=627445475]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree23" type="MeshInstance3D" parent="SickTree" unique_id=622526045]
+[node name="SickTree23" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=622526045]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, -4.165905, -3.725846, -19.97657)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree23" unique_id=805672597]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree23" unique_id=805672597]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree23/StaticBody3D" unique_id=68269823]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree23/StaticBody3D" unique_id=68269823]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree23" unique_id=2027023506]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree23" unique_id=2027023506]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree24" type="MeshInstance3D" parent="SickTree" unique_id=1324665132]
+[node name="SickTree24" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=1324665132]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, -5.4738436, -3.725846, 20.269627)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree24" unique_id=348903133]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree24" unique_id=348903133]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree24/StaticBody3D" unique_id=603721099]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree24/StaticBody3D" unique_id=603721099]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree24" unique_id=183214018]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree24" unique_id=183214018]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
 
-[node name="SickTree25" type="MeshInstance3D" parent="SickTree" unique_id=1023793974]
+[node name="SickTree25" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree" unique_id=1023793974]
 transform = Transform3D(0.96816957, 0, -0.27641356, 0, 1.2397496, 0, 0.25029552, 0, 1.0691965, -5.4738436, -3.725846, 20.269627)
 mesh = SubResource("ArrayMesh_m73dc")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SickTree/SickTree25" unique_id=703773673]
+[node name="StaticBody3D" type="StaticBody3D" parent="SubViewport/GameScene/SickTree/SickTree25" unique_id=703773673]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SickTree/SickTree25/StaticBody3D" unique_id=119245804]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/SickTree/SickTree25/StaticBody3D" unique_id=119245804]
 shape = SubResource("ConcavePolygonShape3D_akkhh")
 
-[node name="Leaves" type="MeshInstance3D" parent="SickTree/SickTree25" unique_id=1476985077]
+[node name="Leaves" type="MeshInstance3D" parent="SubViewport/GameScene/SickTree/SickTree25" unique_id=1476985077]
 mesh = SubResource("ArrayMesh_guxd3")
 skeleton = NodePath("")
+
+[node name="Banana" parent="SubViewport/GameScene" unique_id=1292782938 instance=ExtResource("19_akkhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.14943, -0.73349845, -2.05617)
+
+[node name="Banana2" parent="SubViewport/GameScene" unique_id=1266623548 instance=ExtResource("19_akkhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8800938, -0.3059148, -1.122102)
 
 [editable path="SubViewport/GameScene/Clearing"]
 [editable path="SubViewport/GameScene/Ball2"]
-[editable path="SickTree"]
+[editable path="SubViewport/GameScene/SickTree"]
