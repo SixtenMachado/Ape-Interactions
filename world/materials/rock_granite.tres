@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cm05kvkalto2a"]
+
+[ext_resource type="Shader" uid="uid://dw3quh7owpey5" path="res://color_ramp.gdshader" id="1_4hyr1"]
+[ext_resource type="Texture2D" uid="uid://dm13761fbosxk" path="res://world/textures/stone_test.png" id="2_r2pdk"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_30jq8"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_4hyr1")
+shader_parameter/input_texture = ExtResource("2_r2pdk")
+shader_parameter/red_color = Color(0.4117647, 0.4, 0.38431373, 1)
+shader_parameter/black_color = Color(0.34375, 0.3269817, 0.34375, 1)
+shader_parameter/uv_mult = Vector2(1.8, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.2
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_30jq8")

@@ -69,6 +69,11 @@ _subresources={
 "use_external/fallback_path": "res://world/materials/rock_sedimentary.tres",
 "use_external/path": "uid://c2xs2kmfwb4jf"
 },
+"Stone_test": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/materials/rock_granite.tres",
+"use_external/path": "uid://cm05kvkalto2a"
+},
 "branch_mango": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/materials/mango_branch.tres",
