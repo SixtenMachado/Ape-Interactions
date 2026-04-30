@@ -39,6 +39,11 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
+"Bark": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/materials/bark_rough.tres",
+"use_external/path": "uid://cdlupq2w43cjt"
+},
 "Bark_mossy": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/materials/bark_mossy.tres",
