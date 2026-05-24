@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://6vfwiws5ahw5"]
+
+[ext_resource type="Shader" uid="uid://bn225pdvsp1k1" path="res://color_ramp_double_sided.gdshader" id="1_f5oxj"]
+[ext_resource type="Texture2D" uid="uid://c6te46xsbvv0l" path="res://world/materials/leaves_frayed.png" id="2_f5oxj"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_m0o8m"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_f5oxj")
+shader_parameter/input_texture = ExtResource("2_f5oxj")
+shader_parameter/red_color = Color(0.38681138, 0.53125, 0.20271307, 1)
+shader_parameter/black_color = Color(0.3359375, 0.3328561, 0.03706564, 1)
+shader_parameter/uv_mult = Vector2(1, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.7
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_m0o8m")

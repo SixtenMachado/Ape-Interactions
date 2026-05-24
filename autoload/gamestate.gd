@@ -8,6 +8,8 @@ var save_path = "user://"
 var save_file_name = "SaveData.json"
 var full_path = save_path + "/" + save_file_name
 
+var vignette: Vignette
+
 func _ready() -> void:
 	await get_tree().process_frame;
 	get_tree().root.move_child(get_tree().current_scene,0);

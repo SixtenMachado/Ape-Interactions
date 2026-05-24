@@ -1,4 +1,5 @@
 extends Node
+class_name Grabbo
 
 @export var right_hand : bool = true
 

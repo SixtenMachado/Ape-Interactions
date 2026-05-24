@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dewkdvlwq82nk"
+path="res://.godot/imported/clink slurp.wav-64b849d2c012ec782d34b390561e2003.sample"
+
+[deps]
+
+source_file="res://audio/clink slurp.wav"
+dest_files=["res://.godot/imported/clink slurp.wav-64b849d2c012ec782d34b390561e2003.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

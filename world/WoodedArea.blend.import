@@ -59,6 +59,11 @@ _subresources={
 "use_external/fallback_path": "res://world/materials/leaves_pollock.tres",
 "use_external/path": "uid://dfq6ytympclob"
 },
+"Leaves_frayed": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://world/materials/leaves_frayed.tres",
+"use_external/path": "uid://6vfwiws5ahw5"
+},
 "Stone_test": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://world/materials/rock_granite.tres",

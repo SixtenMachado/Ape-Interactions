@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cgmnx4on3jod5"]
 
-[ext_resource type="Script" uid="uid://c1inyq3no23br" path="res://props/network_rigidbody.gd" id="1_yigti"]
+[ext_resource type="Script" uid="uid://mhqepcq3gs0o" path="res://props/food_item.gd" id="1_qlmr8"]
 [ext_resource type="Material" uid="uid://u4tk2mt8q41w" path="res://props/models/banana_material.tres" id="2_k6piy"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x6r5b"]
@@ -46,7 +46,7 @@ collision_layer = 0
 collision_mask = 0
 mass = 0.6
 physics_material_override = SubResource("PhysicsMaterial_x6r5b")
-script = ExtResource("1_yigti")
+script = ExtResource("1_qlmr8")
 
 [node name="Banana" type="MeshInstance3D" parent="." unique_id=993519015]
 mesh = SubResource("ArrayMesh_v426p")
