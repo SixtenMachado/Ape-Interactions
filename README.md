@@ -9,9 +9,10 @@ HOW TO APE:
 APE CONTROLS:  
 	- move with WASD  
 	- jump with SPACE  
-	- grab with RMB  
-	- pause with SPACE  
-	- ragdoll with L  
+	- grab with MOUSE BUTTONS
+	- use grabbed items with Q and E
+	- pause with ESC  
+	- ragdoll with R or L  
 	- free mouse with F1  
 	- reset ape position with F2  
 	- enable Funny Jumping with F3
