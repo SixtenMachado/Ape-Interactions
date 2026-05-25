@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://2yp7bsy1f4c5"]
+
+[ext_resource type="Texture2D" uid="uid://n2vdnw0fovxs" path="res://world/materials/hidden_comic.png" id="1_fjl83"]
+[ext_resource type="Script" uid="uid://dsnfbm5qtn1ky" path="res://props/particles/yummy_particles.gd" id="2_5g0qy"]
+
+[sub_resource type="Curve" id="Curve_5g0qy"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_gg4yf"]
+curve = SubResource("Curve_5g0qy")
+
+[sub_resource type="Curve" id="Curve_o6oaa"]
+_data = [Vector2(0, 0), 0.0, 13.995282, 0, 0, Vector2(0.16611296, 0.9299192), -0.14648873, -0.14648873, 0, 0, Vector2(0.7209303, 0.7284367), -0.988797, -0.988797, 0, 0, Vector2(1, 0), -4.7026596, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_5yd54"]
+curve = SubResource("Curve_o6oaa")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sexp4"]
+emission_shape = 1
+emission_sphere_radius = 0.33
+angle_min = -79.49999
+angle_max = 21.000011
+angle_curve = SubResource("CurveTexture_gg4yf")
+spread = 180.0
+gravity = Vector3(0, 0.3, 0)
+attractor_interaction_enabled = false
+scale_curve = SubResource("CurveTexture_5yd54")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5g0qy"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+specular_mode = 2
+albedo_texture = ExtResource("1_fjl83")
+texture_filter = 0
+disable_receive_shadows = true
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+proximity_fade_enabled = true
+distance_fade_min_distance = 9.7
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gg4yf"]
+material = SubResource("StandardMaterial3D_5g0qy")
+size = Vector2(0.25, 0.25)
+orientation = 2
+
+[node name="YummyParticles" type="GPUParticles3D" unique_id=1802928574]
+process_mode = 1
+amount = 7
+lifetime = 1.5
+randomness = 0.5
+fixed_fps = 12
+process_material = SubResource("ParticleProcessMaterial_sexp4")
+draw_pass_1 = SubResource("PlaneMesh_gg4yf")
+script = ExtResource("2_5g0qy")

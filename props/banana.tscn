@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mhqepcq3gs0o" path="res://props/food_item.gd" id="1_qlmr8"]
 [ext_resource type="Material" uid="uid://u4tk2mt8q41w" path="res://props/models/banana_material.tres" id="2_k6piy"]
+[ext_resource type="PackedScene" uid="uid://2yp7bsy1f4c5" path="res://props/particles/yummy_particles.tscn" id="3_yigti"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x6r5b"]
 friction = 0.8
@@ -54,3 +55,5 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1448139016]
 shape = SubResource("ConvexPolygonShape3D_qlmr8")
+
+[node name="YummyParticles" parent="." unique_id=1802928574 instance=ExtResource("3_yigti")]

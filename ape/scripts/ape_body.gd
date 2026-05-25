@@ -22,7 +22,6 @@ var adjusting_rotation : bool = false
 func _enter_tree() -> void:
 	set_multiplayer_authority(name.to_int())
 	push_warning("i am player ", get_multiplayer_authority(), ", is_multiplayer_authority is: ", is_multiplayer_authority())
-
 func _ready():
 	# Set spawn position
 	position = Vector3(0, 4, 0)
@@ -31,6 +30,7 @@ func _ready():
 	await get_tree().process_frame
 	if is_multiplayer_authority():
 		camera.make_current()
+		Gamestate.player = self
 	
 
 func _physics_process(delta: float) -> void:
