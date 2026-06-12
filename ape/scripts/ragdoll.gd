@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 	if input.ragdoll: 
 		state.ragdoll()
 		
-	if state.current_state == state.State.RAGDOLL:
+	if state.current_state == state.State.RAGDOLL or state.current_state == state.State.KNOCKOUT:
 		getting_up = false
 		influence = clampf(influence + (delta * 10), 0, 1)
 		

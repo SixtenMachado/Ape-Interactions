@@ -230,7 +230,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_mib5a")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2xp0o")
 text = "Resume"
 
-[node name="ReturnToTitle" type="Button" parent="." unique_id=1715474643]
+[node name="Disconnect" type="Button" parent="." unique_id=1715474643]
 clip_children = 2
 layout_mode = 0
 offset_left = 77.0
@@ -241,7 +241,7 @@ rotation = -0.14153583
 theme_override_styles/normal = SubResource("StyleBoxFlat_8crwb")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_mib5a")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2xp0o")
-text = "Return To Title"
+text = "Disconnect"
 
 [node name="Windowed" type="Button" parent="." unique_id=2007738801]
 clip_children = 2

@@ -1,5 +1,7 @@
 extends Control
 var last_focused : Control;
+@onready var disconnect_button : Button = $Disconnect
+
 func _ready() -> void:
 	hide();
 	$MusicSlider.value_changed.connect(set_music_volume);
@@ -9,13 +11,15 @@ func _ready() -> void:
 	$Windowed.pressed.connect(windowed_mode);
 	$Fullscreen.pressed.connect(fullscreen_mode);
 	$Fullscreen2.pressed.connect(exclusive_fullscreen_mode);
-	$ReturnToTitle.pressed.connect(return_to_title);
+	$Disconnect.pressed.connect(return_to_title);
 	$MyGames.pressed.connect(go_to_my_games);
 func go_to_my_games() -> void:
 	OS.shell_open("https://sixten-machado.itch.io/");
 func return_to_title() -> void:
 	#Gamestate.go_to_scene("res://title_scene/title.tscn");
 	toggle_pause();
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE;
+	
 func resume() -> void:
 	toggle_pause();
 func windowed_mode() -> void:

@@ -12,6 +12,7 @@ func _ready() -> void:
 	%Join.pressed.connect(_on_join_pressed)
 	%LeaveRoom.pressed.connect(_on_leave_room_pressed)
 	%Host.grab_focus()
+	PauseMenu.disconnect_button.pressed.connect(_on_leave_room_pressed)
 	# Create the NodeTunnelPeer
 	peer = NodeTunnelPeer.new()
 	#peer.debug_enabled = true # Enable debugging if needed
@@ -58,7 +59,7 @@ func _on_host_pressed() -> void:
 	%ConnectionControls.hide()
 	
 	# Show leave room button
-	%LeaveRoom.show()
+	#%LeaveRoom.show()
 	
 	print("hosted")
 
@@ -75,7 +76,7 @@ func _on_join_pressed() -> void:
 	%ConnectionControls.hide()
 	
 	# Show leave room button
-	%LeaveRoom.show()
+	#%LeaveRoom.show()
 
 # Same as any other Godot game
 # Uses the MultiplayerSpawner node's auto-spawn list to spawn players

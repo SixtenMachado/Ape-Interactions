@@ -73,7 +73,7 @@ func _physics_process(delta: float) -> void:
 			start_cooldown()
 	
 	#Grab item
-	elif pressed and not cooldown:
+	elif pressed and not cooldown and not state.current_state == state.State.KNOCKOUT:
 		lerp_ik_influence(delta)
 		if raycast.get_collider() is NetworkRigidBody:
 			held_item = raycast.get_collider()

@@ -21,7 +21,7 @@ func _on_body_entered(body: Node3D) -> void:
 		var pushable : RigidBody3D = body
 		
 		if pushable.linear_velocity.length() > armor:
-			state.ragdoll()
+			state.take_damage(pushable.linear_velocity.length())
 			ragdoll_impulse.call_deferred(body)
 		
 		var added_velocity : float = ape.velocity.length()
