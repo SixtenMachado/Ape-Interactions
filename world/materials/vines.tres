@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bpy15vv6dp54l"]
+
+[ext_resource type="Shader" uid="uid://bn225pdvsp1k1" path="res://color_ramp_double_sided.gdshader" id="1_rj2r3"]
+[ext_resource type="Texture2D" uid="uid://dw8uftd3kxoho" path="res://world/textures/vines.png" id="2_rj2r3"]
+[ext_resource type="Texture2D" uid="uid://dlihtshu6pcmx" path="res://squiggle_noise.tres" id="3_ofcsv"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_rj2r3")
+shader_parameter/input_texture = ExtResource("2_rj2r3")
+shader_parameter/red_color = Color(0.33716166, 0.5160158, 0.24306637, 1)
+shader_parameter/black_color = Color(0.57288, 0.66, 0.44219998, 1)
+shader_parameter/uv_mult = Vector2(1.105, 1)
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.4
+shader_parameter/fps = 6.0
+shader_parameter/noise = ExtResource("3_ofcsv")
