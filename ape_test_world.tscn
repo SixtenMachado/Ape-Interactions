@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://dw8uftd3kxoho" path="res://world/textures/vines.png" id="17_qyiko"]
 [ext_resource type="PackedScene" uid="uid://cgmnx4on3jod5" path="res://props/banana.tscn" id="19_akkhh"]
 [ext_resource type="PackedScene" uid="uid://ca7etpync8len" path="res://world/WoodedArea.blend" id="20_63tlq"]
+[ext_resource type="PackedScene" uid="uid://drdh3eshhgbgn" path="res://props/drum.tscn" id="25_kh6ot"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0pddg"]
 shader = ExtResource("1_ngyot")
@@ -1168,6 +1169,9 @@ shape = SubResource("ConcavePolygonShape3D_kh6ot")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewport/GameScene/WoodedArea/SickTree_006/StaticBody3D" unique_id=1808964866]
 shape = SubResource("ConcavePolygonShape3D_lm65a")
+
+[node name="Drum" parent="SubViewport/GameScene" unique_id=1897186506 instance=ExtResource("25_kh6ot")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5525724, -0.4924988, -1.9424676)
 
 [editable path="SubViewport/GameScene/Clearing"]
 [editable path="SubViewport/GameScene/Ball2"]
