@@ -1171,7 +1171,7 @@ shape = SubResource("ConcavePolygonShape3D_kh6ot")
 shape = SubResource("ConcavePolygonShape3D_lm65a")
 
 [node name="Drum" parent="SubViewport/GameScene" unique_id=1897186506 instance=ExtResource("25_kh6ot")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5525724, -0.4924988, -1.9424676)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5525724, 0.07705429, -1.9424676)
 
 [editable path="SubViewport/GameScene/Clearing"]
 [editable path="SubViewport/GameScene/Ball2"]

@@ -17,15 +17,16 @@ func _ready() -> void:
 	peer = NodeTunnelPeer.new()
 	#peer.debug_enabled = true # Enable debugging if needed
 	
-	# Always set the global peer *before* attempting to connect
-	multiplayer.multiplayer_peer = peer
+	
 	
 	# Connect to the public relay
-	peer.connect_to_relay("relay.nodetunnel.io", 9998)
+	peer.connect_to_relay("eu_central.nodetunnel.io:8080", "p6obnczaiu4jhmc")
+	
+	multiplayer.multiplayer_peer = peer
 	
 	# Wait until we have connected to the relay
-	await peer.relay_connected
-	print("Connected! Your ID: ", peer.online_id)
+	await peer.authenticated
+	print("Connected! Your ID: ", peer.room_id)
 	
 	# Attach peer_connected signal
 	peer.peer_connected.connect(_add_player)
@@ -34,23 +35,24 @@ func _ready() -> void:
 	peer.peer_disconnected.connect(_remove_player)
 	
 	# Attach room_left signal
-	peer.room_left.connect(_cleanup_room)
+	peer.forced_disconnect.connect(_cleanup_room)
 	
 	# At this point, we can access the online ID that the server generated for us
-	%IDLabel.text = "Online ID: " + peer.online_id
+	%IDLabel.text = "Online ID: " + peer.room_id
 
 
 func _on_host_pressed() -> void:
-	print("Online ID: ", peer.online_id)
-	
 	# Host a game, must be done *after* relay connection is made
-	peer.host()
+	peer.host_room(true, "Ape Interactions multiplayer room")
 	
-	# Copy online id to clipboard
-	DisplayServer.clipboard_set(peer.online_id)
 	
 	# Wait until peer has started hosting
-	await peer.hosting
+	await peer.room_connected
+	
+	# Copy online id to clipboard
+	DisplayServer.clipboard_set(peer.room_id)
+	
+	print("Online ID: ", peer.room_id)
 	
 	# Spawn the host player
 	_add_player()
@@ -67,10 +69,10 @@ func _on_host_pressed() -> void:
 func _on_join_pressed() -> void:
 	# Join a game, must be done *after* relay connection is made
 	# Requires the online ID of the host peer
-	peer.join(%HostID.text)
+	peer.join_room(%HostID.text)
 	
 	# Wait until peer has finished joining
-	await peer.joined
+	await peer.join_validation
 	
 	# Hide the UI
 	%ConnectionControls.hide()

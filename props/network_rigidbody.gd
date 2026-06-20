@@ -13,7 +13,7 @@ func _ready() -> void:
 
 @rpc("any_peer", "call_local")
 func attach_to_grabber(grab_transform : Transform3D):
-		print ("grabbo babbo")
+		#print ("grabbo babbo")
 		global_transform.basis = grab_transform.basis
 		global_transform.origin = grab_transform.origin
 		angular_velocity = Vector3.ZERO

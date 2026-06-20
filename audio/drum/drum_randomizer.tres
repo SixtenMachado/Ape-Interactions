@@ -1,0 +1,21 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://c17ty17x3ypy6"]
+
+[ext_resource type="AudioStream" uid="uid://cijrgxko4yukb" path="res://audio/drum/hgbdrum-001.ogg" id="1_3x1ug"]
+[ext_resource type="AudioStream" uid="uid://14r57q24gxea" path="res://audio/drum/hgbdrum-002.ogg" id="2_5aao7"]
+[ext_resource type="AudioStream" uid="uid://ckd35syp4xbe7" path="res://audio/drum/hgbdrum-003.ogg" id="3_slm4i"]
+[ext_resource type="AudioStream" uid="uid://dbgq4ke5ca8h6" path="res://audio/drum/hgbdrum-004.ogg" id="4_mlpr5"]
+[ext_resource type="AudioStream" uid="uid://y1wb7p4ln2yw" path="res://audio/drum/hgbdrum-005.ogg" id="5_u0n7p"]
+[ext_resource type="AudioStream" uid="uid://cuqw35ismsymx" path="res://audio/drum/hgbdrum-006.ogg" id="6_aowgh"]
+[ext_resource type="AudioStream" uid="uid://3gnfpfr4xw4x" path="res://audio/drum/hgbdrum.ogg" id="7_1a7rm"]
+
+[resource]
+playback_mode = 1
+random_pitch = 1.0116194
+streams_count = 7
+stream_0/stream = ExtResource("1_3x1ug")
+stream_1/stream = ExtResource("2_5aao7")
+stream_2/stream = ExtResource("3_slm4i")
+stream_3/stream = ExtResource("4_mlpr5")
+stream_4/stream = ExtResource("5_u0n7p")
+stream_5/stream = ExtResource("6_aowgh")
+stream_6/stream = ExtResource("7_1a7rm")

@@ -21,3 +21,7 @@ func use(right_hand : bool):
 		grabbo.held_item.consume()
 		grabbo.held_item = null
 		GameplayInterface.play_sound(load("res://audio/clink slurp.wav"))
+	
+	elif grabbo.held_item is UsableItem:
+		var item = grabbo.held_item as UsableItem
+		item.use.rpc()
